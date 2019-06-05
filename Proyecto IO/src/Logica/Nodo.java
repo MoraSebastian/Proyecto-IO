@@ -21,7 +21,7 @@ public class Nodo extends Componente{
 		String cad = this.id + "[";
         for (Iterator<Componente> it = partes.iterator(); it.hasNext();) {
             Componente component = it.next();
-            cad += component.getId() + ",";            
+            cad += component.getId() + ","+component.operation();            
         }
         cad = cad.substring(0, cad.length()-1) + "]";       
         return cad;
