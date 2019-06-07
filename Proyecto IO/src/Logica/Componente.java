@@ -21,4 +21,6 @@ public abstract class Componente {
 	public String operation() {
 		return getEnunciado();
 	}
+	
+	public abstract Componente getSiguiente();
 }

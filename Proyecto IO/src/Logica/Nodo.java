@@ -21,7 +21,7 @@ public class Nodo extends Componente{
 		String cad = this.id + "[";
         for (Iterator<Componente> it = partes.iterator(); it.hasNext();) {
             Componente component = it.next();
-            cad += component.getId() + ","+component.operation();            
+            cad += component.operation();            
         }
         cad = cad.substring(0, cad.length()-1) + "]";       
         return cad;
@@ -44,4 +44,15 @@ public class Nodo extends Componente{
 	public void setProbabilidad(double probabilidad) {
 		this.probabilidad = probabilidad;
 	}
+
+	@Override
+	public Componente getSiguiente() {
+		Componente c = null;
+		if(partes.size()!=0) {
+			c = partes.get(0);
+		}
+		return c;
+	}
+	
+	
 }
