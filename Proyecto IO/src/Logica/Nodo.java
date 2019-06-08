@@ -4,8 +4,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Nodo extends Componente{
+	public static String PROBABILIDAD = "probabilidad";
+	public static String DECISION = "decision";
+	public static String GASTO = "gasto";
+	public static String TERMINAL = "terminal";
+	
 	private double puntaje;
-	private String opcion;
+	private String tipo;
+	private ArrayList<String> opciones = new ArrayList<String>();
 	private double probabilidad;
 	protected ArrayList<Componente> partes = new ArrayList<Componente>();
 	
@@ -31,11 +37,11 @@ public class Nodo extends Componente{
 		return this.partes;
 	}
 			
-	public String getOpcion() {
-		return this.opcion;
+	public String getTipo() {
+		return this.tipo;
 	}
-	public void setOpcion(String opcion) {
-		this.opcion = opcion;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	
 	public double getProbabilidad() {
@@ -64,8 +70,8 @@ public class Nodo extends Componente{
 		this.puntaje = puntaje;
 	}
 
-	public void setPuntaje(int puntaje2) {
-		// TODO Auto-generated method stub
-		
+	public void agregarOpcion(String opcion) {
+		opciones.add(opcion);
 	}
+	
 }

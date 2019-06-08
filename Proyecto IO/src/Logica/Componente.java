@@ -30,6 +30,6 @@ public abstract class Componente {
 	}
 	
 	public abstract Componente getSiguiente();
-	public abstract String getOpcion();
+	public abstract String getTipo();
 	public abstract double getPuntaje();
 }

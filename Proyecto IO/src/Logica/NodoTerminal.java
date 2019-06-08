@@ -16,14 +16,15 @@ public class NodoTerminal extends Componente{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	@Override
-	public String getOpcion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 	@Override
 	public double getPuntaje() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	@Override
+	public String getTipo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

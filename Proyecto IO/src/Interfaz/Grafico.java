@@ -64,11 +64,11 @@ public class Grafico extends JPanel{
     public void calcularPosiciones(Componente nodo, int x, int y) {
     	if(nodo!=null){
              int ancho = fm.stringWidth(String.valueOf(nodo.getId()));
-             if(nodo.getOpcion().equals("decision")) {
+             if(nodo.getTipo().equals("decision")) {
             	 posicionNodo.put(nodo, new Rectangle(x-ancho/2,y-fm.getHeight()-3,ancho+6,fm.getHeight())); 
-             }else if(nodo.getOpcion().equals("probabilidad")){
+             }else if(nodo.getTipo().equals("probabilidad")){
             	 posicionNodo.put(nodo, new Ellipse2D.Double(x-ancho/2,y-fm.getHeight()-3,ancho+6,fm.getHeight()));
-             }else if(nodo.getOpcion().equals("gasto")) {
+             }else if(nodo.getTipo().equals("gasto")) {
             	 posicionNodo.put(nodo, new Polygon(new int[] {x-4,x+ancho-4,x+(2*ancho)-4},new int[] {y,y-fm.getHeight()-6,y},3));
              }
              
@@ -80,18 +80,18 @@ public class Grafico extends JPanel{
     public void dibujar(Graphics2D g){
     	 Componente referencia = a.getInicio();
          while(referencia!=null){
-        	 if(referencia.getOpcion().equals("decision")) {
+        	 if(referencia.getTipo().equals("decision")) {
         		 Rectangle rectangulo = (Rectangle) posicionNodo.get(referencia);
         		 g.draw(rectangulo);
         		 g.drawString(String.valueOf(referencia.getId()),rectangulo.x+3,rectangulo.y+dye);
-             }else if(referencia.getOpcion().equals("probabilidad")){
+             }else if(referencia.getTipo().equals("probabilidad")){
             	 Ellipse2D eli = (Ellipse2D)posicionNodo.get(referencia);
             	 g.draw(eli);
             	 g.drawString(String.valueOf(referencia.getId()),(int)eli.getX()+3,(int)eli.getY()+dye);
-             }else if(referencia.getOpcion().equals("gasto")) {
+             }else if(referencia.getTipo().equals("gasto")) {
             	Polygon triangulo  = (Polygon) posicionNodo.get(referencia);
             	g.draw(triangulo);
-            	g.drawString(String.valueOf(referencia.getId()),(int)triangulo.xpoints[2]-10,(int)triangulo.ypoints[0]-4);
+            	
              }
         	
             
