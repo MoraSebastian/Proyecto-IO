@@ -3,6 +3,13 @@ package Logica;
 public abstract class Componente {
 	//atributos
 	protected int id;
+	protected String Ubicacion;
+	public String getUbicacion() {
+		return Ubicacion;
+	}
+	public void setUbicacion(String ubicacion) {
+		Ubicacion = ubicacion;
+	}
 	protected String enunciado;
 	
 	//métodos
@@ -23,4 +30,6 @@ public abstract class Componente {
 	}
 	
 	public abstract Componente getSiguiente();
+	public abstract String getOpcion();
+	public abstract double getPuntaje();
 }

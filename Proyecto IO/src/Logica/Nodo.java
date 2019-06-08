@@ -54,5 +54,18 @@ public class Nodo extends Componente{
 		return c;
 	}
 	
-	
+	public double getPuntaje() {
+		return puntaje;
+	}
+
+	public void setPuntaje(double puntaje) {
+		
+		
+		this.puntaje = puntaje;
+	}
+
+	public void setPuntaje(int puntaje2) {
+		// TODO Auto-generated method stub
+		
+	}
 }

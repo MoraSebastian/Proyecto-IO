@@ -11,4 +11,19 @@ public class NodoTerminal extends Componente{
 		//toca implementarlo
 		return 0;
 	}
+	@Override
+	public Componente getSiguiente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String getOpcion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public double getPuntaje() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
