@@ -23,6 +23,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.Cursor;
 
 public class PanelJuego extends JPanel implements ActionListener {
 	JPanel panel = new JPanel();
@@ -57,8 +58,9 @@ public class PanelJuego extends JPanel implements ActionListener {
 			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 43.png")));
 			break;
 		}
+		
 		textoHistoria.setText(arbol.getReferencia().getEnunciado());
-		textoHistoria.setEditable(false);
+		panel.updateUI();
 		btnBotondecision.setText(arbol.getReferencia().getOpciones().get(0));
 		if(arbol.getReferencia().getOpciones().size()>1) {
 			btnBotondecision2.setText(arbol.getReferencia().getOpciones().get(1));
@@ -83,9 +85,9 @@ public class PanelJuego extends JPanel implements ActionListener {
 		panel.setLayout(null);
 		
 		internalFrameSinopsis = new JInternalFrame("Sinopsis");
-		internalFrameSinopsis.setBounds(154, 65, 1093, 700);
+		internalFrameSinopsis.setBounds(137, 147, 1093, 700);
 		panel.add(internalFrameSinopsis);
-		internalFrameSinopsis.setFrameIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 37.png")));
+		internalFrameSinopsis.setFrameIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 38.png")));
 		internalFrameSinopsis.setClosable(true);
 		internalFrameSinopsis.setVisible(false);
 		internalFrameSinopsis.getContentPane().setLayout(null);
@@ -96,6 +98,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 		internalFrameSinopsis.setVisible(true);
 		
 		btnBotondecision2 = new JButton("");
+		btnBotondecision2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnBotondecision2.setOpaque(false);
 		btnBotondecision2.setHorizontalAlignment(SwingConstants.LEFT);
 		btnBotondecision2.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 39.png")));
@@ -109,6 +112,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 		panel.add(btnBotondecision2);
 		
 		btnBotondecision = new JButton("");
+		btnBotondecision.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnBotondecision.setHorizontalAlignment(SwingConstants.LEFT);
 		btnBotondecision.setRolloverIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 38.png")));
 		btnBotondecision.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 39.png")));
