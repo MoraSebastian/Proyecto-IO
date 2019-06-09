@@ -73,8 +73,7 @@ public class Arbol {
 		n1122.addpart(n11221);
 		
 		//Nodo 1.1.2.2.2 Llueve
-		Nodo n11222 = new Nodo(5, "Al ver que llueve, Morita le propone ir a comer empanadita de 1000, ya que no cuenta con presupuesto para invitarla para algo mas caro. El espera que ella acepte su " + 
-				"invitación");
+		Nodo n11222 = new Nodo(5, "Al ver que llueve, Morita le propone ir a comer empanadita de 1000, ya que no cuenta con presupuesto para invitarla para algo mas caro. El espera que ella acepte su invitación");
 		n11222.setTipo(n11222.PROBABILIDAD);
 		n11222.agregarOpcion("Catalina acepta su invitación");
 		n11222.agregarOpcion("Catalina dice que no, que mejor hacen el plan otro día.");
