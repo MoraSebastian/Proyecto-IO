@@ -74,4 +74,8 @@ public class Nodo extends Componente{
 		opciones.add(opcion);
 	}
 	
+	public ArrayList<String> getOpciones(){
+		return opciones;
+	}
+	
 }

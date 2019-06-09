@@ -7,6 +7,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+
+import Logica.Arbol;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -20,6 +23,7 @@ import java.awt.event.ActionEvent;
 public class PantallaInicio {
 
 	public JFrame frame;
+	public Arbol arbol = new Arbol();
 	private JTextField txtNombreusuario;
 
 	public PantallaInicio() {
@@ -130,7 +134,7 @@ public class PantallaInicio {
 	
 	public void accionJugar(){
 		frame.getContentPane().removeAll();
-		JPanel panelJ = new PanelJuego();
+		JPanel panelJ = new PanelJuego(this.arbol);
 		panelJ.setBounds(0, 0, 1300, 828);
 		frame.add(panelJ);
 		frame.repaint();

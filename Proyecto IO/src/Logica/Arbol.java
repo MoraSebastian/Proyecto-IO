@@ -6,6 +6,7 @@ import Interfaz.FrameArbol;
 
 public class Arbol {
 	private Nodo nodo;
+	private Nodo referencia;
 	public void construirArbol() {
 		
 		//Nodo 0
@@ -49,6 +50,7 @@ public class Arbol {
 				"Necesitaba una oportunidad para hacerle la invitación. Aquel momento llegó, se " + 
 				"encontraba sola leyendo. Morita planea acercarse, pero debe tener claro que tipo " + 
 				"de invitación hacerle para que ella acepte.");
+		n112.setTipo(n112.DECISION);
 		n112.agregarOpcion("Invitarla a tomar cerveza");
 		n112.agregarOpcion("Invitarla a comer bonice.");
 		n11.addpart(n112);
@@ -84,13 +86,13 @@ public class Arbol {
 				"excelente tarde a su lado. Que desea volver a salir con ella, pero no para devolverle " + 
 				"un favor de amigos sino como algo más. X algo sonrojada le dice que si." + 
 				"El sueño de Morita se hace realidad, por primera vez en su vida una chica aceptó su invitación.");
-		n112211.setTipo(n112211.GASTO);
+		n112211.setTipo(n112211.TERMINAL);
 		n112211.agregarOpcion("ERES ES TODO UN TÍMIDO CONQUISTADOR.");
 		n11221.addpart(n112211);
 		
 		//Nodo 1.1.2.2.1.2 Pedirle la cita al final
 		Nodo n112212 = new Nodo(6,"Mientras se dirigían a la universidad, en el semáforo de carrera 13, Morita sintió que algo le cayó en el brazo. Era popó de paloma. Justo se había puesto debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdió la oportunidad de hacerle una nueva invitación.");
-		n112212.setTipo(n112212.GASTO);
+		n112212.setTipo(n112212.TERMINAL);
 		n112212.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
 		n11221.addpart(n112212);
 		
@@ -104,23 +106,31 @@ public class Arbol {
 		
 		//Nodo 1.1.2.2.2.2 Espera a otro día
 		Nodo n112222 = new Nodo(6,"Durante el mes, en Bogotá no dejó de llover. Morita se quedó esperando...");
-		n112222.setTipo(n112222.GASTO);
+		n112222.setTipo(n112222.TERMINAL);
 		n112222.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
 		n11222.addpart(n112222);
 
 		//Nodo 1.1.2.2.2.1.1 Le hecha salsa de ajo
 		Nodo n1122211 = new Nodo(7,"Morita y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Cuando llega el momento en que Catalina se acerca para darle un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradó. La situación se tornó algo incómoda, por lo que terminaron la conversación, se despidieron y nada mas volvió a suceder.");
-		n1122211.setTipo(n1122211.GASTO);
+		n1122211.setTipo(n1122211.TERMINAL);
 		n1122211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
 		n112221.addpart(n1122211);
 		
 		//Nodo 1.1.2.2.2.1.2 No usa la salsa de ajo
 		Nodo n1122212 = new Nodo(7, "Morita y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Antes de despedirse, Catalina, muy sonrojada le dice a Morita que la pasó muy bien a su lado. Que desearía volver a salir con el, ya que le pareció alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
-		n1122212.setTipo(n1122212.GASTO);
+		n1122212.setTipo(n1122212.TERMINAL);
 		n1122212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN");
 		n112221.addpart(n1122212);
 	}
 	
+	public void agregarNodo(Nodo nodo) {
+		referencia.addpart(nodo);
+		referencia = (Nodo) referencia.getSiguiente();
+	}
+	public Arbol() {
+		construirArbol();
+		referencia = nodo;
+	}
 	public  void mostrarHijos () {				
 		System.out.println(nodo.operation());
 	}
@@ -131,6 +141,22 @@ public class Arbol {
 
 	public void setNodo(Nodo nodo) {
 		this.nodo = nodo;
+	}
+	
+	public void vaciar() {
+		nodo = null;
+	}
+
+	public Nodo getReferencia() {
+		return referencia;
+	}
+
+	public void setReferencia(Nodo nodo2) {
+		this.referencia = nodo2;
+	}
+
+	public Nodo getNodo() {
+		return nodo;
 	}
 
 	public static void main(String args[]) {				
