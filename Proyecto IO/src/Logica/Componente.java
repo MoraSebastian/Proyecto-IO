@@ -1,8 +1,18 @@
 package Logica;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public abstract class Componente {
 	//atributos
 	protected int id;
+	protected int decision;
+	public int getDecision() {
+		return decision;
+	}
+	public void setDecision(int decision) {
+		this.decision = decision;
+	}
 	protected String Ubicacion;
 	public String getUbicacion() {
 		return Ubicacion;
@@ -32,4 +42,5 @@ public abstract class Componente {
 	public abstract Componente getSiguiente();
 	public abstract String getTipo();
 	public abstract double getPuntaje();
+	public abstract ArrayList<String> getOpciones();
 }

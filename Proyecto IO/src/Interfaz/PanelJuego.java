@@ -191,12 +191,14 @@ public class PanelJuego extends JPanel implements ActionListener {
 
 		switch (comando) {
 		case "btn1":
+			arbol.getReferencia().setDecision(0);
+			System.out.println(arbol.getReferencia().getDecision());
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(0));
-			
+			System.out.println(arbol.getReferencia().getEnunciado());
 			if(arbol.getReferencia().getTipo().equals("terminal")) {
 				EventQueue.invokeLater(new Runnable() { public void run() { 
-					try { FrameArbol frame = new FrameArbol(arbol); frame.setVisible(true); 
+					try { FrameArbol frame = new FrameArbol(salida); frame.setVisible(true); 
 					} catch (Exception e){
 						e.printStackTrace(); 
 					} } });
@@ -205,12 +207,14 @@ public class PanelJuego extends JPanel implements ActionListener {
 			}
 		break;
 		case "btn2":
+			arbol.getReferencia().setDecision(1);
+			System.out.println(arbol.getReferencia().getDecision());
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(1));
 			
 			if(arbol.getReferencia().getTipo().equals("terminal")) {
 				EventQueue.invokeLater(new Runnable() { public void run() { 
-					try { FrameArbol frame = new FrameArbol(arbol); frame.setVisible(true); 
+					try { FrameArbol frame = new FrameArbol(salida); frame.setVisible(true); 
 					} catch (Exception e){
 						e.printStackTrace(); 
 					} } });

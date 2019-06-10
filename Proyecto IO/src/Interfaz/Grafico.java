@@ -68,7 +68,7 @@ public class Grafico extends JPanel{
             	 posicionNodo.put(nodo, new Rectangle(x-ancho/2,y-fm.getHeight()-3,ancho+6,fm.getHeight())); 
              }else if(nodo.getTipo().equals("probabilidad")){
             	 posicionNodo.put(nodo, new Ellipse2D.Double(x-ancho/2,y-fm.getHeight()-3,ancho+6,fm.getHeight()));
-             }else if(nodo.getTipo().equals("gasto")) {
+             }else if(nodo.getTipo().equals("terminal")) {
             	 posicionNodo.put(nodo, new Polygon(new int[] {x-4,x+ancho-4,x+(2*ancho)-4},new int[] {y,y-fm.getHeight()-6,y},3));
              }
              
@@ -84,20 +84,18 @@ public class Grafico extends JPanel{
         		 Rectangle rectangulo = (Rectangle) posicionNodo.get(referencia);
         		 g.draw(rectangulo);
         		 g.drawString(String.valueOf(referencia.getId()),rectangulo.x+3,rectangulo.y+dye);
+        		 g.drawString(referencia.getOpciones().get(referencia.getDecision()),rectangulo.x+25,rectangulo.y+dye);
              }else if(referencia.getTipo().equals("probabilidad")){
             	 Ellipse2D eli = (Ellipse2D)posicionNodo.get(referencia);
             	 g.draw(eli);
             	 g.drawString(String.valueOf(referencia.getId()),(int)eli.getX()+3,(int)eli.getY()+dye);
-             }else if(referencia.getTipo().equals("gasto")) {
+            	 g.drawString(referencia.getOpciones().get(referencia.getDecision()),(int)eli.getX()+25,(int)eli.getY()+dye);
+             }else if(referencia.getTipo().equals("terminal")) {
             	Polygon triangulo  = (Polygon) posicionNodo.get(referencia);
             	g.draw(triangulo);
             	
              }
-        	
-            
-           
-            
-            referencia = referencia.getSiguiente();
+             referencia = referencia.getSiguiente();
          	
          }
     }

@@ -15,6 +15,7 @@ public class Nodo extends Componente{
 	private double probabilidad;
 	protected ArrayList<Componente> partes = new ArrayList<Componente>();
 	
+	
 	public Nodo(int id, String enunciado) {
 		this.id = id;
 		this.enunciado = enunciado;
@@ -76,6 +77,10 @@ public class Nodo extends Componente{
 	
 	public ArrayList<String> getOpciones(){
 		return opciones;
+	}
+
+	public void setOpciones(ArrayList<String> opciones) {
+		this.opciones = opciones;
 	}
 	
 }
