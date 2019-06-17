@@ -26,6 +26,7 @@ public class Arbol {
 		n1.setTipo(n1.DECISION);
 		n1.agregarOpcion("Pedirle ayuda con la tarea (aunque ya la tienes hecha)");
 		n1.agregarOpcion("Ofrecerle ayuda con la tarea");
+		n1.setPuntaje(10);
 		nodo.addpart(n1);
 		
 		//Nodo 1.1 Pedir ayuda con la tarea
@@ -41,6 +42,7 @@ public class Arbol {
 				+ "Uno de ellos le dice: 'Parce,  páseme la tarea que me dijo que ya la tenía."
 				+ "La chica se voltea y mira hacia Morita con cara de enojo por haberla echo perder el tiempo, se va.");
 		n111.setTipo(n111.TERMINAL);
+		n111.setPuntaje(-5);
 		n11.addpart(n111);
 		
 		//NODO 1.1.2 Los amigos no se acercan

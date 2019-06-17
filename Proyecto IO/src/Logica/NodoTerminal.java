@@ -27,4 +27,5 @@ public class NodoTerminal extends Componente{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 }

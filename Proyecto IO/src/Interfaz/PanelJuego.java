@@ -45,7 +45,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 	
 	//Arbol que sale
 	Arbol salida = new Arbol();
-	
+	double puntaje = 0;
 	
 	private void cargar() {
 		switch(arbol.getReferencia().getTipo()) {
@@ -64,7 +64,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 		btnBotondecision.setText(arbol.getReferencia().getOpciones().get(0));
 		if(arbol.getReferencia().getOpciones().size()>1) {
 			btnBotondecision2.setText(arbol.getReferencia().getOpciones().get(1));
-
+		}else {
+			
 		}
 	}
 	
@@ -195,10 +196,16 @@ public class PanelJuego extends JPanel implements ActionListener {
 			System.out.println(arbol.getReferencia().getDecision());
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(0));
+			
+			puntaje += arbol.getReferencia().getPuntaje();
+			
 			System.out.println(arbol.getReferencia().getEnunciado());
 			if(arbol.getReferencia().getTipo().equals("terminal")) {
 				EventQueue.invokeLater(new Runnable() { public void run() { 
-					try { FrameArbol frame = new FrameArbol(salida); frame.setVisible(true); 
+					try { 
+						FrameArbol frame = new FrameArbol(salida); 
+						frame.setVisible(true);
+						lblPuntaje.setText("Puntaje: "+puntaje);
 					} catch (Exception e){
 						e.printStackTrace(); 
 					} } });
@@ -212,9 +219,14 @@ public class PanelJuego extends JPanel implements ActionListener {
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(1));
 			
+			puntaje += arbol.getReferencia().getPuntaje();
+			
 			if(arbol.getReferencia().getTipo().equals("terminal")) {
 				EventQueue.invokeLater(new Runnable() { public void run() { 
-					try { FrameArbol frame = new FrameArbol(salida); frame.setVisible(true); 
+					try { 
+						FrameArbol frame = new FrameArbol(salida); 
+						frame.setVisible(true);
+						lblPuntaje.setText("Puntaje: "+puntaje);
 					} catch (Exception e){
 						e.printStackTrace(); 
 					} } });
