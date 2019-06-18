@@ -65,25 +65,36 @@ public class FrameArbol extends JFrame {
 	//	System.out.println("Tipo: "+comp.getTipo());
 		while(comp != null) {
 			tipo = comp.getTipo();
+			JLabel lbl, lb;			
 			switch(tipo) {
-			case "decision":
-				JLabel lbl = new JLabel();
+			case "decision":				
+				lbl = new JLabel();
 				lbl.setBounds(x, y, 85, 85);
+				
+				lb = new JLabel();
+				lb.setBounds(x + 95, y ,250 , 100);
+				lb.setText("<html>"+comp.getOpciones().get(comp.getDecision())+"<html>");
 				lbl.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 43.png")));
 				panel.add(lbl);
+				panel.add(lb);
 				System.out.println("decision");
 				break;
 			case "probabilidad":
-				JLabel lbl1 = new JLabel();
-				lbl1.setBounds(x, y, 85, 85);
-				lbl1.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 42.png")));
-				panel.add(lbl1);
+				lbl = new JLabel();
+				lbl.setBounds(x, y, 85, 85);
+				
+				lb = new JLabel();
+				lb.setBounds(x + 95, y ,250 , 100);
+				lb.setText("<html>"+comp.getOpciones().get(comp.getDecision())+"<html>");
+				lbl.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 42.png")));
+				panel.add(lbl);
+				panel.add(lb);
 				break;
 			case "terminal":
-				JLabel lbl2 = new JLabel();
-				lbl2.setBounds(x, y, 85, 85);
-				lbl2.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 59.png")));
-				panel.add(lbl2);
+				lbl = new JLabel();
+				lbl.setBounds(x, y, 200, 85);							
+				lbl.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 59.png")));
+				panel.add(lbl);				
 				break;
 			}			
 			comp = comp.getSiguiente();

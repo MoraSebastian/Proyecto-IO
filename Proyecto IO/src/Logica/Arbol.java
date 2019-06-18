@@ -412,6 +412,7 @@ public class Arbol {
 		n1221222.setTipo(n1221222.TERMINAL);
 		n1221222.agregarOpcion("USTED NO APRENDER VERDAD.");
 		
+		
 		n112112121.addpart(n1121121211);
 		n112112121.addpart(n1121121212);
 		
