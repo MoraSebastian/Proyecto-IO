@@ -56,7 +56,7 @@ public class Nodo extends Componente{
 	public Componente getSiguiente() {
 		Componente c = null;
 		if(partes.size()!=0) {
-			c = partes.get(0);
+			c = partes.get(this.decision);
 		}
 		return c;
 	}

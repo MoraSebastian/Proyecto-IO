@@ -27,7 +27,7 @@ public class Arbol {
 		n1.agregarOpcion("Pedirle ayuda con la tarea (aunque ya la tienes hecha)");
 		n1.agregarOpcion("Ofrecerle ayuda con la tarea");
 		n1.setPuntaje(10);
-		nodo.addpart(n1);
+		
 		
 		//Nodo 1.1 Pedir ayuda con la tarea
 		Nodo n11 = new  Nodo(2,"Ella acepta ayudarlo y Morita se sienta a su lado para que le explique lo que no entiende."
@@ -35,7 +35,7 @@ public class Arbol {
 		n11.setTipo(n11.PROBABILIDAD);
 		n11.agregarOpcion("Sus amigos  se acercan.");
 		n11.agregarOpcion("Sus amigos no se acercan.");
-		n1.addpart(n11);
+		
 		
 		//Nodo 1.1.1 Los amigos se acercan
 		Nodo n111 = new Nodo(3,"Por la puerta se acerca el grupo de IO de Morita. "
@@ -43,7 +43,6 @@ public class Arbol {
 				+ "La chica se voltea y mira hacia Morita con cara de enojo por haberla echo perder el tiempo, se va.");
 		n111.setTipo(n111.TERMINAL);
 		n111.setPuntaje(-5);
-		n11.addpart(n111);
 		
 		//NODO 1.1.2 Los amigos no se acercan
 		Nodo n112 = new Nodo(3,"La chica le explica exitosamente y Morita resuelve la tarea (de nuevo)."
@@ -58,7 +57,6 @@ public class Arbol {
 		n112.setTipo(n112.DECISION);
 		n112.agregarOpcion("Invitarla a tomar cerveza");
 		n112.agregarOpcion("Invitarla a comer bonice.");
-		n11.addpart(n112);
 		
 		//Nodo 1.1.2.1 Invitarla a tomar una cerveza
 		Nodo n1121 = new Nodo (4, "Catalina lo observa con cara extrañada y algo incómoda le responde "
@@ -69,7 +67,6 @@ public class Arbol {
 				+ " adelante Morita se las arreglará para convenserla.)");
 		n1121.agregarOpcion("Insistirle en ir de una vez a tomar cerveza (Puede que más adelante "
 				+ "se arrepienta).");
-		n112.addpart(n1121);
 		
 		//Nodo 1.1.2.1.1 Pedir el numero
 		Nodo n11211 = new Nodo(5, "Catalina visiblemente aliviada le da su número a Morita. Se despiden,"
@@ -100,19 +97,19 @@ public class Arbol {
 		n112112.agregarOpcion("Morita le sugiere que vayan por el plan del bonice. Ella acepta.");
 		
 		// Nodo 1.1.2.1.1.2.1 Continuar con el plan inicial de la cerveza
-		Nodo n1121122 = new Nodo(7, "Morita y Catalina se dirigen a un bar cercano a la universidad. "
+		Nodo n1121121 = new Nodo(7, "Morita y Catalina se dirigen a un bar cercano a la universidad. "
 				+ "Cada uno pide una cerveza. Como siente que Catalina está algo incómoda por el lugar"
 				+ ", ¿qué debería hacer para remediar esto?");
-		n1121122.setTipo(n1121122.PROBABILIDAD);
-		n1121122.agregarOpcion("Morita pide más cervezas.");
-		n1121122.agregarOpcion("Morita pide jugo de mora.");
+		n1121121.setTipo(n1121121.PROBABILIDAD);
+		n1121121.agregarOpcion("Morita pide más cervezas.");
+		n1121121.agregarOpcion("Morita pide jugo de mora.");
 		
 		//Nodo 1.1.2.1.1.2.2 Mejor ir por un bonice
-		Nodo n1121121 = new Nodo(7, "A catalina le agrada la idea de ir a comer bonice, Morita espera"
+		Nodo n1121122 = new Nodo(7, "A catalina le agrada la idea de ir a comer bonice, Morita espera"
 				+ " que haga un buen clima, porque el bonice solo es rico cuando hace calor.");
-		n1121121.setTipo(n1121121.PROBABILIDAD);
-		n1121121.agregarOpcion("No llueve y hace buen clima.");
-		n1121121.agregarOpcion("Cae un aguacero.");
+		n1121122.setTipo(n1121122.PROBABILIDAD);
+		n1121122.agregarOpcion("No llueve y hace buen clima.");
+		n1121122.agregarOpcion("Cae un aguacero.");
 		
 		//Nodo 1.1.2.1.1.2.1.1 Hace buen clima
 		Nodo n11211211 = new Nodo(8, "Morita y Catalina salen a comer bonice, tienen una buena charla y "
@@ -234,7 +231,6 @@ public class Arbol {
 		n1122.setTipo(n1122.PROBABILIDAD);
 		n1122.agregarOpcion("No llueve y hace buen clima.");
 		n1122.agregarOpcion("Cae un aguacero.");
-		n112.addpart(n1122);
 		
 		
 		//Nodo 1.1.2.2.1 No llueve
@@ -245,14 +241,12 @@ public class Arbol {
 		n11221.setTipo(n11221.DECISION);
 		n11221.agregarOpcion("Pedirle en ese momento una cita.");
 		n11221.agregarOpcion("Esperar a la hora de despedirse para pedirle la cita.");
-		n1122.addpart(n11221);
 		
 		//Nodo 1.1.2.2.2 Llueve
 		Nodo n11222 = new Nodo(5, "Al ver que llueve, Morita le propone ir a comer empanadita de 1000, ya que no cuenta con presupuesto para invitarla para algo mas caro. El espera que ella acepte su invitación");
 		n11222.setTipo(n11222.PROBABILIDAD);
 		n11222.agregarOpcion("Catalina acepta su invitación");
 		n11222.agregarOpcion("Catalina dice que no, que mejor hacen el plan otro día.");
-		n1122.addpart(n11222);
 		
 		//Nodo 1.1.2.2.1.1 Pedirle la cita en ese momento
 		Nodo n112211 = new Nodo(6,"En ese momento Morita mira a Catalina a los ojos y le dice que pasó una " + 
@@ -261,39 +255,33 @@ public class Arbol {
 				"El sueño de Morita se hace realidad, por primera vez en su vida una chica aceptó su invitación.");
 		n112211.setTipo(n112211.TERMINAL);
 		n112211.agregarOpcion("ERES ES TODO UN TÍMIDO CONQUISTADOR.");
-		n11221.addpart(n112211);
 		
 		//Nodo 1.1.2.2.1.2 Pedirle la cita al final
 		Nodo n112212 = new Nodo(6,"Mientras se dirigían a la universidad, en el semáforo de carrera 13, Morita sintió que algo le cayó en el brazo. Era popó de paloma. Justo se había puesto debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdió la oportunidad de hacerle una nueva invitación.");
 		n112212.setTipo(n112212.TERMINAL);
 		n112212.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
-		n11221.addpart(n112212);
 		
 		//Nodo 1.1.2.2.2.1 Acepta ir a comer empanada
 		Nodo n112221 = new Nodo(6,"Catalina no pone problema y se dirigen a la tienda donde venden empanaditas de mil. Se sientan a hablar. Morita disfruta muchísimo de la charla y considera que hay muy buena química entre los dos. Piden otra ronda de empanadas y esta vez le ofrecen salsa de ajo para aderezar. Morita no puede resistirse a su salsa favorita. ");
 		n112221.setTipo(n112221.PROBABILIDAD);
 		n112221.agregarOpcion("Morita le echa salsa de ajo a la empanada.");
 		n112221.agregarOpcion("Morita decide no aderezar la empenada con salsa de ajo.");
-		n11222.addpart(n112221);
 		
 		
 		//Nodo 1.1.2.2.2.2 Espera a otro día
 		Nodo n112222 = new Nodo(6,"Durante el mes, en Bogotá no dejó de llover. Morita se quedó esperando...");
 		n112222.setTipo(n112222.TERMINAL);
 		n112222.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
-		n11222.addpart(n112222);
 
 		//Nodo 1.1.2.2.2.1.1 Le hecha salsa de ajo
 		Nodo n1122211 = new Nodo(7,"Morita y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Cuando llega el momento en que Catalina se acerca para darle un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradó. La situación se tornó algo incómoda, por lo que terminaron la conversación, se despidieron y nada mas volvió a suceder.");
 		n1122211.setTipo(n1122211.TERMINAL);
 		n1122211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
-		n112221.addpart(n1122211);
 		
 		//Nodo 1.1.2.2.2.1.2 No usa la salsa de ajo
 		Nodo n1122212 = new Nodo(7, "Morita y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Antes de despedirse, Catalina, muy sonrojada le dice a Morita que la pasó muy bien a su lado. Que desearía volver a salir con el, ya que le pareció alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
 		n1122212.setTipo(n1122212.TERMINAL);
 		n1122212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN");
-		n112221.addpart(n1122212);
 		
 		//Nodo 1.2 Ofrecer ayuda con la tarea
 		Nodo n12 = new Nodo(2, "Ella acepta ser ayudada. Al parecer tenía problemas en resolver el"
@@ -493,6 +481,7 @@ public class Arbol {
 		if(this.nodo==null) {
 			this.nodo=referencia;
 		}
+		System.out.println(referencia.getPartes().size());
 		referencia = (Nodo) referencia.getSiguiente();
 
 	}

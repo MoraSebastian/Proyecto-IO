@@ -49,13 +49,13 @@ public class PanelJuego extends JPanel implements ActionListener {
 	
 	private void cargar() {
 		switch(arbol.getReferencia().getTipo()) {
-		case "probailidad":
+		case "probabilidad":
 			lblTipoopcion.setText("Probabilidad");
-			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 42.png")));
+			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 32.png")));
 			break;
 		case "decision":
 			lblTipoopcion.setText("Decision");
-			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 43.png")));
+			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 31.png")));
 			break;
 		}
 		
@@ -154,10 +154,9 @@ public class PanelJuego extends JPanel implements ActionListener {
 		lblPuntaje.setBounds(929, 46, 266, 72);
 		panel.add(lblPuntaje);
 		
-		lblTipoopcion = new JLabel("DECISI\u00D3N");
+		lblTipoopcion = new JLabel();
 		lblTipoopcion.setForeground(new Color(220, 20, 60));
 		lblTipoopcion.setFont(new Font("Segoe UI Semibold", Font.PLAIN, 28));
-		lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 43.png")));
 		lblTipoopcion.setBounds(71, 51, 298, 72);
 		panel.add(lblTipoopcion);
 		
@@ -187,21 +186,21 @@ public class PanelJuego extends JPanel implements ActionListener {
 	
 	public void actionPerformed(ActionEvent evento) {
 		String comando = evento.getActionCommand();
-
 		switch (comando) {
 		case "btn1":
 			arbol.getReferencia().setDecision(0);
-			System.out.println(arbol.getReferencia().getDecision());
+			System.out.println(arbol.getReferencia().getDecision()+" "+comando);
+			//System.out.println(arbol.getReferencia().getDecision());
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(0));
 			
 			puntaje += arbol.getReferencia().getPuntaje();
 			
-			System.out.println(arbol.getReferencia().getEnunciado());
+			//System.out.println(arbol.getReferencia().getEnunciado());
 			if(arbol.getReferencia().getTipo().equals("terminal")) {
 				EventQueue.invokeLater(new Runnable() { public void run() { 
 					try { 
-						FrameArbol frame = new FrameArbol(salida); 
+						FrameArbol frame = new FrameArbol(arbol); 
 						frame.setVisible(true);
 						lblPuntaje.setText("Puntaje: "+puntaje);
 					} catch (Exception e){
@@ -213,7 +212,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 		break;
 		case "btn2":
 			arbol.getReferencia().setDecision(1);
-			System.out.println(arbol.getReferencia().getDecision());
+			System.out.println(arbol.getReferencia().getDecision()+" "+comando);
+			//System.out.println(arbol.getReferencia().getDecision());
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(1));
 			
@@ -222,7 +222,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 			if(arbol.getReferencia().getTipo().equals("terminal")) {
 				EventQueue.invokeLater(new Runnable() { public void run() { 
 					try { 
-						FrameArbol frame = new FrameArbol(salida); 
+						FrameArbol frame = new FrameArbol(arbol); 
 						frame.setVisible(true);
 						lblPuntaje.setText("Puntaje: "+puntaje);
 					} catch (Exception e){

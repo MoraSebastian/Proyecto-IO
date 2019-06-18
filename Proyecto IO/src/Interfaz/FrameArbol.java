@@ -70,7 +70,7 @@ public class FrameArbol extends JFrame {
 			case "decision":				
 				lbl = new JLabel();
 				lbl.setBounds(x, y, 85, 85);
-				
+				System.out.println(comp.getDecision()+" "+comp.getOpciones().get(comp.getDecision()));
 				lb = new JLabel();
 				lb.setBounds(x + 95, y ,250 , 100);
 				lb.setText("<html>"+comp.getOpciones().get(comp.getDecision())+"<html>");
@@ -85,6 +85,7 @@ public class FrameArbol extends JFrame {
 				
 				lb = new JLabel();
 				lb.setBounds(x + 95, y ,250 , 100);
+				System.out.println(comp.getDecision()+" "+comp.getOpciones().get(comp.getDecision()));
 				lb.setText("<html>"+comp.getOpciones().get(comp.getDecision())+"<html>");
 				lbl.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 42.png")));
 				panel.add(lbl);
