@@ -95,8 +95,7 @@ public class Grafico extends JPanel{
             	g.draw(triangulo);
             	
              }
-             referencia = referencia.getSiguiente();
-         	
+             referencia = referencia.getSiguiente();         	
          }
     }
     

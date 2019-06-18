@@ -64,8 +64,6 @@ public class PanelJuego extends JPanel implements ActionListener {
 		btnBotondecision.setText(arbol.getReferencia().getOpciones().get(0));
 		if(arbol.getReferencia().getOpciones().size()>1) {
 			btnBotondecision2.setText(arbol.getReferencia().getOpciones().get(1));
-		}else {
-			
 		}
 	}
 	
