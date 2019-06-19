@@ -40,6 +40,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 	JLabel lblContenedorpreguntas;
 	JLabel lblContenedorjuego;
 	JLabel lblPanelsuperior;
+	JButton btnProbabilidad;
+	
 	//Arbol que llega (Completo)
 	Arbol arbol;
 	
@@ -50,10 +52,16 @@ public class PanelJuego extends JPanel implements ActionListener {
 	private void cargar() {
 		switch(arbol.getReferencia().getTipo()) {
 		case "probabilidad":
+			btnProbabilidad.setVisible(true);
 			lblTipoopcion.setText("Probabilidad");
+			btnBotondecision.setEnabled(false);
+			btnBotondecision2.setEnabled(false);
 			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 32.png")));
 			break;
 		case "decision":
+			btnProbabilidad.setVisible(false);
+			btnBotondecision.setEnabled(true);
+			btnBotondecision2.setEnabled(true);
 			lblTipoopcion.setText("Decision");
 			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 31.png")));
 			break;
@@ -124,6 +132,19 @@ public class PanelJuego extends JPanel implements ActionListener {
 		btnBotondecision.setContentAreaFilled(false);
 		panel.add(btnBotondecision);
 		
+		
+		btnProbabilidad = new JButton();
+		btnProbabilidad.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 44.png")));
+		btnProbabilidad.setBounds(700, 500, 200, 100);
+		btnProbabilidad.setBorderPainted(false);
+		btnProbabilidad.setOpaque(false);
+		btnProbabilidad.setContentAreaFilled(false);
+		btnProbabilidad.setRolloverIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 45.png")));
+		btnProbabilidad.setPressedIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 45.png")));
+		btnProbabilidad.setActionCommand("probabilidad");
+		btnProbabilidad.addActionListener( this);
+		panel.add(btnProbabilidad);
+		
 		btnDerecho = new JButton("");
 		btnDerecho.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 40.png")));
 		btnDerecho.setBounds(1050, 543, 68, 61);
@@ -193,7 +214,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 			//System.out.println(arbol.getReferencia().getDecision());
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(0));
-			
+			System.out.println(arbol.getReferencia().getEnunciado());
 			puntaje += arbol.getReferencia().getPuntaje();
 			
 			//System.out.println(arbol.getReferencia().getEnunciado());
@@ -216,7 +237,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 			//System.out.println(arbol.getReferencia().getDecision());
 			salida.agregarNodo(arbol.getReferencia());
 			arbol.setReferencia( (Nodo) arbol.getReferencia().getPartes().get(1));
-			
+			System.out.println(arbol.getReferencia().getEnunciado());
 			puntaje += arbol.getReferencia().getPuntaje();
 			
 			if(arbol.getReferencia().getTipo().equals("terminal")) {
@@ -233,7 +254,15 @@ public class PanelJuego extends JPanel implements ActionListener {
 			}
 			
 		break;
-		
+		case "probabilidad":
+			double p =  Math.random()*1;
+			System.out.println(p);
+			if(p<0.5) {
+				btnBotondecision.setEnabled(true);
+			}else {
+				btnBotondecision2.setEnabled(true);
+			}
+			break;
 		}
 		
 	}
