@@ -69,9 +69,9 @@ public class PanelJuego extends JPanel implements ActionListener {
 		
 		textoHistoria.setText(arbol.getReferencia().getEnunciado());
 		panel.updateUI();
-		btnBotondecision.setText(arbol.getReferencia().getOpciones().get(0));
+		btnBotondecision.setText("<html>"+arbol.getReferencia().getOpciones().get(0)+"<html>");
 		if(arbol.getReferencia().getOpciones().size()>1) {
-			btnBotondecision2.setText(arbol.getReferencia().getOpciones().get(1));
+			btnBotondecision2.setText("<html>"+arbol.getReferencia().getOpciones().get(1)+"<html>");
 		}
 	}
 	
