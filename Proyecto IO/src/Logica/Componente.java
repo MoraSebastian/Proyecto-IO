@@ -7,6 +7,21 @@ public abstract class Componente {
 	//atributos
 	protected int id;
 	protected int decision;
+	protected String imagen;
+	protected String audio;
+	
+	public String getImagen() {
+		return imagen;
+	}
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+	public String getAudio() {
+		return audio;
+	}
+	public void setAudio(String audio) {
+		this.audio = audio;
+	}
 	public int getDecision() {
 		return decision;
 	}

@@ -20,6 +20,7 @@ public class Arbol {
 		nodo.setTipo(nodo.DECISION);
 		nodo.agregarOpcion("Ir a clase de IO3");
 		nodo.agregarOpcion("Hablar con las chicas");
+		nodo.setAudio("/audio/Nodo0.wav");
 		
 		//Inicio Historia de Tefa
 		Nodo n = new Nodo(0,"Oliver ya se propuso "
@@ -27,7 +28,9 @@ public class Arbol {
 				+ "Necesita buscar una excusa para iniciar una conversación ¿Qué hará?");
 		n.setTipo(nodo.DECISION);
 		n.agregarOpcion("Preguntarle por la tarea que hay para la clase.");
-		n.setUbicacion("imagenesChicas/A01.jpg");
+		n.setUbicacion("/imagenesChicas/A01.jpg");
+		n.setAudio("/audio/Nodon.wav");
+		
 		//Nodo 1 Acercarse a la chica para saber que hacer
 		Nodo n1 = new Nodo(1,"Oliver se acerca a la chica y le pregunta qué había para hoy. "
 				+ "Ella se voltea hacia él y le dice que hoy es	la entrega del ejercicio de árboles de decisión"
@@ -36,8 +39,8 @@ public class Arbol {
 		n1.agregarOpcion("Pedirle ayuda con la tarea (aunque ya la tienes hecha)");
 		n1.agregarOpcion("Ofrecerle ayuda con la tarea");
 		n1.setPuntaje(10);
-		n1.setUbicacion("imagenesChicas/A02.jpg");
-		
+		n1.setUbicacion("/imagenesChicas/A02.jpg");
+		n1.setAudio("/audio/Nodo1.wav");
 		
 		//Nodo 1.1 Pedir ayuda con la tarea
 		Nodo n11 = new  Nodo(2,"Ella acepta ayudarlo y Oliver se sienta a su lado para que le explique lo que no entiende."
@@ -45,8 +48,8 @@ public class Arbol {
 		n11.setTipo(n11.PROBABILIDAD);
 		n11.agregarOpcion("Sus amigos  se acercan.");
 		n11.agregarOpcion("Sus amigos no se acercan.");
-		n11.setUbicacion("imagenesChicas/A09.jpg");
-		
+		n11.setUbicacion("/imagenesChicas/A09.jpg");
+		n11.setAudio("/audio/Nodo11.wav");
 		
 		//Nodo 1.1.1 Los amigos se acercan
 		Nodo n111 = new Nodo(3,"Por la puerta se acerca el grupo de IO de Oliver. "
@@ -55,8 +58,8 @@ public class Arbol {
 		n111.setTipo(n111.TERMINAL);
 		n111.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
 		n111.setPuntaje(-5);
-		n111.setUbicacion("imagenesChicas/A04.jpg");
-		
+		n111.setUbicacion("/imagenesChicas/A04.jpg");
+		n111.setAudio("/audio/Nodo111.wav");
 		
 		//NODO 1.1.2 Los amigos no se acercan
 			Nodo n112 = new Nodo(3,"La chica le explica exitosamente y Oliver resuelve la tarea (de nuevo)."
@@ -71,8 +74,8 @@ public class Arbol {
 		n112.setTipo(n112.DECISION);
 		n112.agregarOpcion("Invitarla a tomar cerveza");
 		n112.agregarOpcion("Invitarla a comer bonice.");
-		n112.setUbicacion("imagenesChicas/A02.jpg");
-		
+		n112.setUbicacion("/imagenesChicas/A02.jpg");
+//		n112.setAudio("/audio/Nodo112.wav");
 		
 		//Nodo 1.1.2.1 Invitarla a tomar una cerveza
 		Nodo n1121 = new Nodo (4, "Catalina lo observa con cara extrañada y algo incómoda le responde "
@@ -83,8 +86,8 @@ public class Arbol {
 				+ " adelante Oliver se las arreglará para convenserla.)");
 		n1121.agregarOpcion("Insistirle en ir de una vez a tomar cerveza (Puede que más adelante "
 				+ "se arrepienta).");
-		n1121.setUbicacion("imagenesChicas/A06.jpg");
-		
+		n1121.setUbicacion("/imagenesChicas/A06.jpg");
+		n1121.setAudio("/audio/Nodo1121.wav");
 		
 		//Nodo 1.1.2.1.1 Pedir el numero
 		Nodo n11211 = new Nodo(5, "Catalina visiblemente aliviada le da su número a Oliver. Se despiden,"
@@ -94,6 +97,7 @@ public class Arbol {
 		n11211.setTipo(n11211.DECISION);
 		n11211.agregarOpcion("Hola, ¿Cómo estás?");
 		n11211.agregarOpcion("Hola, oye, soy Oliver. ¿Cuando estarás disponible para salir?");
+		n11211.setAudio("/audio/Nodo11211.wav");
 		
 		//Nodo 1.1.2.1.1.1 Hola ¿Como estas?
 		Nodo n112111 = new Nodo (6, "Ella responde: Bien y tú? Oliver continúa la conversación con un "
@@ -101,9 +105,10 @@ public class Arbol {
 				+ "ahora le pregunta cosas relacionadas con IO3. Cada vez ella le responde más demorada"
 				+ " y Oliver no es capaz de recordarle la invitación. La conversación muere.");
 		n112111.setTipo(n112111.TERMINAL);
-		n112111.setUbicacion("imagenesChicas/A07.jpg");
+		n112111.setUbicacion("/imagenesChicas/A07.jpg");
 		n112111.agregarOpcion("ERES UN MATADOR CON LAS CHICAS....\n "
 				+ "PERO DE CONVERSACIONES.");
+		n112111.setAudio("/audio/Nodo112111.wav");
 		
 		//Nodo 1.1.2.1.1.2 Preguntarle cuando estara disponible
 			Nodo n112112 = new Nodo (6, "Catalina le responde diciendole la disponibilidad que tiene. Ahora"
@@ -111,27 +116,30 @@ public class Arbol {
 					+ "con el plan actual, tiene más posibilidades de romper el hielo, si lo cambia, podría "
 					+ "agradarle más a ella, pero perdería la oportunidad de generar mayor confianza.");
 		n112112.setTipo(n112112.DECISION);
-		n112112.setUbicacion("imagenesChicas/A08.jpg");
+		n112112.setUbicacion("/imagenesChicas/A08.jpg");
 		n112112.agregarOpcion("Oliver seguirá con su plan inicial, el de la cerveza. La conversación "
 				+ "termina con una fecha y hora definidas para reunirse.");
 		n112112.agregarOpcion("Oliver le sugiere que vayan por el plan del bonice. Ella acepta.");
+		n112112.setAudio("/audio/Nodo112112.wav");
 		
 		// Nodo 1.1.2.1.1.2.1 Continuar con el plan inicial de la cerveza
 		Nodo n1121122 = new Nodo(7, "Oliver y Catalina se dirigen a un bar cercano a la universidad. "
 				+ "Cada uno pide una cerveza. Como siente que Catalina está algo incómoda por el lugar"
 				+ ", ¿qué debería hacer para remediar esto?");
-		n1121122.setUbicacion("imagenesChicas/A20.jpg");
+		n1121122.setUbicacion("/imagenesChicas/A20.jpg");
 		n1121122.setTipo(n1121122.PROBABILIDAD);
 		n1121122.agregarOpcion("Oliver pide más cervezas.");
 		n1121122.agregarOpcion("Oliver pide jugo de mora.");
+		n1121122.setAudio("/audio/Nodo1121122.wav");
 		
 		//Nodo 1.1.2.1.1.2.2 Mejor ir por un bonice
 		Nodo n1121121 = new Nodo(7, "A catalina le agrada la idea de ir a comer bonice, Oliver espera"
 				+ " que haga un buen clima, porque el bonice solo es rico cuando hace calor.");
 		n1121121.setTipo(n1121121.PROBABILIDAD);
-		n1121121.setUbicacion("imagenesChicas/A05.jpg");
+		n1121121.setUbicacion("/imagenesChicas/A05.jpg");
 		n1121121.agregarOpcion("No llueve y hace buen clima.");
 		n1121121.agregarOpcion("Cae un aguacero.");
+		n1121121.setAudio("/audio/Nodo1121121.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.1 Hace buen clima
 		Nodo n11211211 = new Nodo(8, "Oliver y Catalina salen a comer bonice, tienen una buena charla y "
@@ -140,9 +148,10 @@ public class Arbol {
 				+ "ese momento, puede que no sea apropiado, pero si lo hace antes de despedirse, puede "
 				+ "que se acobarde.");
 		n11211211.setTipo(n11211211.DECISION);
-		n11211211.setUbicacion("imagenesChicas/A14.jpg");
+		n11211211.setUbicacion("/imagenesChicas/A14.jpg");
 		n11211211.agregarOpcion("Pedirle en ese momento una cita.");
 		n11211211.agregarOpcion("Esperar la hora de despedirse para pedirle la cita.");
+		n11211211.setAudio("/audio/Nodo11211211.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.2 Cae un aguacero
 		Nodo n11211212 = new Nodo (8, "Al ver que llueve, Oliver le propone ir a comer empanadita de "
@@ -151,6 +160,7 @@ public class Arbol {
 		n11211212.setTipo(n11211212.PROBABILIDAD);
 		n11211212.agregarOpcion("Catalina acepta su invitación.");
 		n11211212.agregarOpcion("Catalina dice que no, que mejor hacen el plan para otro día.");
+		n11211212.setAudio("/audio/Nodo11211212.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.2.1 Catalina acepta la invitacion
 		Nodo n112112121 = new Nodo(9, "Catalina no pone problema y se dirigen a la tienda donde venden "
@@ -159,9 +169,10 @@ public class Arbol {
 				+ "y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a su "
 				+ "salsa favorita.");
 		n112112121.setTipo(n112112121.PROBABILIDAD);
-		n112112121.setUbicacion("imagenesChicas/A16.jpg");
+		n112112121.setUbicacion("/imagenesChicas/A16.jpg");
 		n112112121.agregarOpcion("Oliver le echa salsa de ajo a la empanada.");
 		n112112121.agregarOpcion("Oliver decide no aderezar la empanada con salsa de ajo.");
+		n112112121.setAudio("/audio/Nodo112112121.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.1 Echarle salsa de ajo a la empanada
 		Nodo n1121121211 = new Nodo(9, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
@@ -170,8 +181,9 @@ public class Arbol {
 				+ "situación se tornó algo incómoda, por lo que terminaron la conversación, se despidieron "
 				+ "y nada más volvió a suceder.");
 		n1121121211.setTipo(n1121121211.TERMINAL);
-		n1121121211.setUbicacion("imagenesChicas/A18.jpg");
+		n1121121211.setUbicacion("/imagenesChicas/A18.jpg");
 		n1121121211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO.");
+		n1121121211.setAudio("/audio/Nodo1121121211.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.2 No usar la salsa de ajo
 		Nodo n1121121212 = new Nodo(10, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
@@ -179,13 +191,15 @@ public class Arbol {
 				+ "que la pasó muy bien a su lado. Que desearía volver a salir con el, ya que le pareció "
 				+ "alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
 		n1121121212.setTipo(n1121121212.TERMINAL);
-		n1121121212.setUbicacion("imagenesChicas/A19.jpg");
+		n1121121212.setUbicacion("/imagenesChicas/A19.jpg");
 		n1121121212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN.");
+		n1121121212.setAudio("/audio/Nodo1121121212.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.2.2 Catalina dice que mejor para otro dia 
 		Nodo n112112122 = new Nodo(9, "Durante el mes, en Bogotá no dejó de llover. Oliver se quedó esperando...");
 		n112112122.setTipo(n112112122.TERMINAL);
 		n112112122.agregarOpcion("MUY DE MALAS HERMANO.");
+		n112112122.setAudio("/audio/Nodo112112122.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.1.1 Pedirle la cita  --------------    ----------------
 		Nodo n112112111 = new Nodo(9, "En ese momento Oliver mira a Catalina a los ojos y le dice que pasó "
@@ -194,8 +208,9 @@ public class Arbol {
 				+ " El sueño de Oliver se hace realidad, por primera vez en su vida una chica aceptó "
 				+ "su invitación.");
 		n112112111.setTipo(n112112111.TERMINAL);
-		n112112111.setUbicacion("imagenesChicas/A15.jpg");
+		n112112111.setUbicacion("/imagenesChicas/A15.jpg");
 		n112112111.agregarOpcion("ERES TODO UN CONQUISTADOR.");
+		n112112111.setAudio("/audio/Nodo112112111.wav");
 		
 		//Nodo 1.1.2.1.1.2.1.1.2 Esperar a la hora de despedida para pedirle la cita ---------  ----
 		Nodo n112112112 = new Nodo(9, "Mientras se dirigían a la universidad, en el semáforo de la carrera 13,"
@@ -204,9 +219,11 @@ public class Arbol {
 				+ "corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdió la "
 				+ "oportunidad de hacerle una nueva invitación.");
 		n112112112.setTipo(n112112112.TERMINAL);
-		n112112112.setUbicacion("imagenesChicas/A17.jpg");
+		n112112112.setUbicacion("/imagenesChicas/A17.jpg");
 		n112112112.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE. ");
+		n112112112.setAudio("/audio/Nodo112112112.wav");
 		
+
 		//Nodo 1.1.2.1.1.2.2.1 Pedir más cervezas
 		Nodo n11211221 = new Nodo (8, "Es la peor decisión que Oliver pudo haber tomado en su vida. No"
 				+ " sabía que el era muy propenso a emborracharse, por lo que a la tercera cerveza ya no "
@@ -214,7 +231,7 @@ public class Arbol {
 				+ "inmediatamente se levantó y le pegó un puño en la cara, fue tan fuerte que incluso le"
 				+ " rompió las gafas..");
 		n11211221.setTipo(n11211221.TERMINAL);
-		n11211221.setUbicacion("imagenesChicas/A21.jpg");
+		n11211221.setUbicacion("/imagenesChicas/A21.jpg");
 		n11211221.agregarOpcion("ERES UN CONQUISTADOR QUE NO SE CONOCE A SI MISMO.");
 		n11211221.setAudio("/audio/pedir más cervezas.wav");
 		
@@ -226,7 +243,7 @@ public class Arbol {
 				+ "salir con el, ya que le pareció alguien divertido. Le da un beso en la mejilla y se "
 				+ "aleja muy apenada.");
 		n11211222.setTipo(n11211222.TERMINAL);
-		n11211222.setUbicacion("imagenesChicas/A19.jpg");
+		n11211222.setUbicacion("/imagenesChicas/A19.jpg");
 		n11211222.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO UNA BUENA CONVERSACIÓN.");
 		n11211222.setAudio("/audio/pedir jugo de mora.wav");
 		
@@ -235,7 +252,7 @@ public class Arbol {
 				+ "Cada uno pide una cerveza. Como siente que Catalina está algo incómoda por el lugar "
 				+ ", ¿qué debería hacer para remediar eso?");
 		n11212.setTipo(n11212.PROBABILIDAD);
-		n11212.setUbicacion("imagenesChicas/A20.jpg");
+		n11212.setUbicacion("/imagenesChicas/A20.jpg");
 		n11212.agregarOpcion("Oliver pide más cervezas.");
 		n11212.agregarOpcion("Oliver pide juguito de mora.");
 		n11212.setAudio("/audio/ir a tomar cerveza.wav");
@@ -247,7 +264,7 @@ public class Arbol {
 				+ "que ella inmediatamente se levantó y le pegó un puño en la cara, fue tan fuerte"
 				+ "que incluso le rompió las gafas.");
 		n112121.setTipo(n112121.TERMINAL);
-		n112121.setUbicacion("imagenesChicas/A21.jpg");
+		n112121.setUbicacion("/imagenesChicas/A21.jpg");
 		n112121.agregarOpcion("ERES UN CONQUISTADOR QUE NO SE CONOCE A SI MISMO.");
 		n112121.setAudio("/audio/pedir más cervezas.wav");
 		
@@ -259,7 +276,7 @@ public class Arbol {
 				+ "a salir con el, ya que le pareció alguien divertido. Le da un beso en la mejilla y "
 				+ "se aleja muy apenada.");
 		n112122.setTipo(n112122.TERMINAL);
-		n112122.setUbicacion("imagenesChicas/A19.jpg");
+		n112122.setUbicacion("/imagenesChicas/A19.jpg");
 		n112122.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO BUENA CONVERSACIÓN.");
 		n112122.setAudio("/audio/pedir jugo de mora.wav");
 		
@@ -277,7 +294,7 @@ public class Arbol {
 				"porque siente que tuvieron buena química. Si lo hace en ese momento, puede que no sea " + 
 				"apropiado, pero si lo hace antes de despedirse, puede que se acobarde");
 		n11221.setTipo(n11221.DECISION);
-		n11221.setUbicacion("imagenesChicas/A14.jpg");
+		n11221.setUbicacion("/imagenesChicas/A14.jpg");
 		n11221.agregarOpcion("Pedirle en ese momento una cita.");
 		n11221.agregarOpcion("Esperar a la hora de despedirse para pedirle la cita.");
 		n11221.setAudio("/audio/hace buen clima.wav");
@@ -285,7 +302,7 @@ public class Arbol {
 		//Nodo 1.1.2.2.2 Llueve
 		Nodo n11222 = new Nodo(5, "Al ver que llueve, Oliver le propone ir a comer empanadita de 1000, ya que no cuenta con presupuesto para invitarla para algo mas caro. El espera que ella acepte su invitación");
 		n11222.setTipo(n11222.PROBABILIDAD);
-		n11222.setUbicacion("imagenesChicas/A05.jpg");
+		n11222.setUbicacion("/imagenesChicas/A05.jpg");
 		n11222.agregarOpcion("Catalina acepta su invitación");
 		n11222.agregarOpcion("Catalina dice que no, que mejor hacen el plan otro día.");
 		n11222.setAudio("/audio/llueve.wav");
@@ -295,7 +312,7 @@ public class Arbol {
 				"excelente tarde a su lado. Que desea volver a salir con ella, pero no para devolverle " + 
 				"un favor de amigos sino como algo más. Catalina algo sonrojada le dice que si." + 
 				"El sueño de Oliver se hace realidad, por primera vez en su vida una chica aceptó su invitación.");
-		n112211.setUbicacion("imagenesChicas/A15.jpg");
+		n112211.setUbicacion("/imagenesChicas/A15.jpg");
 		n112211.setTipo(n112211.TERMINAL);
 		n112211.agregarOpcion("ERES ES TODO UN TÍMIDO CONQUISTADOR.");
 		n112211.setAudio("/audio/pedir la cita en el momento.wav");
@@ -303,14 +320,14 @@ public class Arbol {
 		//Nodo 1.1.2.2.1.2 Pedirle la cita al final
 		Nodo n112212 = new Nodo(6,"Mientras se dirigían a la universidad, en el semáforo de carrera 13, Oliver sintió que algo le cayó en el brazo. Era popó de paloma. Justo se había puesto debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdió la oportunidad de hacerle una nueva invitación.");
 		n112212.setTipo(n112212.TERMINAL);
-		n112212.setUbicacion("imagenesChicas/A17.jpg");
+		n112212.setUbicacion("/imagenesChicas/A17.jpg");
 		n112212.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
 		n112212.setAudio("/audio/pedir la invitacion despues.wav");
 		
 		//Nodo 1.1.2.2.2.1 Acepta ir a comer empanada
 		Nodo n112221 = new Nodo(6,"Catalina no pone problema y se dirigen a la tienda donde venden empanaditas de mil. Se sientan a hablar. Oliver disfruta muchísimo de la charla y considera que hay muy buena química entre los dos. Piden otra ronda de empanadas y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a su salsa favorita. ");
 		n112221.setTipo(n112221.PROBABILIDAD);
-		n112221.setUbicacion("imagenesChicas/A16.jpg");
+		n112221.setUbicacion("/imagenesChicas/A16.jpg");
 		n112221.agregarOpcion("Oliver le echa salsa de ajo a la empanada.");
 		n112221.agregarOpcion("Oliver decide no aderezar la empenada con salsa de ajo.");
 		n112221.setAudio("/audio/acepta ir a comer empanada.wav");
@@ -325,14 +342,14 @@ public class Arbol {
 		//Nodo 1.1.2.2.2.1.1 Le hecha salsa de ajo
 		Nodo n1122211 = new Nodo(7,"Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Cuando llega el momento en que Catalina se acerca para darle un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradó. La situación se tornó algo incómoda, por lo que terminaron la conversación, se despidieron y nada mas volvió a suceder.");
 		n1122211.setTipo(n1122211.TERMINAL);
-		n1122211.setUbicacion("imagenesChicas/A18.jpg");
+		n1122211.setUbicacion("/imagenesChicas/A18.jpg");
 		n1122211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
 		n1122211.setAudio("/audio/usar salsa de ajo.wav");
 		
 		//Nodo 1.1.2.2.2.1.2 No usa la salsa de ajo
 		Nodo n1122212 = new Nodo(7, "Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Antes de despedirse, Catalina, muy sonrojada le dice a Oliver que la pasó muy bien a su lado. Que desearía volver a salir con el, ya que le pareció alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
 		n1122212.setTipo(n1122212.TERMINAL);
-		n1122212.setUbicacion("imagenesChicas/A15.jpg");
+		n1122212.setUbicacion("/imagenesChicas/A15.jpg");
 		n1122212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN");
 		n1122212.setAudio("/audio/no usar salsa de ajo.wav");
 		
@@ -346,7 +363,7 @@ public class Arbol {
 		n12.setTipo(n12.PROBABILIDAD);
 		n12.agregarOpcion("Catalina Le agradece.");
 		n12.agregarOpcion("Catalina le agradece y le promete invitarle a algo por su ayuda.");
-		n12.setUbicacion("imagenesChicas/A09.jpg");
+		n12.setUbicacion("/imagenesChicas/A09.jpg");
 		n12.setAudio("/audio/ofrecer ayuda con la tarea.wav");
 		
 		//Nodo 1.2.1 Catalina le agradece y ya
@@ -370,7 +387,7 @@ public class Arbol {
 				+ "la conversación. Catalina responde rápidamente y finalmente ella le dice donde se "
 				+ "pueden reunir, para gastarle algo de comer. Ahora él debe decidir entre las "
 				+ "opciones que ella le dió.");
-		n1221.setUbicacion("imagenesChicas/A10.jpg");
+		n1221.setUbicacion("/imagenesChicas/A10.jpg");
 		n1221.setTipo(n1221.DECISION);
 		n1221.agregarOpcion("Ir a comer empanadita de 1000.");
 		n1221.agregarOpcion("Ir a comer helado.");
@@ -383,7 +400,7 @@ public class Arbol {
 				+ "y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a "
 				+ "su salsa favorita.");
 		n12211.setTipo(n12211.PROBABILIDAD);
-		n12211.setUbicacion("imagenesChicas/A16.jpg");
+		n12211.setUbicacion("/imagenesChicas/A16.jpg");
 		n12211.agregarOpcion("Oliver le hecha salsa de ajo a la empanada.");
 		n12211.agregarOpcion("Oliver decide no aderezar la empanada con salsa de ajo.");
 		n12211.setAudio("/audio/acepta ir a comer empanada.wav");
@@ -395,7 +412,7 @@ public class Arbol {
 				+ "situación se tornó algo incómoda, por lo que terminaron la conversación, se "
 				+ "despidieron y nada más volvio a suceder.");
 		n122111.setTipo(n122111.TERMINAL);
-		n122111.setUbicacion("imagenesChicas/A18.jpg");
+		n122111.setUbicacion("/imagenesChicas/A18.jpg");
 		n122111.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
 		n122111.setAudio("/audio/usar salsa de ajo.wav");
 		
@@ -404,7 +421,7 @@ public class Arbol {
 				+ " una gran conexión. Antes de despedirse, Catalina muy sonrojada le dice a Oliver "
 				+ "que la pasó muy bien a su lado. Que desearía volver a salir con el, ya que le "
 				+ "pareció alguien divertido. Le da un beso en la mejilla y se aleja apenada. ");
-		n122112.setUbicacion("imagenesChicas/A19.jpg");
+		n122112.setUbicacion("/imagenesChicas/A19.jpg");
 		n122112.setTipo(n122112.TERMINAL);
 		n122112.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN.");
 		n122112.setAudio("/audio/no usar salsa de ajo.wav");
@@ -422,7 +439,7 @@ public class Arbol {
 				+ "A pesar de ser ella la que invitó, Oliver tiene la posibilidad de pagar por "
 				+ "el helado, eso lo haría quedar bien y daría otra oportunidad para que se "
 				+ "reúnan.");
-		n12212.setUbicacion("imagenesChicas/A05.jpg");
+		n12212.setUbicacion("/imagenesChicas/A05.jpg");
 		n12212.setTipo(n12212.DECISION);
 		n12212.agregarOpcion("Oliver se adelanta a Catalina y paga los helados.");
 		n12212.agregarOpcion("Oliver permite que Catalina pague los helados.");
@@ -433,7 +450,7 @@ public class Arbol {
 				+ "la charla se hace más interesante y Oliver siente que es un buen momento para "
 				+ "ser sincero con sus sentimientos. ¿Cómo debería demostrarlos?");
 		n122121.setTipo(n122121.PROBABILIDAD);
-		n122121.setUbicacion("imagenesChicas/A11.jpg");
+		n122121.setUbicacion("/imagenesChicas/A11.jpg");
 		n122121.agregarOpcion("Acercarse e intentar darle un beso.");
 		n122121.agregarOpcion("Decirle: 'Oye, me gustas'.");
 		n122121.setAudio("/audio/pagar los helados primero.wav");
@@ -442,7 +459,7 @@ public class Arbol {
 		Nodo n1221211 = new Nodo (7, "Oliver se acerca cada vez más, e intenta darle un beso, ella"
 				+ " lo detiene en seco y le dice: 'Oye, no te confundas, tengo novio'. ");
 		n1221211.setTipo(n1221211.TERMINAL);
-		n1221211.setUbicacion("imagenesChicas/A12.jpg");
+		n1221211.setUbicacion("/imagenesChicas/A12.jpg");
 		n1221211.agregarOpcion("FRIENZONEADO PAPÁ");
 		n1221211.setAudio("/audio/intentar darle un beso.wav");
 		
@@ -451,7 +468,7 @@ public class Arbol {
 				+ " incómodo. Ella algo apenada le dice: 'Lo siento, pero tengo novio'.");
 		n1221212.setTipo(n1221212.TERMINAL);
 		n1221212.agregarOpcion("FRIENZONEADO PAPÁ");
-		n1221212.setUbicacion("imagenesChicas/A12.jpg");
+		n1221212.setUbicacion("/imagenesChicas/A12.jpg");
 		n1221212.setAudio("/audio/decirle que le gusta.wav");
 		
 		//Nodo 1.2.2.1.2.2 Dejar que ella pague los helados
@@ -466,7 +483,7 @@ public class Arbol {
 		//Nodo 1.2.2.1.2.2.1 Decirle que le gusta
 		Nodo n1221221 = new Nodo (7, "Oliver dice estas palabras y el momento se vuelve inmediatamente "
 				+ "incómodo. Ella algo apenada le dice: 'Lo siento, pero tengo novio'.");
-		n1221221.setUbicacion("imagenesChicas/A11.jpg");
+		n1221221.setUbicacion("/imagenesChicas/A11.jpg");
 		n1221221.setTipo(n1221221.TERMINAL);
 		n1221221.agregarOpcion("FRIENZONEADO PAPÁ.");	
 		n1221221.setAudio("/audio/decirle que le gusta.wav");
@@ -808,8 +825,7 @@ public class Arbol {
 		n21121122.setTipo(n21121122.TERMINAL);
 		n21121122.agregarOpcion("¡BIENVENIDO A LA FRIENDZONE!");
 		n21121122.setPuntaje(25);
-		n21121122.setAudio("/audio/saludarla.wav");
-		
+		n21121122.setAudio("/audio/saludarla.wav");		
 		n2112112.addpart(n21121121);
 		n2112112.addpart(n21121122);
 		
@@ -936,7 +952,7 @@ public class Arbol {
 		
 		nodo.addpart(n);
 		nodo.addpart(n0);
-		System.out.println(nodo.getPartes().get(0).getEnunciado());
+		
 	}
 	
 	public void agregarNodo(Nodo nodo) {

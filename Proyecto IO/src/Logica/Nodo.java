@@ -9,21 +9,12 @@ public class Nodo extends Componente{
 	public static String GASTO = "gasto";
 	public static String TERMINAL = "terminal";
 	
-	
-	private String audio;
-	
-	public String getAudio() {
-		return audio;
-	}
-
-	public void setAudio(String audio) {
-		this.audio = audio;
-	}
 	private double puntaje;
 	private String tipo;
 	private ArrayList<String> opciones = new ArrayList<String>();
 	private double probabilidad;
 	protected ArrayList<Componente> partes = new ArrayList<Componente>();
+	
 	
 	
 	public Nodo(int id, String enunciado) {
