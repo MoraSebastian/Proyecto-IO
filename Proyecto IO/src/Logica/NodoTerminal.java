@@ -27,5 +27,10 @@ public class NodoTerminal extends Componente{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public ArrayList<String> getOpciones() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
