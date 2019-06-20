@@ -50,6 +50,7 @@ public class Arbol {
 		n11.agregarOpcion("Sus amigos no se acercan.");
 		n11.setUbicacion("/imagenesChicas/A09.jpg");
 		n11.setAudio("/audio/Nodo11.wav");
+		n11.setPuntaje(25);
 		
 		//Nodo 1.1.1 Los amigos se acercan
 		Nodo n111 = new Nodo(3,"Por la puerta se acerca el grupo de IO de Oliver. "
@@ -60,6 +61,7 @@ public class Arbol {
 		n111.setPuntaje(-5);
 		n111.setUbicacion("/imagenesChicas/A04.jpg");
 		n111.setAudio("/audio/Nodo111.wav");
+		n111.setPuntaje(0);
 		
 		//NODO 1.1.2 Los amigos no se acercan
 			Nodo n112 = new Nodo(3,"La chica le explica exitosamente y Oliver resuelve la tarea (de nuevo)."
@@ -76,6 +78,7 @@ public class Arbol {
 		n112.agregarOpcion("Invitarla a comer bonice.");
 		n112.setUbicacion("/imagenesChicas/A02.jpg");
 //		n112.setAudio("/audio/Nodo112.wav");
+		n112.setPuntaje(100);
 		
 		//Nodo 1.1.2.1 Invitarla a tomar una cerveza
 		Nodo n1121 = new Nodo (4, "Catalina lo observa con cara extrañada y algo incómoda le responde "
@@ -88,6 +91,7 @@ public class Arbol {
 				+ "se arrepienta).");
 		n1121.setUbicacion("/imagenesChicas/A06.jpg");
 		n1121.setAudio("/audio/Nodo1121.wav");
+		n1121.setPuntaje(20);
 		
 		//Nodo 1.1.2.1.1 Pedir el numero
 		Nodo n11211 = new Nodo(5, "Catalina visiblemente aliviada le da su número a Oliver. Se despiden,"
@@ -98,6 +102,7 @@ public class Arbol {
 		n11211.agregarOpcion("Hola, ¿Cómo estás?");
 		n11211.agregarOpcion("Hola, oye, soy Oliver. ¿Cuando estarás disponible para salir?");
 		n11211.setAudio("/audio/Nodo11211.wav");
+		n11211.setPuntaje(65);
 		
 		//Nodo 1.1.2.1.1.1 Hola ¿Como estas?
 		Nodo n112111 = new Nodo (6, "Ella responde: Bien y tú? Oliver continúa la conversación con un "
@@ -109,6 +114,7 @@ public class Arbol {
 		n112111.agregarOpcion("ERES UN MATADOR CON LAS CHICAS....\n "
 				+ "PERO DE CONVERSACIONES.");
 		n112111.setAudio("/audio/Nodo112111.wav");
+		n112111.setPuntaje(10);
 		
 		//Nodo 1.1.2.1.1.2 Preguntarle cuando estara disponible
 			Nodo n112112 = new Nodo (6, "Catalina le responde diciendole la disponibilidad que tiene. Ahora"
@@ -121,6 +127,7 @@ public class Arbol {
 				+ "termina con una fecha y hora definidas para reunirse.");
 		n112112.agregarOpcion("Oliver le sugiere que vayan por el plan del bonice. Ella acepta.");
 		n112112.setAudio("/audio/Nodo112112.wav");
+		n112112.setPuntaje(90);
 		
 		// Nodo 1.1.2.1.1.2.1 Continuar con el plan inicial de la cerveza
 		Nodo n1121122 = new Nodo(7, "Oliver y Catalina se dirigen a un bar cercano a la universidad. "
@@ -131,6 +138,7 @@ public class Arbol {
 		n1121122.agregarOpcion("Oliver pide más cervezas.");
 		n1121122.agregarOpcion("Oliver pide jugo de mora.");
 		n1121122.setAudio("/audio/Nodo1121122.wav");
+		n1121122.setPuntaje(40);
 		
 		//Nodo 1.1.2.1.1.2.2 Mejor ir por un bonice
 		Nodo n1121121 = new Nodo(7, "A catalina le agrada la idea de ir a comer bonice, Oliver espera"
@@ -140,6 +148,7 @@ public class Arbol {
 		n1121121.agregarOpcion("No llueve y hace buen clima.");
 		n1121121.agregarOpcion("Cae un aguacero.");
 		n1121121.setAudio("/audio/Nodo1121121.wav");
+		n1121121.setPuntaje(60);
 		
 		//Nodo 1.1.2.1.1.2.1.1 Hace buen clima
 		Nodo n11211211 = new Nodo(8, "Oliver y Catalina salen a comer bonice, tienen una buena charla y "
@@ -152,6 +161,7 @@ public class Arbol {
 		n11211211.agregarOpcion("Pedirle en ese momento una cita.");
 		n11211211.agregarOpcion("Esperar la hora de despedirse para pedirle la cita.");
 		n11211211.setAudio("/audio/Nodo11211211.wav");
+		n11211211.setPuntaje(70);
 		
 		//Nodo 1.1.2.1.1.2.1.2 Cae un aguacero
 		Nodo n11211212 = new Nodo (8, "Al ver que llueve, Oliver le propone ir a comer empanadita de "
@@ -161,6 +171,7 @@ public class Arbol {
 		n11211212.agregarOpcion("Catalina acepta su invitación.");
 		n11211212.agregarOpcion("Catalina dice que no, que mejor hacen el plan para otro día.");
 		n11211212.setAudio("/audio/Nodo11211212.wav");
+		n11211212.setPuntaje(30);
 		
 		//Nodo 1.1.2.1.1.2.1.2.1 Catalina acepta la invitacion
 		Nodo n112112121 = new Nodo(9, "Catalina no pone problema y se dirigen a la tienda donde venden "
@@ -173,6 +184,7 @@ public class Arbol {
 		n112112121.agregarOpcion("Oliver le echa salsa de ajo a la empanada.");
 		n112112121.agregarOpcion("Oliver decide no aderezar la empanada con salsa de ajo.");
 		n112112121.setAudio("/audio/Nodo112112121.wav");
+		n112112121.setPuntaje(80);
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.1 Echarle salsa de ajo a la empanada
 		Nodo n1121121211 = new Nodo(9, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
@@ -184,6 +196,7 @@ public class Arbol {
 		n1121121211.setUbicacion("/imagenesChicas/A18.jpg");
 		n1121121211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO.");
 		n1121121211.setAudio("/audio/Nodo1121121211.wav");
+		n1121121211.setPuntaje(0);
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.2 No usar la salsa de ajo
 		Nodo n1121121212 = new Nodo(10, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
@@ -194,12 +207,14 @@ public class Arbol {
 		n1121121212.setUbicacion("/imagenesChicas/A19.jpg");
 		n1121121212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN.");
 		n1121121212.setAudio("/audio/Nodo1121121212.wav");
+		n1121121212.setPuntaje(100);
 		
 		//Nodo 1.1.2.1.1.2.1.2.2 Catalina dice que mejor para otro dia 
 		Nodo n112112122 = new Nodo(9, "Durante el mes, en Bogotá no dejó de llover. Oliver se quedó esperando...");
 		n112112122.setTipo(n112112122.TERMINAL);
 		n112112122.agregarOpcion("MUY DE MALAS HERMANO.");
 		n112112122.setAudio("/audio/Nodo112112122.wav");
+		n112112122.setPuntaje(0);
 		
 		//Nodo 1.1.2.1.1.2.1.1.1 Pedirle la cita  --------------    ----------------
 		Nodo n112112111 = new Nodo(9, "En ese momento Oliver mira a Catalina a los ojos y le dice que pasó "
@@ -211,6 +226,7 @@ public class Arbol {
 		n112112111.setUbicacion("/imagenesChicas/A15.jpg");
 		n112112111.agregarOpcion("ERES TODO UN CONQUISTADOR.");
 		n112112111.setAudio("/audio/Nodo112112111.wav");
+		n112112111.setPuntaje(100);
 		
 		//Nodo 1.1.2.1.1.2.1.1.2 Esperar a la hora de despedida para pedirle la cita ---------  ----
 		Nodo n112112112 = new Nodo(9, "Mientras se dirigían a la universidad, en el semáforo de la carrera 13,"
@@ -222,6 +238,7 @@ public class Arbol {
 		n112112112.setUbicacion("/imagenesChicas/A17.jpg");
 		n112112112.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE. ");
 		n112112112.setAudio("/audio/Nodo112112112.wav");
+		n112112112.setPuntaje(10);
 		
 
 		//Nodo 1.1.2.1.1.2.2.1 Pedir más cervezas
@@ -234,6 +251,7 @@ public class Arbol {
 		n11211221.setUbicacion("/imagenesChicas/A21.jpg");
 		n11211221.agregarOpcion("ERES UN CONQUISTADOR QUE NO SE CONOCE A SI MISMO.");
 		n11211221.setAudio("/audio/pedir más cervezas.wav");
+		n11211221.setPuntaje(0);
 		
 		//Nodo 1.1.2.1.1.2.2.2 Pedir jugo de mora
 		Nodo n11211222 = new Nodo (8, "El jugo de mora fue una buena idea. Le hizo gracia a Catalina, ya "
@@ -246,6 +264,7 @@ public class Arbol {
 		n11211222.setUbicacion("/imagenesChicas/A19.jpg");
 		n11211222.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO UNA BUENA CONVERSACIÓN.");
 		n11211222.setAudio("/audio/pedir jugo de mora.wav");
+		n11211222.setPuntaje(100);
 		
 		//Nodo 1.1.2.1.2 Insistir en ir a tomar la cerveza
 		Nodo n11212 = new Nodo (5, "Oliver y Catalina se dirigen a un bar cercano a la universidad. "
@@ -256,6 +275,7 @@ public class Arbol {
 		n11212.agregarOpcion("Oliver pide más cervezas.");
 		n11212.agregarOpcion("Oliver pide juguito de mora.");
 		n11212.setAudio("/audio/ir a tomar cerveza.wav");
+		n11212.setPuntaje(35);
 		
 		//Nodo 1.1.2.1.2.1 Pedir más cervezas
 		Nodo n112121 = new Nodo (6, "Es la peor decisión que Oliver pudo haber tomado en su vida. "
@@ -267,6 +287,7 @@ public class Arbol {
 		n112121.setUbicacion("/imagenesChicas/A21.jpg");
 		n112121.agregarOpcion("ERES UN CONQUISTADOR QUE NO SE CONOCE A SI MISMO.");
 		n112121.setAudio("/audio/pedir más cervezas.wav");
+		n112121.setPuntaje(0);
 		
 		//Nodo 1.1.2.1.2.2 Pedir jugo de mora.
 		Nodo n112122 = new Nodo(6, "El jugo de mora fue una buena idea. Le hizo gracia a Catalina, ya que "
@@ -279,6 +300,7 @@ public class Arbol {
 		n112122.setUbicacion("/imagenesChicas/A19.jpg");
 		n112122.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO BUENA CONVERSACIÓN.");
 		n112122.setAudio("/audio/pedir jugo de mora.wav");
+		n112122.setPuntaje(100);
 		
 		//Nodo 1.1.2.2 Invitarla a comer Bonice
 		Nodo n1122 = new Nodo(4,"A Catalina le agrada la idea de ir a comer bonice, Oliver espera que haga un buen clima porque el bonice solo es rico cuando hace calor.");
@@ -286,6 +308,7 @@ public class Arbol {
 		n1122.agregarOpcion("No llueve y hace buen clima.");
 		n1122.agregarOpcion("Cae un aguacero.");
 		n1122.setAudio("/audio/ir a comer bonice.wav");
+		n1122.setPuntaje(80);
 		
 		
 		//Nodo 1.1.2.2.1 No llueve
@@ -298,6 +321,7 @@ public class Arbol {
 		n11221.agregarOpcion("Pedirle en ese momento una cita.");
 		n11221.agregarOpcion("Esperar a la hora de despedirse para pedirle la cita.");
 		n11221.setAudio("/audio/hace buen clima.wav");
+		n11221.setPuntaje(70);
 		
 		//Nodo 1.1.2.2.2 Llueve
 		Nodo n11222 = new Nodo(5, "Al ver que llueve, Oliver le propone ir a comer empanadita de 1000, ya que no cuenta con presupuesto para invitarla para algo mas caro. El espera que ella acepte su invitación");
@@ -306,6 +330,7 @@ public class Arbol {
 		n11222.agregarOpcion("Catalina acepta su invitación");
 		n11222.agregarOpcion("Catalina dice que no, que mejor hacen el plan otro día.");
 		n11222.setAudio("/audio/llueve.wav");
+		n11222.setPuntaje(30);
 		
 		//Nodo 1.1.2.2.1.1 Pedirle la cita en ese momento
 		Nodo n112211 = new Nodo(6,"En ese momento Oliver mira a Catalina a los ojos y le dice que pasó una " + 
@@ -316,6 +341,7 @@ public class Arbol {
 		n112211.setTipo(n112211.TERMINAL);
 		n112211.agregarOpcion("ERES ES TODO UN TÍMIDO CONQUISTADOR.");
 		n112211.setAudio("/audio/pedir la cita en el momento.wav");
+		n112211.setPuntaje(100);
 		
 		//Nodo 1.1.2.2.1.2 Pedirle la cita al final
 		Nodo n112212 = new Nodo(6,"Mientras se dirigían a la universidad, en el semáforo de carrera 13, Oliver sintió que algo le cayó en el brazo. Era popó de paloma. Justo se había puesto debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdió la oportunidad de hacerle una nueva invitación.");
@@ -323,6 +349,7 @@ public class Arbol {
 		n112212.setUbicacion("/imagenesChicas/A17.jpg");
 		n112212.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
 		n112212.setAudio("/audio/pedir la invitacion despues.wav");
+		n112212.setPuntaje(0);
 		
 		//Nodo 1.1.2.2.2.1 Acepta ir a comer empanada
 		Nodo n112221 = new Nodo(6,"Catalina no pone problema y se dirigen a la tienda donde venden empanaditas de mil. Se sientan a hablar. Oliver disfruta muchísimo de la charla y considera que hay muy buena química entre los dos. Piden otra ronda de empanadas y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a su salsa favorita. ");
@@ -331,6 +358,7 @@ public class Arbol {
 		n112221.agregarOpcion("Oliver le echa salsa de ajo a la empanada.");
 		n112221.agregarOpcion("Oliver decide no aderezar la empenada con salsa de ajo.");
 		n112221.setAudio("/audio/acepta ir a comer empanada.wav");
+		n112221.setPuntaje(80);
 		
 		
 		//Nodo 1.1.2.2.2.2 Espera a otro día
@@ -338,6 +366,7 @@ public class Arbol {
 		n112222.setTipo(n112222.TERMINAL);
 		n112222.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
 		n112222.setAudio("/audio/espera a otro dia.wav");
+		n112222.setPuntaje(0);
 
 		//Nodo 1.1.2.2.2.1.1 Le hecha salsa de ajo
 		Nodo n1122211 = new Nodo(7,"Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Cuando llega el momento en que Catalina se acerca para darle un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradó. La situación se tornó algo incómoda, por lo que terminaron la conversación, se despidieron y nada mas volvió a suceder.");
@@ -345,6 +374,7 @@ public class Arbol {
 		n1122211.setUbicacion("/imagenesChicas/A18.jpg");
 		n1122211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
 		n1122211.setAudio("/audio/usar salsa de ajo.wav");
+		n1122211.setPuntaje(0);
 		
 		//Nodo 1.1.2.2.2.1.2 No usa la salsa de ajo
 		Nodo n1122212 = new Nodo(7, "Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexión. Antes de despedirse, Catalina, muy sonrojada le dice a Oliver que la pasó muy bien a su lado. Que desearía volver a salir con el, ya que le pareció alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
@@ -352,7 +382,7 @@ public class Arbol {
 		n1122212.setUbicacion("/imagenesChicas/A15.jpg");
 		n1122212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN");
 		n1122212.setAudio("/audio/no usar salsa de ajo.wav");
-		
+		n1122212.setPuntaje(100);
 		
 		//Nodo 1.2 Ofrecer ayuda con la tarea
 		Nodo n12 = new Nodo(2, "Ella acepta ser ayudada. Al parecer tenía problemas en resolver el"
@@ -365,12 +395,14 @@ public class Arbol {
 		n12.agregarOpcion("Catalina le agradece y le promete invitarle a algo por su ayuda.");
 		n12.setUbicacion("/imagenesChicas/A09.jpg");
 		n12.setAudio("/audio/ofrecer ayuda con la tarea.wav");
+		n12.setPuntaje(75);
 		
 		//Nodo 1.2.1 Catalina le agradece y ya
 		Nodo n121 = new Nodo (3, "Y esa fue la única y última vez que Oliver habló con Catalina.");
 		n121.setTipo(n121.TERMINAL);
 		n121.agregarOpcion("SER AMABLE NO SIEMPRE ES SUFICIENTE.");
 		n121.setAudio("/audio/le agradece y ya.wav");
+		n121.setPuntaje(0);
 		
 		//Nodo 1.2.2 Le agradece y le invita a algo
 		Nodo n122 = new Nodo (3, "Oliver se sorprende de la facilidad con la que consiguió aquella"
@@ -381,6 +413,7 @@ public class Arbol {
 		n122.agregarOpcion("Oliver decide escribirle primero.");
 		n122.agregarOpcion("Oliver esperará hasta que ella se comunique.");
 		n122.setAudio("/audio/le agradece y le invita algo.wav");
+		n122.setPuntaje(100);
 		
 		//Nodo 1.2.2.1 Escribirle primero
 		Nodo n1221 = new Nodo (4, "Oliver prefiere no arriesgarse y da la iniciativa para iniciar "
@@ -392,6 +425,7 @@ public class Arbol {
 		n1221.agregarOpcion("Ir a comer empanadita de 1000.");
 		n1221.agregarOpcion("Ir a comer helado.");
 		n1221.setAudio("/audio/escribirle primero.wav");
+		n1221.setPuntaje(100);
 		
 		//Nodo 1.2.2.1.1 Empanada de mil
 		Nodo n12211 = new Nodo (5, "Catalina no pone problema y se dirigen a la tienda donde venden "
@@ -404,6 +438,7 @@ public class Arbol {
 		n12211.agregarOpcion("Oliver le hecha salsa de ajo a la empanada.");
 		n12211.agregarOpcion("Oliver decide no aderezar la empanada con salsa de ajo.");
 		n12211.setAudio("/audio/acepta ir a comer empanada.wav");
+		n12211.setPuntaje(40);
 		
 		//Nodo 1.2.2.1.1.1 Usar salsa de ajo
 		Nodo n122111 = new Nodo (6, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
@@ -415,6 +450,7 @@ public class Arbol {
 		n122111.setUbicacion("/imagenesChicas/A18.jpg");
 		n122111.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
 		n122111.setAudio("/audio/usar salsa de ajo.wav");
+		n122111.setPuntaje(0);
 		
 		//Nodo 1.2.2.1.1.2 No usar salsa de ajo
 		Nodo n122112 = new Nodo (6	, "Oliver y X continuan hablando y coqueteando por un rato, tienen"
@@ -425,11 +461,13 @@ public class Arbol {
 		n122112.setTipo(n122112.TERMINAL);
 		n122112.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN.");
 		n122112.setAudio("/audio/no usar salsa de ajo.wav");
+		n122112.setPuntaje(100);
 		
 		//Nodo 1.2.2.2 Esperar a que ella se comunique
 		Nodo n1222 = new Nodo (4, "ESPERÓ, ESPERÓ Y SE QUEDO ESPERANDO ....");
 		n1222.setTipo(n1222.TERMINAL);
 		n1222.setAudio("/audio/esperar que ella se comunique.wav");
+		n1222.setPuntaje(0);
 		
 		//Nodo 1.2.2.1.2 Ir a comer helado
 		Nodo n12212 = new Nodo (5, "Llegó el día esperado. Le pareció verla radiante ese día, no "
@@ -444,6 +482,7 @@ public class Arbol {
 		n12212.agregarOpcion("Oliver se adelanta a Catalina y paga los helados.");
 		n12212.agregarOpcion("Oliver permite que Catalina pague los helados.");
 		n12212.setAudio("/audio/ir a comer helado.wav");
+		n12212.setPuntaje(60);
 		
 		//Nodo 1.2.2.1.2.1 Pagar los helados primero
 		Nodo n122121 = new Nodo(6, "Catalina le mira agradecida y se sientan a comer el helado. Cada vez "
@@ -454,6 +493,7 @@ public class Arbol {
 		n122121.agregarOpcion("Acercarse e intentar darle un beso.");
 		n122121.agregarOpcion("Decirle: 'Oye, me gustas'.");
 		n122121.setAudio("/audio/pagar los helados primero.wav");
+		n122121.setPuntaje(80);
 		
 		//Nodo 1.2.2.1.2.1.1 Intentar darle un beso
 		Nodo n1221211 = new Nodo (7, "Oliver se acerca cada vez más, e intenta darle un beso, ella"
@@ -462,6 +502,7 @@ public class Arbol {
 		n1221211.setUbicacion("/imagenesChicas/A12.jpg");
 		n1221211.agregarOpcion("FRIENZONEADO PAPÁ");
 		n1221211.setAudio("/audio/intentar darle un beso.wav");
+		n1221211.setPuntaje(0);
 		
 		//Nodo 1.2.2.1.2.1.2 Decirle que le gusta
 		Nodo n1221212 = new Nodo (7, "Oliver dice estas palabras y el momento se vuelve inmediatamente"
@@ -470,6 +511,7 @@ public class Arbol {
 		n1221212.agregarOpcion("FRIENZONEADO PAPÁ");
 		n1221212.setUbicacion("/imagenesChicas/A12.jpg");
 		n1221212.setAudio("/audio/decirle que le gusta.wav");
+		n1221212.setPuntaje(25);
 		
 		//Nodo 1.2.2.1.2.2 Dejar que ella pague los helados
 		Nodo n122122 = new Nodo (6, "Ambos se sientan a comer helado. Cada vez la charla se hace "
@@ -479,6 +521,7 @@ public class Arbol {
 		n122122.agregarOpcion("Decirle: 'Oye, me gustas'.");
 		n122122.agregarOpcion("No decirle nada.");
 		n122122.setAudio("/audio/dejar que ella pague.wav");
+		n122122.setPuntaje(20);
 		
 		//Nodo 1.2.2.1.2.2.1 Decirle que le gusta
 		Nodo n1221221 = new Nodo (7, "Oliver dice estas palabras y el momento se vuelve inmediatamente "
@@ -487,6 +530,7 @@ public class Arbol {
 		n1221221.setTipo(n1221221.TERMINAL);
 		n1221221.agregarOpcion("FRIENZONEADO PAPÁ.");	
 		n1221221.setAudio("/audio/decirle que le gusta.wav");
+		n1221221.setPuntaje(25);
 		
 		//Nodo 1.2.2.1.2.2.2 No decirle nada
 		Nodo n1221222= new Nodo (7, "Estuvieron hablando por un buen rato hasta que terminaron el helado"
@@ -495,6 +539,7 @@ public class Arbol {
 		n1221222.setTipo(n1221222.TERMINAL);
 		n1221222.agregarOpcion("USTED NO APRENDE, ¿VERDAD?.");
 		n1221222.setAudio("/audio/no decirle nada.wav");
+		n1221222.setPuntaje(0);
 		
 		//Inicio historia de Camilo
 		Nodo n0 = new Nodo(0,"En ese momento Oliver se da cuenta que una de las chicas se queda mirandolo fijamente, ¿qué debería hacer?");
