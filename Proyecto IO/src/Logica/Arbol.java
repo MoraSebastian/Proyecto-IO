@@ -584,7 +584,7 @@ public class Arbol {
 		n21111.agregarOpcion("Acompañarla hasta que llegue a la casa para asegurarse que llegue bien.");
 		n21111.agregarOpcion("Acompañarla al transporte que ella coja y decirle que espera verse en otra ocasión.");
 		n21111.setPuntaje(75);
-		n21111.setAudio("/audio/decide no ir por su hermana.wav");
+		n21111.setAudio("/audio/continuar con la cita.wav");
 		
 		//Nodo 2.1.1.1.2 Decide cancelar la cita
 		Nodo n21112 = new Nodo(5,"Daniela acepta y deciden verse al otro día, en lo cual ambos estaban vestido informalmente, esta vez no fueron a comer helado fueron a escuchar cuenteros, en la tarde ambos la pasan súper bien, Daniela se sintió bien al estar con él, Oliver la invita a caminar un rato para conocerse en el trayecto él le pregunta que si tiene  novio,\n" + 
