@@ -5,15 +5,20 @@ import javax.swing.SwingConstants;
 
 import Logica.Arbol;
 import Logica.Nodo;
+import Logica.Puntaje;
+import Logica.Reproductor;
 
 import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JInternalFrame;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JTextPane;
 import javax.swing.JEditorPane;
 import java.awt.SystemColor;
@@ -39,17 +44,21 @@ public class PanelJuego extends JPanel implements ActionListener {
 	JLabel lblTipoopcion ;
 	JLabel lblContenedorpreguntas;
 	JLabel lblContenedorjuego;
+	JLabel lblIMG;
 	JLabel lblPanelsuperior;
 	JButton btnProbabilidad;
-	Reproductor repro = new Reproductor();
+	String usuario;
 	//Arbol que llega (Completo)
 	Arbol arbol;
-	
+	JButton btnPuntajes;
 	//Arbol que sale
 	Arbol salida = new Arbol();
 	double puntaje = 0;
-	
+	Reproductor repro = new Reproductor();
 	private void cargar() {
+		btnBotondecision.setText("");
+		btnBotondecision2.setText("");
+		lblPuntaje.setText(String.valueOf(Integer.valueOf(lblPuntaje.getText())+(int)arbol.getReferencia().getPuntaje()));
 		switch(arbol.getReferencia().getTipo()) {
 		case "probabilidad":
 			btnProbabilidad.setVisible(true);
@@ -65,21 +74,33 @@ public class PanelJuego extends JPanel implements ActionListener {
 			lblTipoopcion.setText("Decision");
 			lblTipoopcion.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 31.png")));
 			break;
+		case "terminal":
+			btnBotondecision.setEnabled(false);
+			btnBotondecision2.setEnabled(false);
+			btnPuntajes.setVisible(true);
+			break;
 		}
 		
 		textoHistoria.setText(arbol.getReferencia().getEnunciado());
+		textoHistoria.setVisible(false);
+		if(arbol.getReferencia().getUbicacion()!=null) {
+			ImageIcon fot = new ImageIcon(PanelJuego.class.getResource(arbol.getReferencia().getUbicacion()));
+			Icon icono = new ImageIcon(fot.getImage().getScaledInstance(lblIMG.getWidth(), lblIMG.getHeight(), Image.SCALE_DEFAULT));
+			lblIMG.setIcon(icono);
+			this.repaint();
+		}
+		lblIMG.setVisible(true);
+		btnIzquierda.setEnabled(false);
 		panel.updateUI();
 		btnBotondecision.setText(arbol.getReferencia().getOpciones().get(0));
 		if(arbol.getReferencia().getOpciones().size()>1) {
 			btnBotondecision2.setText(arbol.getReferencia().getOpciones().get(1));
 		}
-		//ACA TIENE QUE DESCOMENTARIAR CUANDO TENGA ESO LISTO
-	
 		
-		//repro.Reproducir(arbol.getReferencia().getAudio());	
 	}
 	
-	public PanelJuego(Arbol arbol) {
+	public PanelJuego(Arbol arbol,String usuario) {
+		this.usuario = usuario;
 		this.arbol = arbol;
 		construirPanel();
 		salida.vaciar();
@@ -109,7 +130,21 @@ public class PanelJuego extends JPanel implements ActionListener {
 		internalFrameSinopsis.getContentPane().add(lblAquiVaLa);
 		internalFrameSinopsis.setVisible(true);
 		
-		
+		btnPuntajes = new JButton("");
+		btnPuntajes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				accionPuntajes();
+			}
+		});
+		btnPuntajes.setSelectedIcon(null);
+		btnPuntajes.setPressedIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 54.png")));
+		btnPuntajes.setIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 53.png")));
+		btnPuntajes.setOpaque(false);
+		btnPuntajes.setContentAreaFilled(false);
+		btnPuntajes.setBorderPainted(false);
+		btnPuntajes.setVisible(false);
+		btnPuntajes.setBounds(300, 500, 200, 100);
+		panel.add(btnPuntajes);
 		
 		btnBotondecision2 = new JButton("");
 		btnBotondecision2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -157,6 +192,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 		btnDerecho.setBounds(1050, 543, 68, 61);
 		btnDerecho.setBorderPainted(false);
 		btnDerecho.setOpaque(false);
+		btnDerecho.setActionCommand("derecho");
+		btnDerecho.addActionListener(this);
 		btnDerecho.setContentAreaFilled(false);
 		panel.add(btnDerecho);
 		
@@ -165,6 +202,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 		btnIzquierda.setBounds(972, 538, 68, 61);
 		btnIzquierda.setBorderPainted(false);
 		btnIzquierda.setOpaque(false);
+		btnIzquierda.setActionCommand("izquierdo");
+		btnIzquierda.addActionListener(this);
 		btnIzquierda.setContentAreaFilled(false);
 		panel.add(btnIzquierda);
 		
@@ -176,7 +215,11 @@ public class PanelJuego extends JPanel implements ActionListener {
 		textoHistoria.setBounds(180, 211, 921, 334);
 		panel.add(textoHistoria);
 		
-		lblPuntaje = new JLabel("puntaje");
+		lblIMG = new JLabel();
+		lblIMG.setBounds(180, 211, 921, 334);
+		panel.add(lblIMG);
+		
+		lblPuntaje = new JLabel("0");
 		lblPuntaje.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPuntaje.setFont(new Font("Agency FB", Font.PLAIN, 43));
 		lblPuntaje.setBounds(929, 46, 266, 72);
@@ -225,18 +268,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 			puntaje += arbol.getReferencia().getPuntaje();
 			
 			//System.out.println(arbol.getReferencia().getEnunciado());
-			if(arbol.getReferencia().getTipo().equals("terminal")) {
-				EventQueue.invokeLater(new Runnable() { public void run() { 
-					try { 
-						FrameArbol frame = new FrameArbol(arbol); 
-						frame.setVisible(true);
-						lblPuntaje.setText("Puntaje: "+puntaje);
-					} catch (Exception e){
-						e.printStackTrace(); 
-					} } });
-			}else {
-				cargar();
-			}
+			cargar();
 		break;
 		case "btn2":
 			arbol.getReferencia().setDecision(1);
@@ -247,18 +279,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 			System.out.println(arbol.getReferencia().getEnunciado());
 			puntaje += arbol.getReferencia().getPuntaje();
 			
-			if(arbol.getReferencia().getTipo().equals("terminal")) {
-				EventQueue.invokeLater(new Runnable() { public void run() { 
-					try { 
-						FrameArbol frame = new FrameArbol(arbol); 
-						frame.setVisible(true);
-						lblPuntaje.setText("Puntaje: "+puntaje);
-					} catch (Exception e){
-						e.printStackTrace(); 
-					} } });
-			}else {
-				cargar();
-			}
+			cargar();
 			
 		break;
 		case "probabilidad":
@@ -270,9 +291,32 @@ public class PanelJuego extends JPanel implements ActionListener {
 				btnBotondecision2.setEnabled(true);
 			}
 			break;
+		case "derecho":
+			lblIMG.setVisible(false);
+			textoHistoria.setVisible(true);
+			btnIzquierda.setEnabled(true);
+			btnDerecho.setEnabled(false);
+			repro.Reproducir(arbol.getReferencia().getAudio());
+			break;
+		case "izquierdo":
+			lblIMG.setVisible(true);
+			textoHistoria.setVisible(false);
+			btnIzquierda.setEnabled(false);
+			btnDerecho.setEnabled(true);
+			break;
 		}
 		
 	}
 	
+	public void accionPuntajes(){
+		Puntaje p = new Puntaje();
+		p.setNombre(usuario);
+		p.setPuntaje(lblPuntaje.getText());
+		removeAll();
+		JPanel panelP = new PanelPuntaje(p,arbol);
+		panelP.setBounds(0, 0, 1300, 828);
+		add(panelP);
+		repaint();
+	}
 	
 }

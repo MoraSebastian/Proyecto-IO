@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
@@ -15,6 +17,7 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.MouseMotionAdapter;
+import java.io.IOException;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.ActionListener;
@@ -41,7 +44,12 @@ public class PantallaInicio {
 		JButton btnJugar = new JButton("");
 		btnJugar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				accionJugar();
+				try {
+					accionJugar(txtNombreusuario.getText());
+				} catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 		
@@ -92,14 +100,7 @@ public class PantallaInicio {
 				accionDecision();
 			}
 		});
-		btnDecisiones.setIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 51.png")));
-		btnDecisiones.setBounds(328, 706, 203, 55);
-		btnDecisiones.setBorderPainted(false);
-		btnDecisiones.setPressedIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 52.png")));
-		btnDecisiones.setOpaque(false);
-		btnDecisiones.setBorderPainted(false);
-		btnDecisiones.setContentAreaFilled(false);
-		frame.getContentPane().add(btnDecisiones);
+		
 		
 		txtNombreusuario = new JTextField();
 		txtNombreusuario.setFont(new Font("Agency FB", Font.PLAIN, 20));
@@ -132,9 +133,9 @@ public class PantallaInicio {
 		
 	}
 	
-	public void accionJugar(){
+	public void accionJugar(String usuario) throws LineUnavailableException, IOException, UnsupportedAudioFileException{
 		frame.getContentPane().removeAll();
-		JPanel panelJ = new PanelJuego(this.arbol);
+		JPanel panelJ = new PanelJuego(this.arbol,usuario);
 		panelJ.setBounds(0, 0, 1300, 828);
 		frame.add(panelJ);
 		frame.repaint();
