@@ -69,9 +69,9 @@ public class PanelJuego extends JPanel implements ActionListener {
 		
 		textoHistoria.setText(arbol.getReferencia().getEnunciado());
 		panel.updateUI();
-		btnBotondecision.setText("<html>"+arbol.getReferencia().getOpciones().get(0)+"<html>");
+		btnBotondecision.setText(arbol.getReferencia().getOpciones().get(0));
 		if(arbol.getReferencia().getOpciones().size()>1) {
-			btnBotondecision2.setText("<html>"+arbol.getReferencia().getOpciones().get(1)+"<html>");
+			btnBotondecision2.setText(arbol.getReferencia().getOpciones().get(1));
 		}
 	}
 	
@@ -92,17 +92,20 @@ public class PanelJuego extends JPanel implements ActionListener {
 		panel.setLayout(null);
 		
 		internalFrameSinopsis = new JInternalFrame("Sinopsis");
-		internalFrameSinopsis.setBounds(137, 147, 1093, 700);
+		internalFrameSinopsis.setBounds(137, 147, 1193, 700);
 		panel.add(internalFrameSinopsis);
 		internalFrameSinopsis.setFrameIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 38.png")));
 		internalFrameSinopsis.setClosable(true);
 		internalFrameSinopsis.setVisible(false);
 		internalFrameSinopsis.getContentPane().setLayout(null);
 		
-		lblAquiVaLa = new JLabel("aqui va la sinopsis");
-		lblAquiVaLa.setBounds(172, 67, 185, 14);
+		lblAquiVaLa = new JLabel();
+		lblAquiVaLa.setBounds(0,0,1185,700);
+		lblAquiVaLa.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Sinopsis-04.png")));
 		internalFrameSinopsis.getContentPane().add(lblAquiVaLa);
 		internalFrameSinopsis.setVisible(true);
+		
+		
 		
 		btnBotondecision2 = new JButton("");
 		btnBotondecision2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

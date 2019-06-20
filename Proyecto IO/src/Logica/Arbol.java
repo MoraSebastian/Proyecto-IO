@@ -13,25 +13,25 @@ public class Arbol {
 	public void construirArbol() {
 		
 			//Nodo 0
-		nodo = new Nodo(0," Es la 1:30 de la tarde, se acerca la clase de IO3 morita está bajando "
+		nodo = new Nodo(0," Es la 1:30 de la tarde, se acerca la clase de IO3, Oliver está bajando "
 				+ "por la caracola del sabio caldas, se puede percatar que hay dos chicas lindas "
-				+ "que están riendo en una esquina, Morita piensa que podría hablarles y aplicar todo lo aprendido, "
+				+ "que están riendo en una esquina, Oliver piensa que podría hablarles y aplicar todo lo aprendido, "
 				+ "pero también podría ir a clase y hablar con la chica que le gusta desde hace tanto: ¿qué debería hacer?");
 		nodo.setTipo(nodo.DECISION);
 		nodo.agregarOpcion("Ir a clase de IO3");
 		nodo.agregarOpcion("Hablar con las chicas");
 		
 		//Inicio Historia de Tefa
-		Nodo n = new Nodo(0,"Morita ya se propuso "
+		Nodo n = new Nodo(0,"Oliver ya se propuso "
 				+ "a conquistar aquella chica solitaria, tímida y misteriosa que siempre le dió curiosidad. "
 				+ "Necesita buscar una excusa para iniciar una conversación ¿Qué hará?");
 		n.setTipo(nodo.DECISION);
 		n.agregarOpcion("Preguntarle por la tarea que hay para la clase.");
 		
 		//Nodo 1 Acercarse a la chica para saber que hacer
-		Nodo n1 = new Nodo(1,"Morita se acerca a la chica y le pregunta qué había para hoy. "
+		Nodo n1 = new Nodo(1,"Oliver se acerca a la chica y le pregunta qué había para hoy. "
 				+ "Ella se voltea hacia él y le dice que hoy es	la entrega del ejercicio de árboles de decisión"
-				+ " ¿Cómo puede Morita continuar la conversación?");
+				+ " ¿Cómo puede Oliver continuar la conversación?");
 		n1.setTipo(n1.DECISION);
 		n1.agregarOpcion("Pedirle ayuda con la tarea (aunque ya la tienes hecha)");
 		n1.agregarOpcion("Ofrecerle ayuda con la tarea");
@@ -39,31 +39,32 @@ public class Arbol {
 		
 		
 		//Nodo 1.1 Pedir ayuda con la tarea
-		Nodo n11 = new  Nodo(2,"Ella acepta ayudarlo y Morita se sienta a su lado para que le explique lo que no entiende."
-				+ " A lo lejos divisa a su grupo de amigos, espera que no se acercen  a arruinar la oportunidad.");
+		Nodo n11 = new  Nodo(2,"Ella acepta ayudarlo y Oliver se sienta a su lado para que le explique lo que no entiende."
+				+ " A lo lejos divisa a su grupo de amigos, espera que no se acerquen  a arruinar la oportunidad.");
 		n11.setTipo(n11.PROBABILIDAD);
 		n11.agregarOpcion("Sus amigos  se acercan.");
 		n11.agregarOpcion("Sus amigos no se acercan.");
 		
 		
 		//Nodo 1.1.1 Los amigos se acercan
-		Nodo n111 = new Nodo(3,"Por la puerta se acerca el grupo de IO de Morita. "
+		Nodo n111 = new Nodo(3,"Por la puerta se acerca el grupo de IO de Oliver. "
 				+ "Uno de ellos le dice: 'Parce,  páseme la tarea que me dijo que ya la tenía."
-				+ "La chica se voltea y mira hacia Morita con cara de enojo por haberla echo perder el tiempo, se va.");
+				+ "La chica se voltea y mira hacia Oliver con cara de enojo por haberla echo perder el tiempo, se va.");
 		n111.setTipo(n111.TERMINAL);
+		n111.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
 		n111.setPuntaje(-5);
 		
 		
 		//NODO 1.1.2 Los amigos no se acercan
-		Nodo n112 = new Nodo(3,"La chica le explica exitosamente y Morita resuelve la tarea (de nuevo)."
-				+ "Antes de que la clase empiece, Morita le pregunta su nombre a lo que ella le " + 
-				"dice que es Catalina. Morita le dice: \"Oye, muchas gracias, te debo una. La próxima te" + 
-				"invito a algo, por el favor.\"" + 
-				"\n" + 
-				"Pasó una semana, las siguientes ocasiones en que la encontraba, la saludaba. " + 
-				"Necesitaba una oportunidad para hacerle la invitación. Aquel momento llegó, se " + 
-				"encontraba sola leyendo. Morita planea acercarse, pero debe tener claro que tipo " + 
-				"de invitación hacerle para que ella acepte.");
+			Nodo n112 = new Nodo(3,"La chica le explica exitosamente y Oliver resuelve la tarea (de nuevo)."
+					+ "Antes de que la clase empiece, Oliver le pregunta su nombre a lo que ella le " + 
+					"dice que es Catalina. Morita le dice: \"Oye, muchas gracias, te debo una. La próxima te" + 
+					"invito a algo, por el favor.\"" + 
+					"\n" + 
+					"Pasó una semana, las siguientes ocasiones en que la encontraba, la saludaba. " + 
+					"Necesitaba una oportunidad para hacerle la invitación. Aquel momento llegó, se " + 
+					"encontraba sola leyendo. Oliver planea acercarse, pero debe tener claro que tipo " + 
+					"de invitación hacerle para que ella acepte.");
 		n112.setTipo(n112.DECISION);
 		n112.agregarOpcion("Invitarla a tomar cerveza");
 		n112.agregarOpcion("Invitarla a comer bonice.");
@@ -81,8 +82,8 @@ public class Arbol {
 		
 		
 		//Nodo 1.1.2.1.1 Pedir el numero
-		Nodo n11211 = new Nodo(5, "Catalina visiblemente aliviada le da su número a Morita. Se despiden,"
-				+ " pero Morita está contento por haber conseguido su número, ya es un gran avance. Llega "
+		Nodo n11211 = new Nodo(5, "Catalina visiblemente aliviada le da su número a Oliver. Se despiden,"
+				+ " pero Oliver está contento por haber conseguido su número, ya es un gran avance. Llega "
 				+ "por la tarde a su hogar y se dispone a escribirle. ¿Cómo debería empezar la "
 				+ "conversación?");
 		n11211.setTipo(n11211.DECISION);
@@ -90,42 +91,42 @@ public class Arbol {
 		n11211.agregarOpcion("Hola, oye, soy Morita. ¿Cuando estarás disponible para salir?");
 		
 		//Nodo 1.1.2.1.1.1 Hola ¿Como estas?
-		Nodo n112111 = new Nodo (6, "Ella responde: Bien y tú? Morita continúa la conversación con un "
+		Nodo n112111 = new Nodo (6, "Ella responde: Bien y tú? Oliver continúa la conversación con un "
 				+ "'Bien'. Él necesita buscar la oportunidad para preguntarle cuándo pueden salir. Por "
 				+ "ahora le pregunta cosas relacionadas con IO3. Cada vez ella le responde más demorada"
-				+ " y Morita no es capaz de recordarle la invitación. La conversación muere.");
+				+ " y Oliver no es capaz de recordarle la invitación. La conversación muere.");
 		n112111.setTipo(n112111.TERMINAL);
 		n112111.agregarOpcion("ERES UN MATADOR CON LAS CHICAS....\n "
 				+ "PERO DE CONVERSACIONES.");
 		
 		//Nodo 1.1.2.1.1.2 Preguntarle cuando estara disponible
-		Nodo n112112 = new Nodo (6, "Catalina le responde diciendole la disponibilidad que tiene. Ahora"
-				+ " es tiempo de decidir si continuar el plan de la cerveza o cambiarlo. Si continúa "
-				+ "con el plan actual, tiene más posibilidades de romper el hielo, si lo cambia, podría "
-				+ "agradarle más a ella, pero perdería la oportunidad de generar mayor confianza.");
+			Nodo n112112 = new Nodo (6, "Catalina le responde diciendole la disponibilidad que tiene. Ahora"
+					+ " es tiempo de decidir si continuar el plan de la cerveza o cambiarlo. Si continúa "
+					+ "con el plan actual, tiene más posibilidades de romper el hielo, si lo cambia, podría "
+					+ "agradarle más a ella, pero perdería la oportunidad de generar mayor confianza.");
 		n112112.setTipo(n112112.DECISION);
-		n112112.agregarOpcion("Morita seguirá con su plan inicial, el de la cerveza. La conversación "
+		n112112.agregarOpcion("Oliver seguirá con su plan inicial, el de la cerveza. La conversación "
 				+ "termina con una fecha y hora definidas para reunirse.");
-		n112112.agregarOpcion("Morita le sugiere que vayan por el plan del bonice. Ella acepta.");
+		n112112.agregarOpcion("Oliver le sugiere que vayan por el plan del bonice. Ella acepta.");
 		
 		// Nodo 1.1.2.1.1.2.1 Continuar con el plan inicial de la cerveza
-		Nodo n1121122 = new Nodo(7, "Morita y Catalina se dirigen a un bar cercano a la universidad. "
+		Nodo n1121122 = new Nodo(7, "Oliver y Catalina se dirigen a un bar cercano a la universidad. "
 				+ "Cada uno pide una cerveza. Como siente que Catalina está algo incómoda por el lugar"
 				+ ", ¿qué debería hacer para remediar esto?");
 		n1121122.setTipo(n1121122.PROBABILIDAD);
-		n1121122.agregarOpcion("Morita pide más cervezas.");
-		n1121122.agregarOpcion("Morita pide jugo de mora.");
+		n1121122.agregarOpcion("Oliver pide más cervezas.");
+		n1121122.agregarOpcion("Oliver pide jugo de mora.");
 		
 		//Nodo 1.1.2.1.1.2.2 Mejor ir por un bonice
-		Nodo n1121121 = new Nodo(7, "A catalina le agrada la idea de ir a comer bonice, Morita espera"
+		Nodo n1121121 = new Nodo(7, "A catalina le agrada la idea de ir a comer bonice, Oliver espera"
 				+ " que haga un buen clima, porque el bonice solo es rico cuando hace calor.");
 		n1121121.setTipo(n1121121.PROBABILIDAD);
 		n1121121.agregarOpcion("No llueve y hace buen clima.");
 		n1121121.agregarOpcion("Cae un aguacero.");
 		
 		//Nodo 1.1.2.1.1.2.1.1 Hace buen clima
-		Nodo n11211211 = new Nodo(8, "Morita y Catalina salen a comer bonice, tienen una buena charla y "
-				+ "disfrutan el momento. Se dirigen de nuevo a la universidad, pero Morita está decidio"
+		Nodo n11211211 = new Nodo(8, "Oliver y Catalina salen a comer bonice, tienen una buena charla y "
+				+ "disfrutan el momento. Se dirigen de nuevo a la universidad, pero Oliver está decidio"
 				+ " a hacerle una invitación porque siente que tuvieron buena química. Si lo hace en "
 				+ "ese momento, puede que no sea apropiado, pero si lo hace antes de despedirse, puede "
 				+ "que se acobarde.");
@@ -134,7 +135,7 @@ public class Arbol {
 		n11211211.agregarOpcion("Esperar la hora de despedirse para pedirle la cita.");
 		
 		//Nodo 1.1.2.1.1.2.1.2 Cae un aguacero
-		Nodo n11211212 = new Nodo (8, "Al ver que llueve, Morita le propone ir a comer empanadita de "
+		Nodo n11211212 = new Nodo (8, "Al ver que llueve, Oliver le propone ir a comer empanadita de "
 				+ "1000, ya que no cuenta con presupuesto para invitarla para algo más caro. El espera"
 				+ " que ella acepte su invitación.");
 		n11211212.setTipo(n11211212.PROBABILIDAD);
@@ -143,16 +144,16 @@ public class Arbol {
 		
 		//Nodo 1.1.2.1.1.2.1.2.1 Catalina acepta la invitacion
 		Nodo n112112121 = new Nodo(9, "Catalina no pone problema y se dirigen a la tienda donde venden "
-				+ "empanaditas de mil. Se sientan a hablar. Morita disfruta muchísimo de la charla y "
+				+ "empanaditas de mil. Se sientan a hablar. Oliver disfruta muchísimo de la charla y "
 				+ "considera que hay muy buena química entre los dos. Piden otra ronda de empanadas "
-				+ "y esta vez le ofrecen salsa de ajo para aderezar. Morita no puede resistirse a su "
+				+ "y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a su "
 				+ "salsa favorita.");
 		n112112121.setTipo(n112112121.PROBABILIDAD);
-		n112112121.agregarOpcion("Morita le echa salsa de ajo a la empanada.");
-		n112112121.agregarOpcion("Morita decide no aderezar la empanada con salsa de ajo.");
+		n112112121.agregarOpcion("Oliver le echa salsa de ajo a la empanada.");
+		n112112121.agregarOpcion("Oliver decide no aderezar la empanada con salsa de ajo.");
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.1 Echarle salsa de ajo a la empanada
-		Nodo n1121121211 = new Nodo(9, "Morita y Catalina continuan hablando y coqueteando por un rato, "
+		Nodo n1121121211 = new Nodo(9, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
 				+ "tienen una gran conexión. Cuando llega el momento en que Catalina se acerca para darle "
 				+ "un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradó. La "
 				+ "situación se tornó algo incómoda, por lo que terminaron la conversación, se despidieron "
@@ -161,32 +162,32 @@ public class Arbol {
 		n1121121211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO.");
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.2 No usar la salsa de ajo
-		Nodo n1121121212 = new Nodo(10, "Morita y Catalina continuan hablando y coqueteando por un rato, "
-				+ "tienen una gran conexión. Antes de despedirse, Catalina, muy sonrojada le dice a Morita "
+		Nodo n1121121212 = new Nodo(10, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
+				+ "tienen una gran conexión. Antes de despedirse, Catalina, muy sonrojada le dice a Oliver "
 				+ "que la pasó muy bien a su lado. Que desearía volver a salir con el, ya que le pareció "
 				+ "alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
 		n1121121212.setTipo(n1121121212.TERMINAL);
 		n1121121212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACIÓN.");
 		
 		//Nodo 1.1.2.1.1.2.1.2.2 Catalina dice que mejor para otro dia 
-		Nodo n112112122 = new Nodo(9, "Durante el mes, en Bogotá no dejó de llover. Morita se quedó esperando...");
+		Nodo n112112122 = new Nodo(9, "Durante el mes, en Bogotá no dejó de llover. Oliver se quedó esperando...");
 		n112112122.setTipo(n112112122.TERMINAL);
 		n112112122.agregarOpcion("MUY DEMALAS HERMANO.");
 		
 		//Nodo 1.1.2.1.1.2.1.1.1 Pedirle la cita  --------------    ----------------
-		Nodo n112112111 = new Nodo(9, "En ese momento Morita mira a Catalina a los ojos y le dice que pasó "
+		Nodo n112112111 = new Nodo(9, "En ese momento Oliver mira a Catalina a los ojos y le dice que pasó "
 				+ "una excelente tarde a su lado. Que desea volver a salir con ella, pero no para devolverle"
 				+ " un favor de amigos sino como algo más. Catalina algo sonrojada le dice que si."
-				+ " El sueño de Morita se hace realidad, por primera vez en su vida una chica aceptó "
+				+ " El sueño de Oliver se hace realidad, por primera vez en su vida una chica aceptó "
 				+ "su invitación.");
 		n112112111.setTipo(n112112111.TERMINAL);
 		n112112111.agregarOpcion("ERES TODO UN CONQUISTADOR.");
 		
 		//Nodo 1.1.2.1.1.2.1.1.2 Esperar a la hora de despedida para pedirle la cita ---------  ----
 		Nodo n112112112 = new Nodo(9, "Mientras se dirigían a la universidad, en el semáforo de la carrera 13,"
-				+ "Morita sintió que algo le cayo en el brazo. Era popó de paloma. Justo se había puesto "
+				+ "Oliver sintió que algo le cayo en el brazo. Era popó de paloma. Justo se había puesto "
 				+ "debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir "
-				+ "corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Persió la "
+				+ "corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdió la "
 				+ "oportunidad de hacerle una nueva invitación.");
 		n112112112.setTipo(n112112112.TERMINAL);
 		n112112112.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE. ");
@@ -426,6 +427,7 @@ public class Arbol {
 		n0.setTipo(n0.DECISION);
 		n0.agregarOpcion("Ir directamente a hablarle y pedirle ayuda con su investigación.");
 		n0.agregarOpcion("Ir a casa a preparar una conversación para hablar en otra ocasión con ella");
+		n0.setPuntaje(100);
 		
 		//Nodo 2.1 Le hablas a la chica
 		Nodo n21 = new Nodo(2,"La chica le pregunta cuál investigación, a lo que morita responde que su investigación ayudara a muchos chicos en la 40,"
@@ -435,6 +437,7 @@ public class Arbol {
 		n21.setTipo(n21.DECISION);
 		n21.agregarOpcion("Decirle que se vean el viernes a la salida en creps and waffles para comer un helado");
 		n21.agregarOpcion("Pedirle el número para por medio de un mensaje o llamada le diga cuándo salir");
+		n21.setPuntaje(80);
 		
 		//Nodo 2.1.1 Ella accede salir con él
 		Nodo n211 = new Nodo(3,"Ella acepta verse ese día con él, sin necesidad de hablar por redes sociales, parece que le gusta más la idea de conocerse a la antigua, pero Morita se percató de una cosa, nunca le pregunto cómo se llamaba y le daba muchísima pena preguntarle su nombre en la cita, tendrá que hacer de alguna forma ella diga su nombre sin que parezca grosero, ya que no sabe si ella ya se lo había dicho antes.\n" + 
@@ -442,6 +445,7 @@ public class Arbol {
 		n211.setTipo(n211.DECISION);
 		n211.agregarOpcion("Morita decide ir bien arreglado pero sin mucho formalismo");
 		n211.agregarOpcion("Morita decide ir en traje de gala y de paso le compra rosas");
+		n211.setPuntaje(55);
 		
 		//Nodo 2.1.2 Elle le da su número de celular
 		Nodo n212 = new Nodo(3, "La conversación fluye y Morita aprovecha para pedirle el número a la chica que tanto le llamo la atención. Ella acepta con una sonrisa, luego de darle su número, se despiden con un beso en la mejilla.\n" + 
@@ -450,8 +454,9 @@ public class Arbol {
 		n212.setTipo(n212.DECISION);
 		n212.agregarOpcion("Escribirle de una vez.");
 		n212.agregarOpcion("Decide no escribirle por ahora, piensa que lo mejor es hacerse el interesante y deja pasar algunos días.");
+		n212.setPuntaje(45);
 		
-		//Nodo 2.1.1.1 Decide ir formal
+		//Nodo 2.1.1.1 Decide ir informal
 		Nodo n2111 = new Nodo(4,"Pasada media hora de donde habían quedado donde verse, se percata que la chica no llega, a lo cual morita se desanima, ya que piensa que no va a llegar, pero al  menos no gató dinero\n" + 
 				"Cuando está a punto de irse la chica llega con una cara de pena por el tiempo de retraso, le explico que estaba en clase y se quedó hablando con su amiga. Él sonríe y le dice que no hay problema,"
 				+ " que pensaba que no iba a venir, pero ya he le había hecho tarde para irse, (debe ir a recoger a su hermana al colegio), así que no sabe qué hacer.\n" + 
@@ -459,7 +464,7 @@ public class Arbol {
 		n2111.setTipo(n2111.DECISION);
 		n2111.agregarOpcion("Quedarse en la heladería y salir como estaba planeado para conocerse");
 		n2111.agregarOpcion("Aplazar la cita ya que debe recoger a su hermana");
-		
+		n2111.setPuntaje(65);
 		
 		//Nodo 2.1.1.2 Decide irse elegante
 		Nodo n2112 = new Nodo(4,"La chica piensa que está desesperado por ella, viendo que le trajo rosas, pero también piensa que es tierno su gesto. Aun así se le hace muy refinado el hecho de ir en traje de gala,"
@@ -467,6 +472,7 @@ public class Arbol {
 		n2112.setTipo(n2112.DECISION);
 		n2112.agregarOpcion("Insistirle en salir en ese momento");
 		n2112.agregarOpcion("Aceptar verse otro día");
+		n2112.setPuntaje(35);
 		
 		//Nodo 2.1.2.1 Decide hablarle de una vez
 		Nodo n2121 = new Nodo(4,"Daniela piensa que está desesperado por ella por ende no le responde de una,"
@@ -476,6 +482,8 @@ public class Arbol {
 				+ " \"cada rechazo es una oportunidad de aprender a mejorar en cómo no hacerlo\"");
 		n2121.setTipo(n2121.TERMINAL);
 		n2121.agregarOpcion("Eres un coquistador muy intenso.");
+		n2121.setPuntaje(10);
+		
 		
 		//Nodo 2.1.2.2 Decide dejar pasar unos días
 		Nodo n2122 = new Nodo(4,"Han pasado 4 días desde aquella conversación, eran las 2:30 de la tarde y envía un Hola. Ella no está en línea pero Morita no puede despegar los ojos de su conversación. Pasan dos horas desde ese mensaje, por la cabeza de Morita pasan mil cosas, quizá lo vio pero no le interesa responderle, quizá le dio un numero equivocado, quizá lo anoto mal…\n" + 
@@ -484,23 +492,16 @@ public class Arbol {
 		n2122.setTipo(n2122.DECISION);
 		n2122.agregarOpcion("Invitarla a salir.");
 		n2122.agregarOpcion("Pedirle ser su novia.");
-		
+		n2122.setPuntaje(90);
 		
 		//Nodo 2.1.1.1.1 Decide no ir por su hermana
-		Nodo n21111 = new Nodo(5,"Cada uno compra su helado, aunque el preferia gastarle para hacerse pasar por caballero\n" + 
-				"en la cita ella le pregunta el nombre de el, a lo cual el se relaja ya que no se le habia ocurrido nada aun de como preguntarle\n" + 
-				"el nombre a ella, El le responde: -Morita ¿Y tú?, Ella le responde que se llama Daniela.\n" + 
-				"Pasaron los minutos volando a lo cual morita llama a su mama para decirle que no puede recoger a su hermana,\n" + 
-				"la madre le dice que bueno, que ella va por ella. A lo cual se relaja por su hermana y puede disfrutar mas la cita con Daniela.\n" + 
-				"El aplica conceptos del libro donde sabe que en la primera cita poner un tema de conversacion y que ella hable,\n" + 
-				"la idea es que sienta que uno la esta escuchando para asi poder dar una segunda cita, si ella se interesa en el\n" + 
-				"en la segunda si podes preguntar cosas mas de su vida y en esa si darse a conocer, asi que en toda la cita, hablan\n" + 
-				"de historias, amores, cosas de terror algo distinto a una cita, al finalizar la cita el decide:\n" + 
-				"1.1.1.1.1 Acompañarla hasta que llegue a la casa para asegurarse que llegue bien\n" + 
-				"1.1.1.1.2 Acompañarla al transporte que ella coja y decirle que espera verse en otra ocasion");
+		Nodo n21111 = new Nodo(5,"ada uno compra su helado, aunque el prefería gastarle para hacerse pasar por caballero, ella le pregunta por su nombre, él le responde: -Morita ¿Y tú?, Ella le dice que se llama Daniela.\\n\" + \n" + 
+				"				\"Pasaron los minutos volando a lo cual morita llama a su mama para decirle que no puede recoger a su hermana, la madre le dice que bueno, que ella va por ella. Ahora puede disfrutar más con Daniela.\\n\" + \n" + 
+				"				\"Hablan de historias, amores, cosas de terror algo distinto a una cita, al finalizar la cita el decide:");
 		n21111.setTipo(n21111.DECISION);
 		n21111.agregarOpcion("Acompañarla hasta que llegue a la casa para asegurarse que llegue bien.");
 		n21111.agregarOpcion("Acompañarla al transporte que ella coja y decirle que espera verse en otra ocasión.");
+		n21111.setPuntaje(75);
 		
 		//Nodo 2.1.1.1.2 Decide cancelar la cita
 		Nodo n21112 = new Nodo(5,"Daniela acepta y deciden verse al otro día, en lo cual ambos estaban vestido informalmente, esta vez no fueron a comer helado fueron a escuchar cuenteros, en la tarde ambos la pasan súper bien, Daniela se sintió bien al estar con él, morita la invita a caminar un rato para conocerse en el trayecto él le pregunta que si tiene  novio,\n" + 
@@ -510,6 +511,7 @@ public class Arbol {
 		n21112.setTipo(n21112.DECISION);
 		n21112.agregarOpcion("Ser solamente amigos.");
 		n21112.agregarOpcion("Intentar conquistarla.");
+		n21112.setPuntaje(25);
 		
 		//Nodo 2.1.1.2.1 Insiste en salir
 		Nodo n21121 = new Nodo(5, "Él le dice que no hay problema, que salgan así, que la idea es que quiere mostrarle lo caballero que puede ser,"
@@ -520,6 +522,7 @@ public class Arbol {
 		n21121.setTipo(n21121.DECISION);
 		n21121.agregarOpcion("Quedarse en la heladería y salir como estaba planeado para conocerse");
 		n21121.agregarOpcion("Aplazar la cita ya que debe recoger a su hermana");
+		n21121.setPuntaje(55);
 		
 		//Nodo 2.1.1.2.2 Morita se enoja
 		Nodo n21122 = new Nodo(5,"Morita acepto verse otro dia, pero le parecio una falta de respeto que ese dia no salierran\n" + 
@@ -527,7 +530,7 @@ public class Arbol {
 				"no lo valorara, y morita debe hacerse valorar");
 		n21122.setTipo(n21122.TERMINAL);
 		n21122.agregarOpcion("ERES UN CONQUISTADOR MUUY ORGULLOSO.");
-		
+		n21122.setPuntaje(30);
 		
 		
 		
@@ -539,7 +542,7 @@ public class Arbol {
 				"");
 		n21221.setTipo(n21221.TERMINAL);
 		n21221.agregarOpcion("ERES UN CONQUISTADOR MUY EFICIENTE");
-		
+		n21221.setPuntaje(60);
 		
 		//NOdo 2.1.2.2.2 Pedirle ser su novia
 		Nodo n21222 = new Nodo(5,"Daniela le dice que no, ya que no se conocen y que le parece que es muy rápido,"
@@ -547,7 +550,7 @@ public class Arbol {
 		n21222.setTipo(n21222.DECISION);
 		n21222.agregarOpcion("Pedirle disculpas y dejarle de hablar por un tiempo");
 		n21222.agregarOpcion("Decirle que eso se puede arreglar, entonces la invita a salir a un bar");
-		
+		n21222.setPuntaje(10);
 			
 		
 		//Nodo 2.2 ERES UN COBARDe
@@ -555,6 +558,7 @@ public class Arbol {
 				+ " se sintió decepcionado, pero se alegró de no ser rechazado.");
 		n22.setTipo(n22.TERMINAL);
 		n22.agregarOpcion("En verdad eres muy cobarde.");
+		n22.setPuntaje(0);
 		
 		
 		//Nodo 2.1.1.1.1.1 Acompañarla a casa
@@ -565,6 +569,7 @@ public class Arbol {
 		n211111.setTipo(n211111.DECISION);
 		n211111.agregarOpcion("Hablarle de una vez");
 		n211111.agregarOpcion("Esperar unos días y hablarle");
+		n211111.setPuntaje(85);
 		
 		//Nodo 2.1.1.1.1.2 Acompañarla a coger bus
 		Nodo n211112 = new Nodo(6,"Morita sintió que la pasaron  bien y que se gustaron, ahora debe seguir haciéndolo, "
@@ -574,19 +579,21 @@ public class Arbol {
 		n211112.setTipo(n211112.DECISION);
 		n211112.agregarOpcion("Decide ignorarla y seguir subiendo");
 		n211112.agregarOpcion("Decide hablarle y explicarle porqué no se habian hablado antes");
+		n211112.setPuntaje(30);
 				
 		//Nodo 2.1.1.1.2.1 Ser solamente amigos
 		Nodo n211121 = new Nodo(6,"Salen pero como amigos de ahí en adelante hay chispas pero ambos deciden no intentarlo,"
 				+ " ya que Daniela está saliendo con alguien más y morita está inseguro de lo que siente por ella,"
 				+ " así que decide dejarla como una amiga más de la Universidad.");
 		n211121.setTipo(n211121.TERMINAL);
-		n211121.agregarOpcion("ERES UN CONQUISTADOR CON MALA SUERTE.");
-		
+		n211121.agregarOpcion("BIENVENIDO A LA FRIENDZONE.");
+		n211121.setPuntaje(25);
 		
 		//Nodo 2.1.1.1.2.2 Decide conquistarla
 		Nodo n211122 = new Nodo(6,"Empiezan a chatear cada vez más seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n211122.setTipo(n211122.TERMINAL);
 		n211122.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
+		n211122.setPuntaje(100);
 		
 		//Nodo 2.1.1.2.1.1 Continuar con la cita
 		Nodo n211211 = new Nodo(6,"Cada uno compra su helado, aunque el prefería gastarle para hacerse pasar por caballero, ella le pregunta por su nombre, él le responde: -Morita ¿Y tú?, Ella le dice que se llama Daniela.\n" + 
@@ -596,6 +603,7 @@ public class Arbol {
 		n211211.setTipo(n211211.DECISION);
 		n211211.agregarOpcion("Acompañarla hasta que llegue a la casa para asegurarse que llegue bie");
 		n211211.agregarOpcion("Acompañarla al transporte que ella coja y decirle que espera verse en otra ocasion");
+		n211211.setPuntaje(55);
 		
 		//Nodo 2.1.1.2.1.2 Salir otro día
 		Nodo n211212 = new Nodo(6,"Daniela acepta y deciden verse al otro día, en lo cual ambos estaban vestido informalmente, esta vez no fueron a comer helado fueron a escuchar cuenteros, en la tarde ambos la pasan muy bien, ella se sintió cómoda Morita la invita a caminar un rato para conocerse en el trayecto él le pregunta que si tiene  novio, Ella dice que no, que hace poco salió de una relación y decidió no volver a tener novio por el momento\n" + 
@@ -604,6 +612,7 @@ public class Arbol {
 		n211212.setTipo(n211212.DECISION);
 		n211212.agregarOpcion("Ser solamente amigos");
 		n211212.agregarOpcion("Intentar conquistarla");
+		n211212.setPuntaje(45);
 		
 		//Nodo 2.1.2.2.2.1 Decide dejarle de hablar
 		Nodo n212221 = new Nodo(6,"Le pide disculpas, que estaba confundido y sintió que debió hacerlo, "
@@ -612,7 +621,7 @@ public class Arbol {
 				+ "\"cada rechazo es una oportunidad de aprender a mejorar en cómo no hacerlo\"");
 		n212221.setTipo(n212221.TERMINAL);
 		n212221.agregarOpcion("ERES UN CONQUISTADOR CON MALA SUERTE.");
-		
+		n212221.setPuntaje(5);
 		
 		//Nodo 2.1.2.2.2.2 Invitarla al bar
 		Nodo n212222 = new Nodo(6,"Salen al bar, empiezan a tomar y bailar al rato se sientan a hablar, "
@@ -621,6 +630,7 @@ public class Arbol {
 				+ "pero morita quería que fuese su novia, así que la presiona como tal para serlo con el tiempo Daniela empieza ver como morita la cela sin necesidad y empieza aburrirse de morita, un día lo para y le dice que no más ya que él es muy toxico y controlador, le dice que dejara de hablarle Morita se siente destruido pero aprendió a que hay que darle tiempo al tiempo.");
 		n212222.setTipo(n212222.TERMINAL);
 		n212222.agregarOpcion("!PELIGRO¡ PERSONA TÓXICA FRENTE A LA PANTALLA");
+		n212222.setPuntaje(0);
 		
 		//Nodo 2.1.1.1.1.1.2 eSCRIBIRLE DESPUES
 		Nodo n2111112 = new Nodo(7,"Ella cree que a el no le gusto la cita y por eso no le escribio, con el tiempo de los dias ella pierde el interes por el\n" + 
@@ -628,18 +638,19 @@ public class Arbol {
 				"con el tiempo ella le da consejos de comó salir con chicas como ella, para que no pierda una oportunidad como la que perdio con ella");
 		n2111112.setTipo(n2111112.TERMINAL);
 		n2111112.agregarOpcion("LO SIENTO, ASÍ NO LE INTERESAS A NADIE.");
+		n2111112.setPuntaje(5);
 		
 		//Nodo 2.1.1.1.1.1.1 Escribirle de una
 		Nodo n2111111 = new Nodo(7,"Empiezan a chatear cada vez más seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n2111111.setTipo(n2111111.TERMINAL);
 		n2111111.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
-		
+		n2111111.setPuntaje(95);
 		
 		//Nodo 2.1.1.1.1.2.1 Decide ignorarla
 		Nodo n2111121 = new Nodo(7,"Daniela se enoja y decide no volver a hablarle ya que se sintió mal cuando él la ignoró");
 		n2111121.setTipo(n2111121.DECISION);
 		n2111121.agregarOpcion("ES INCREIBLE PERO ESTO NO ES LO TUYO.");
-		
+		n2111121.setPuntaje(25);
 		
 		//Nodo 2.1.1.1.1.2.2 Saludarla
 		Nodo n2111122 = new Nodo(7,"Él le explica que no la encontró en las redes con solo su nombre, la buscó en la U y tampoco la encontró. "
@@ -647,6 +658,7 @@ public class Arbol {
 				+ " ya que Daniela está  saliendo con alguien más y morita está inseguro de lo que siente por ella,");
 		n2111122.setTipo(n2111122.TERMINAL);
 		n2111122.agregarOpcion("ERES UN CONQUISTADOR CON MALA SUERTE.");
+		n2111122.setPuntaje(25);
 		
 		//Nodo 2.1.1.2.1.1.1 La acompaña a la casa
 		Nodo n2112111 = new Nodo(7,"Al ir a la casa, se conocen mejor y morita se siente cómodo con la chica, ambos sienten atracción por el otro,  se dan la oportunidad de compartir sus sueños y ambos le queda gustando.\n" + 
@@ -655,6 +667,7 @@ public class Arbol {
 		n2112111.setTipo(n2112111.DECISION);
 		n2112111.agregarOpcion("Escribirle de una vez.");
 		n2112111.agregarOpcion("Esperar unos días y hablarle");
+		n2112111.setPuntaje(65);
 		
 		//Nodo 2.1.1.2.1.1.2 La acompaña al bus
 		Nodo n2112112 = new Nodo(7,"Morita sintió que la pasaron  bien y que se gustaron, ahora debe seguir haciéndolo, "
@@ -664,6 +677,7 @@ public class Arbol {
 		n2112112.setTipo(n2112112.DECISION);
 		n2112112.agregarOpcion("Decide ignorarla y seguir subiendo");
 		n2112112.agregarOpcion("Decide hablarle y explicarle por qué no se habían hablado antes");
+		n2112112.setPuntaje(35);
 		
 		//Nodo 2.1.1.2.1.2.1 Salen como amigos
 		Nodo n2112121 = new Nodo(7,"Salen pero como amigos de ahí en adelante hay chispas pero ambos deciden no intentarlo,\"\n" + 
@@ -671,16 +685,19 @@ public class Arbol {
 				"				+ \" así que decide dejarla como una amiga más de la Universidad.");
 		n2112121.setTipo(n2112121.TERMINAL);
 		n2112121.agregarOpcion("BIENVENIDO A LA FRIENDZONE");
+		n2112121.setPuntaje(25);
 		
 		//NODO 2.1.1.2.1.2.2 decide conquistarla
 		Nodo n2112122 = new Nodo(7,"Empiezan a chatear cada vez más seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n2112122.setTipo(n2112122.TERMINAL);
 		n2112122.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
+		n2112122.setPuntaje(75);
 		
 		//Nodo 2.1.1.2.1.1.1.1 Escribirle de una vez
 		Nodo n21121111 = new Nodo(8,"Empiezan a chatear cada vez más seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n21121111.setTipo(n21121111.TERMINAL);
 		n21121111.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
+		n21121111.setPuntaje(80);
 		
 		//Nodo 2.1.1.2.1.1.1.2 Escribirle despues
 		Nodo n21121112 = new Nodo(8,"Ella cree que a el no le gusto la cita y por eso no le escribio, con el tiempo de los dias ella pierde el interes por el\n" + 
@@ -688,11 +705,14 @@ public class Arbol {
 				"con el tiempo ella le da consejos de comó salir con chicas como ella, para que no pierda una oportunidad como la que perdio con ella");
 		n21121112.setTipo(n21121112.TERMINAL);
 		n21121112.agregarOpcion("LO SIENTO, ASÍ NO LE INTERESAS A NADIE.");
+		n21121112.setPuntaje(20);
 		
 		//Nodo 2.1.1.2.1.1.2.1 ignorarla
 		Nodo n21121121= new Nodo(8,"Daniela se enoja y decide no volver a hablarle ya que se sintió mal cuando él la ignoró");
 		n21121121.setTipo(n21121121.DECISION);
 		n21121121.agregarOpcion("ES INCREIBLE PERO ESTO NO ES LO TUYO.");
+		n21121121.setPuntaje(5);
+		
 		
 		//Nodo 2.1.1.2.1.1.2.2 Saludarla
 		Nodo n21121122 = new Nodo(7,"Él le explica que no la encontró en las redes con solo su nombre, la buscó en la U y tampoco la encontró. "
@@ -700,6 +720,7 @@ public class Arbol {
 				+ " ya que Daniela está  saliendo con alguien más y morita está inseguro de lo que siente por ella,");
 		n21121122.setTipo(n21121122.TERMINAL);
 		n21121122.agregarOpcion("¡BIENVENIDO A LA FRIENDZONE!");
+		n21121122.setPuntaje(25);
 		
 		n2112112.addpart(n21121121);
 		n2112112.addpart(n21121122);
