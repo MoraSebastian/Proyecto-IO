@@ -41,7 +41,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 	JLabel lblContenedorjuego;
 	JLabel lblPanelsuperior;
 	JButton btnProbabilidad;
-	
+	Reproductor repro = new Reproductor();
 	//Arbol que llega (Completo)
 	Arbol arbol;
 	
@@ -73,6 +73,10 @@ public class PanelJuego extends JPanel implements ActionListener {
 		if(arbol.getReferencia().getOpciones().size()>1) {
 			btnBotondecision2.setText(arbol.getReferencia().getOpciones().get(1));
 		}
+		//ACA TIENE QUE DESCOMENTARIAR CUANDO TENGA ESO LISTO
+	
+		
+		//repro.Reproducir(arbol.getReferencia().getAudio());	
 	}
 	
 	public PanelJuego(Arbol arbol) {
