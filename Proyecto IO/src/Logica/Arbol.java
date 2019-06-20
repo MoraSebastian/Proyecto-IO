@@ -13,25 +13,25 @@ public class Arbol {
 	public void construirArbol() {
 		
 			//Nodo 0
-		nodo = new Nodo(0," Es la 1:30 de la tarde, se acerca la clase de IO3, Oliver est· bajando "
+		nodo = new Nodo(0," Es la 1:30 de la tarde, se acerca la clase de IO3, Oliver est√° bajando "
 				+ "por la caracola del sabio caldas, se puede percatar que hay dos chicas lindas "
-				+ "que est·n riendo en una esquina, Oliver piensa que podrÌa hablarles y aplicar todo lo aprendido, "
-				+ "pero tambiÈn podrÌa ir a clase y hablar con la chica que le gusta desde hace tanto: øquÈ deberÌa hacer?");
+				+ "que est√°n riendo en una esquina, Oliver piensa que podr√≠a hablarles y aplicar todo lo aprendido, "
+				+ "pero tambi√©n podr√≠a ir a clase y hablar con la chica que le gusta desde hace tanto: ¬øqu√© deber√≠a hacer?");
 		nodo.setTipo(nodo.DECISION);
 		nodo.agregarOpcion("Ir a clase de IO3");
 		nodo.agregarOpcion("Hablar con las chicas");
 		
 		//Inicio Historia de Tefa
 		Nodo n = new Nodo(0,"Oliver ya se propuso "
-				+ "a conquistar aquella chica solitaria, tÌmida y misteriosa que siempre le diÛ curiosidad. "
-				+ "Necesita buscar una excusa para iniciar una conversaciÛn øQuÈ har·?");
+				+ "a conquistar aquella chica solitaria, t√≠mida y misteriosa que siempre le di√≥ curiosidad. "
+				+ "Necesita buscar una excusa para iniciar una conversaci√≥n ¬øQu√© har√°?");
 		n.setTipo(nodo.DECISION);
 		n.agregarOpcion("Preguntarle por la tarea que hay para la clase.");
 		n.setUbicacion("imagenesChicas/A01.jpg");
 		//Nodo 1 Acercarse a la chica para saber que hacer
-		Nodo n1 = new Nodo(1,"Oliver se acerca a la chica y le pregunta quÈ habÌa para hoy. "
-				+ "Ella se voltea hacia Èl y le dice que hoy es	la entrega del ejercicio de ·rboles de decisiÛn"
-				+ " øCÛmo puede Oliver continuar la conversaciÛn?");
+		Nodo n1 = new Nodo(1,"Oliver se acerca a la chica y le pregunta qu√© hab√≠a para hoy. "
+				+ "Ella se voltea hacia √©l y le dice que hoy es	la entrega del ejercicio de √°rboles de decisi√≥n"
+				+ " ¬øC√≥mo puede Oliver continuar la conversaci√≥n?");
 		n1.setTipo(n1.DECISION);
 		n1.agregarOpcion("Pedirle ayuda con la tarea (aunque ya la tienes hecha)");
 		n1.agregarOpcion("Ofrecerle ayuda con la tarea");
@@ -50,7 +50,7 @@ public class Arbol {
 		
 		//Nodo 1.1.1 Los amigos se acercan
 		Nodo n111 = new Nodo(3,"Por la puerta se acerca el grupo de IO de Oliver. "
-				+ "Uno de ellos le dice: 'Parce,  p·seme la tarea que me dijo que ya la tenÌa."
+				+ "Uno de ellos le dice: 'Parce,  p√°seme la tarea que me dijo que ya la ten√≠a."
 				+ "La chica se voltea y mira hacia Oliver con cara de enojo por haberla echo perder el tiempo, se va.");
 		n111.setTipo(n111.TERMINAL);
 		n111.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
@@ -61,13 +61,13 @@ public class Arbol {
 		//NODO 1.1.2 Los amigos no se acercan
 			Nodo n112 = new Nodo(3,"La chica le explica exitosamente y Oliver resuelve la tarea (de nuevo)."
 					+ "Antes de que la clase empiece, Oliver le pregunta su nombre a lo que ella le " + 
-					"dice que es Catalina. Oliver le dice: \"Oye, muchas gracias, te debo una. La prÛxima te" + 
+					"dice que es Catalina. Oliver le dice: \"Oye, muchas gracias, te debo una. La pr√≥xima te" + 
 					"invito a algo, por el favor.\"" + 
 					"\n" + 
-					"PasÛ una semana, las siguientes ocasiones en que la encontraba, la saludaba. " + 
-					"Necesitaba una oportunidad para hacerle la invitaciÛn. Aquel momento llegÛ, se " + 
+					"Pas√≥ una semana, las siguientes ocasiones en que la encontraba, la saludaba. " + 
+					"Necesitaba una oportunidad para hacerle la invitaci√≥n. Aquel momento lleg√≥, se " + 
 					"encontraba sola leyendo. Oliver planea acercarse, pero debe tener claro que tipo " + 
-					"de invitaciÛn hacerle para que ella acepte.");
+					"de invitaci√≥n hacerle para que ella acepte.");
 		n112.setTipo(n112.DECISION);
 		n112.agregarOpcion("Invitarla a tomar cerveza");
 		n112.agregarOpcion("Invitarla a comer bonice.");
@@ -75,31 +75,31 @@ public class Arbol {
 		
 		
 		//Nodo 1.1.2.1 Invitarla a tomar una cerveza
-		Nodo n1121 = new Nodo (4, "Catalina lo observa con cara extraÒada y algo incÛmoda le responde "
-				+ "que si. Parece que no le gustÛ mucho la idea, pero a˙n asÌ acepto.");
+		Nodo n1121 = new Nodo (4, "Catalina lo observa con cara extra√±ada y algo inc√≥moda le responde "
+				+ "que si. Parece que no le gust√≥ mucho la idea, pero a√∫n as√≠ acepto.");
 		n1121.setTipo(n1121.DECISION);
-		n1121.agregarOpcion("Percibiendo su incomodidad, le dice que le de su n˙mero de celular para "
-				+ "determinar cu·ndo ir a tomar la cerveza, ya que ahora no es un buen momento. (M·s"
-				+ " adelante Oliver se las arreglar· para convenserla.)");
-		n1121.agregarOpcion("Insistirle en ir de una vez a tomar cerveza (Puede que m·s adelante "
+		n1121.agregarOpcion("Percibiendo su incomodidad, le dice que le de su n√∫mero de celular para "
+				+ "determinar cu√°ndo ir a tomar la cerveza, ya que ahora no es un buen momento. (M√°s"
+				+ " adelante Oliver se las arreglar√° para convenserla.)");
+		n1121.agregarOpcion("Insistirle en ir de una vez a tomar cerveza (Puede que m√°s adelante "
 				+ "se arrepienta).");
 		n1121.setUbicacion("imagenesChicas/A06.jpg");
 		
 		
 		//Nodo 1.1.2.1.1 Pedir el numero
-		Nodo n11211 = new Nodo(5, "Catalina visiblemente aliviada le da su n˙mero a Oliver. Se despiden,"
-				+ " pero Oliver est· contento por haber conseguido su n˙mero, ya es un gran avance. Llega "
-				+ "por la tarde a su hogar y se dispone a escribirle. øCÛmo deberÌa empezar la "
-				+ "conversaciÛn?");
+		Nodo n11211 = new Nodo(5, "Catalina visiblemente aliviada le da su n√∫mero a Oliver. Se despiden,"
+				+ " pero Oliver est√° contento por haber conseguido su n√∫mero, ya es un gran avance. Llega "
+				+ "por la tarde a su hogar y se dispone a escribirle. ¬øC√≥mo deber√≠a empezar la "
+				+ "conversaci√≥n?");
 		n11211.setTipo(n11211.DECISION);
-		n11211.agregarOpcion("Hola, øCÛmo est·s?");
-		n11211.agregarOpcion("Hola, oye, soy Oliver. øCuando estar·s disponible para salir?");
+		n11211.agregarOpcion("Hola, ¬øC√≥mo est√°s?");
+		n11211.agregarOpcion("Hola, oye, soy Oliver. ¬øCuando estar√°s disponible para salir?");
 		
-		//Nodo 1.1.2.1.1.1 Hola øComo estas?
-		Nodo n112111 = new Nodo (6, "Ella responde: Bien y t˙? Oliver contin˙a la conversaciÛn con un "
-				+ "'Bien'. …l necesita buscar la oportunidad para preguntarle cu·ndo pueden salir. Por "
-				+ "ahora le pregunta cosas relacionadas con IO3. Cada vez ella le responde m·s demorada"
-				+ " y Oliver no es capaz de recordarle la invitaciÛn. La conversaciÛn muere.");
+		//Nodo 1.1.2.1.1.1 Hola ¬øComo estas?
+		Nodo n112111 = new Nodo (6, "Ella responde: Bien y t√∫? Oliver contin√∫a la conversaci√≥n con un "
+				+ "'Bien'. √âl necesita buscar la oportunidad para preguntarle cu√°ndo pueden salir. Por "
+				+ "ahora le pregunta cosas relacionadas con IO3. Cada vez ella le responde m√°s demorada"
+				+ " y Oliver no es capaz de recordarle la invitaci√≥n. La conversaci√≥n muere.");
 		n112111.setTipo(n112111.TERMINAL);
 		n112111.setUbicacion("imagenesChicas/A07.jpg");
 		n112111.agregarOpcion("ERES UN MATADOR CON LAS CHICAS....\n "
@@ -107,22 +107,22 @@ public class Arbol {
 		
 		//Nodo 1.1.2.1.1.2 Preguntarle cuando estara disponible
 			Nodo n112112 = new Nodo (6, "Catalina le responde diciendole la disponibilidad que tiene. Ahora"
-					+ " es tiempo de decidir si continuar el plan de la cerveza o cambiarlo. Si contin˙a "
-					+ "con el plan actual, tiene m·s posibilidades de romper el hielo, si lo cambia, podrÌa "
-					+ "agradarle m·s a ella, pero perderÌa la oportunidad de generar mayor confianza.");
+					+ " es tiempo de decidir si continuar el plan de la cerveza o cambiarlo. Si contin√∫a "
+					+ "con el plan actual, tiene m√°s posibilidades de romper el hielo, si lo cambia, podr√≠a "
+					+ "agradarle m√°s a ella, pero perder√≠a la oportunidad de generar mayor confianza.");
 		n112112.setTipo(n112112.DECISION);
 		n112112.setUbicacion("imagenesChicas/A08.jpg");
-		n112112.agregarOpcion("Oliver seguir· con su plan inicial, el de la cerveza. La conversaciÛn "
+		n112112.agregarOpcion("Oliver seguir√° con su plan inicial, el de la cerveza. La conversaci√≥n "
 				+ "termina con una fecha y hora definidas para reunirse.");
 		n112112.agregarOpcion("Oliver le sugiere que vayan por el plan del bonice. Ella acepta.");
 		
 		// Nodo 1.1.2.1.1.2.1 Continuar con el plan inicial de la cerveza
 		Nodo n1121122 = new Nodo(7, "Oliver y Catalina se dirigen a un bar cercano a la universidad. "
-				+ "Cada uno pide una cerveza. Como siente que Catalina est· algo incÛmoda por el lugar"
-				+ ", øquÈ deberÌa hacer para remediar esto?");
+				+ "Cada uno pide una cerveza. Como siente que Catalina est√° algo inc√≥moda por el lugar"
+				+ ", ¬øqu√© deber√≠a hacer para remediar esto?");
 		n1121122.setUbicacion("imagenesChicas/A20.jpg");
 		n1121122.setTipo(n1121122.PROBABILIDAD);
-		n1121122.agregarOpcion("Oliver pide m·s cervezas.");
+		n1121122.agregarOpcion("Oliver pide m√°s cervezas.");
 		n1121122.agregarOpcion("Oliver pide jugo de mora.");
 		
 		//Nodo 1.1.2.1.1.2.2 Mejor ir por un bonice
@@ -135,8 +135,8 @@ public class Arbol {
 		
 		//Nodo 1.1.2.1.1.2.1.1 Hace buen clima
 		Nodo n11211211 = new Nodo(8, "Oliver y Catalina salen a comer bonice, tienen una buena charla y "
-				+ "disfrutan el momento. Se dirigen de nuevo a la universidad, pero Oliver est· decidio"
-				+ " a hacerle una invitaciÛn porque siente que tuvieron buena quÌmica. Si lo hace en "
+				+ "disfrutan el momento. Se dirigen de nuevo a la universidad, pero Oliver est√° decidio"
+				+ " a hacerle una invitaci√≥n porque siente que tuvieron buena qu√≠mica. Si lo hace en "
 				+ "ese momento, puede que no sea apropiado, pero si lo hace antes de despedirse, puede "
 				+ "que se acobarde.");
 		n11211211.setTipo(n11211211.DECISION);
@@ -146,16 +146,16 @@ public class Arbol {
 		
 		//Nodo 1.1.2.1.1.2.1.2 Cae un aguacero
 		Nodo n11211212 = new Nodo (8, "Al ver que llueve, Oliver le propone ir a comer empanadita de "
-				+ "1000, ya que no cuenta con presupuesto para invitarla para algo m·s caro. El espera"
-				+ " que ella acepte su invitaciÛn.");
+				+ "1000, ya que no cuenta con presupuesto para invitarla para algo m√°s caro. El espera"
+				+ " que ella acepte su invitaci√≥n.");
 		n11211212.setTipo(n11211212.PROBABILIDAD);
-		n11211212.agregarOpcion("Catalina acepta su invitaciÛn.");
-		n11211212.agregarOpcion("Catalina dice que no, que mejor hacen el plan para otro dÌa.");
+		n11211212.agregarOpcion("Catalina acepta su invitaci√≥n.");
+		n11211212.agregarOpcion("Catalina dice que no, que mejor hacen el plan para otro d√≠a.");
 		
 		//Nodo 1.1.2.1.1.2.1.2.1 Catalina acepta la invitacion
 		Nodo n112112121 = new Nodo(9, "Catalina no pone problema y se dirigen a la tienda donde venden "
-				+ "empanaditas de mil. Se sientan a hablar. Oliver disfruta muchÌsimo de la charla y "
-				+ "considera que hay muy buena quÌmica entre los dos. Piden otra ronda de empanadas "
+				+ "empanaditas de mil. Se sientan a hablar. Oliver disfruta much√≠simo de la charla y "
+				+ "considera que hay muy buena qu√≠mica entre los dos. Piden otra ronda de empanadas "
 				+ "y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a su "
 				+ "salsa favorita.");
 		n112112121.setTipo(n112112121.PROBABILIDAD);
@@ -165,400 +165,432 @@ public class Arbol {
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.1 Echarle salsa de ajo a la empanada
 		Nodo n1121121211 = new Nodo(9, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
-				+ "tienen una gran conexiÛn. Cuando llega el momento en que Catalina se acerca para darle "
-				+ "un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradÛ. La "
-				+ "situaciÛn se tornÛ algo incÛmoda, por lo que terminaron la conversaciÛn, se despidieron "
-				+ "y nada m·s volviÛ a suceder.");
+				+ "tienen una gran conexi√≥n. Cuando llega el momento en que Catalina se acerca para darle "
+				+ "un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agrad√≥. La "
+				+ "situaci√≥n se torn√≥ algo inc√≥moda, por lo que terminaron la conversaci√≥n, se despidieron "
+				+ "y nada m√°s volvi√≥ a suceder.");
 		n1121121211.setTipo(n1121121211.TERMINAL);
 		n1121121211.setUbicacion("imagenesChicas/A18.jpg");
 		n1121121211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO.");
 		
 		//Nodo 1.1.2.1.1.2.1.2.1.2 No usar la salsa de ajo
 		Nodo n1121121212 = new Nodo(10, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
-				+ "tienen una gran conexiÛn. Antes de despedirse, Catalina, muy sonrojada le dice a Oliver "
-				+ "que la pasÛ muy bien a su lado. Que desearÌa volver a salir con el, ya que le pareciÛ "
+				+ "tienen una gran conexi√≥n. Antes de despedirse, Catalina, muy sonrojada le dice a Oliver "
+				+ "que la pas√≥ muy bien a su lado. Que desear√≠a volver a salir con el, ya que le pareci√≥ "
 				+ "alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
 		n1121121212.setTipo(n1121121212.TERMINAL);
 		n1121121212.setUbicacion("imagenesChicas/A19.jpg");
-		n1121121212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACI”N.");
+		n1121121212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACI√ìN.");
 		
 		//Nodo 1.1.2.1.1.2.1.2.2 Catalina dice que mejor para otro dia 
-		Nodo n112112122 = new Nodo(9, "Durante el mes, en Bogot· no dejÛ de llover. Oliver se quedÛ esperando...");
+		Nodo n112112122 = new Nodo(9, "Durante el mes, en Bogot√° no dej√≥ de llover. Oliver se qued√≥ esperando...");
 		n112112122.setTipo(n112112122.TERMINAL);
 		n112112122.agregarOpcion("MUY DE MALAS HERMANO.");
 		
 		//Nodo 1.1.2.1.1.2.1.1.1 Pedirle la cita  --------------    ----------------
-		Nodo n112112111 = new Nodo(9, "En ese momento Oliver mira a Catalina a los ojos y le dice que pasÛ "
+		Nodo n112112111 = new Nodo(9, "En ese momento Oliver mira a Catalina a los ojos y le dice que pas√≥ "
 				+ "una excelente tarde a su lado. Que desea volver a salir con ella, pero no para devolverle"
-				+ " un favor de amigos sino como algo m·s. Catalina algo sonrojada le dice que si."
-				+ " El sueÒo de Oliver se hace realidad, por primera vez en su vida una chica aceptÛ "
-				+ "su invitaciÛn.");
+				+ " un favor de amigos sino como algo m√°s. Catalina algo sonrojada le dice que si."
+				+ " El sue√±o de Oliver se hace realidad, por primera vez en su vida una chica acept√≥ "
+				+ "su invitaci√≥n.");
 		n112112111.setTipo(n112112111.TERMINAL);
 		n112112111.setUbicacion("imagenesChicas/A15.jpg");
 		n112112111.agregarOpcion("ERES TODO UN CONQUISTADOR.");
 		
 		//Nodo 1.1.2.1.1.2.1.1.2 Esperar a la hora de despedida para pedirle la cita ---------  ----
-		Nodo n112112112 = new Nodo(9, "Mientras se dirigÌan a la universidad, en el sem·foro de la carrera 13,"
-				+ "Oliver sintiÛ que algo le cayÛ en el brazo. Era popÛ de paloma. Justo se habÌa puesto "
+		Nodo n112112112 = new Nodo(9, "Mientras se dirig√≠an a la universidad, en el sem√°foro de la carrera 13,"
+				+ "Oliver sinti√≥ que algo le cay√≥ en el brazo. Era pop√≥ de paloma. Justo se hab√≠a puesto "
 				+ "debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir "
-				+ "corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. PerdiÛ la "
-				+ "oportunidad de hacerle una nueva invitaciÛn.");
+				+ "corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdi√≥ la "
+				+ "oportunidad de hacerle una nueva invitaci√≥n.");
 		n112112112.setTipo(n112112112.TERMINAL);
 		n112112112.setUbicacion("imagenesChicas/A17.jpg");
 		n112112112.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE. ");
 		
-		//Nodo 1.1.2.1.1.2.2.1 Pedir m·s cervezas
-		Nodo n11211221 = new Nodo (8, "Es la peor decisiÛn que Oliver pudo haber tomado en su vida. No"
-				+ " sabÌa que el era muy propenso a emborracharse, por lo que a la tercera cerveza ya no "
-				+ "estaba en sus cabales. IntentÛ acercarse a Catalina y darle un beso, por lo que ella "
-				+ "inmediatamente se levantÛ y le pegÛ un puÒo en la cara, fue tan fuerte que incluso le"
-				+ " rompiÛ las gafas..");
+		//Nodo 1.1.2.1.1.2.2.1 Pedir m√°s cervezas
+		Nodo n11211221 = new Nodo (8, "Es la peor decisi√≥n que Oliver pudo haber tomado en su vida. No"
+				+ " sab√≠a que el era muy propenso a emborracharse, por lo que a la tercera cerveza ya no "
+				+ "estaba en sus cabales. Intent√≥ acercarse a Catalina y darle un beso, por lo que ella "
+				+ "inmediatamente se levant√≥ y le peg√≥ un pu√±o en la cara, fue tan fuerte que incluso le"
+				+ " rompi√≥ las gafas..");
 		n11211221.setTipo(n11211221.TERMINAL);
 		n11211221.setUbicacion("imagenesChicas/A21.jpg");
 		n11211221.agregarOpcion("ERES UN CONQUISTADOR QUE NO SE CONOCE A SI MISMO.");
+		n11211221.setAudio("/audio/pedir m√°s cervezas.wav");
 		
 		//Nodo 1.1.2.1.1.2.2.2 Pedir jugo de mora
 		Nodo n11211222 = new Nodo (8, "El jugo de mora fue una buena idea. Le hizo gracia a Catalina, ya "
-				+ "que Oliver contÛ un mal chiste sobre las moras que hizo que se rompiera el hielo."
+				+ "que Oliver cont√≥ un mal chiste sobre las moras que hizo que se rompiera el hielo."
 				+ " Hablaron un buen rato y volvieron a la universidad. Antes de despedirse, Catalina, "
-				+ "muy sonrojada le dice a Oliver que la pasÛ muy bien a su lado. Que desearÌa volver a "
-				+ "salir con el, ya que le pareciÛ alguien divertido. Le da un beso en la mejilla y se "
+				+ "muy sonrojada le dice a Oliver que la pas√≥ muy bien a su lado. Que desear√≠a volver a "
+				+ "salir con el, ya que le pareci√≥ alguien divertido. Le da un beso en la mejilla y se "
 				+ "aleja muy apenada.");
 		n11211222.setTipo(n11211222.TERMINAL);
 		n11211222.setUbicacion("imagenesChicas/A19.jpg");
-		n11211222.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO UNA BUENA CONVERSACI”N.");
+		n11211222.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO UNA BUENA CONVERSACI√ìN.");
+		n11211222.setAudio("/audio/pedir jugo de mora.wav");
 		
 		//Nodo 1.1.2.1.2 Insistir en ir a tomar la cerveza
 		Nodo n11212 = new Nodo (5, "Oliver y Catalina se dirigen a un bar cercano a la universidad. "
-				+ "Cada uno pide una cerveza. Como siente que Catalina est· algo incÛmoda por el lugar "
-				+ ", øquÈ deberÌa hacer para remediar eso?");
+				+ "Cada uno pide una cerveza. Como siente que Catalina est√° algo inc√≥moda por el lugar "
+				+ ", ¬øqu√© deber√≠a hacer para remediar eso?");
 		n11212.setTipo(n11212.PROBABILIDAD);
 		n11212.setUbicacion("imagenesChicas/A20.jpg");
-		n11212.agregarOpcion("Oliver pide m·s cervezas.");
+		n11212.agregarOpcion("Oliver pide m√°s cervezas.");
 		n11212.agregarOpcion("Oliver pide juguito de mora.");
+		n11212.setAudio("/audio/ir a tomar cerveza.wav");
 		
-		//Nodo 1.1.2.1.2.1 Pedir m·s cervezas
-		Nodo n112121 = new Nodo (6, "Es la peor decisiÛn que Oliver pudo haber tomado en su vida. "
-				+ "No sabÌa que el era muy propenso a emborracharse, por lo que a la tercera cerveza "
-				+ "ya no estaba en sus cabales. IntentÛ acercarse a Catalina y darle un beso, por lo "
-				+ "que ella inmediatamente se levantÛ y le pegÛ un puÒo en la cara, fue tan fuerte"
-				+ "que incluso le rompiÛ las gafas.");
+		//Nodo 1.1.2.1.2.1 Pedir m√°s cervezas
+		Nodo n112121 = new Nodo (6, "Es la peor decisi√≥n que Oliver pudo haber tomado en su vida. "
+				+ "No sab√≠a que el era muy propenso a emborracharse, por lo que a la tercera cerveza "
+				+ "ya no estaba en sus cabales. Intent√≥ acercarse a Catalina y darle un beso, por lo "
+				+ "que ella inmediatamente se levant√≥ y le peg√≥ un pu√±o en la cara, fue tan fuerte"
+				+ "que incluso le rompi√≥ las gafas.");
 		n112121.setTipo(n112121.TERMINAL);
 		n112121.setUbicacion("imagenesChicas/A21.jpg");
 		n112121.agregarOpcion("ERES UN CONQUISTADOR QUE NO SE CONOCE A SI MISMO.");
+		n112121.setAudio("/audio/pedir m√°s cervezas.wav");
 		
 		//Nodo 1.1.2.1.2.2 Pedir jugo de mora.
 		Nodo n112122 = new Nodo(6, "El jugo de mora fue una buena idea. Le hizo gracia a Catalina, ya que "
-				+ "Oliver contÛ un mal chiste sobre las moras que hizo que se rompiera el hielo. "
+				+ "Oliver cont√≥ un mal chiste sobre las moras que hizo que se rompiera el hielo. "
 				+ "Hablaron un buen rato y volvieron a la universidad. Antes de despedirse, Catalina, "
-				+ "muy sonrojada le dice a Oliver que la pasÛ muy bien a su lado. Que desearÌa volver "
-				+ "a salir con el, ya que le pareciÛ alguien divertido. Le da un beso en la mejilla y "
+				+ "muy sonrojada le dice a Oliver que la pas√≥ muy bien a su lado. Que desear√≠a volver "
+				+ "a salir con el, ya que le pareci√≥ alguien divertido. Le da un beso en la mejilla y "
 				+ "se aleja muy apenada.");
 		n112122.setTipo(n112122.TERMINAL);
 		n112122.setUbicacion("imagenesChicas/A19.jpg");
-		n112122.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO BUENA CONVERSACI”N.");
-		
+		n112122.agregarOpcion("ERES UN CONQUISTADOR CON MALOS CHISTES PERO BUENA CONVERSACI√ìN.");
+		n112122.setAudio("/audio/pedir jugo de mora.wav");
 		
 		//Nodo 1.1.2.2 Invitarla a comer Bonice
 		Nodo n1122 = new Nodo(4,"A Catalina le agrada la idea de ir a comer bonice, Oliver espera que haga un buen clima porque el bonice solo es rico cuando hace calor.");
 		n1122.setTipo(n1122.PROBABILIDAD);
 		n1122.agregarOpcion("No llueve y hace buen clima.");
 		n1122.agregarOpcion("Cae un aguacero.");
-		
+		n1122.setAudio("/audio/ir a comer bonice.wav");
 		
 		
 		//Nodo 1.1.2.2.1 No llueve
 		Nodo n11221 = new Nodo(5,"Oliver y Catalina salen a comer bonice, tienen una buena charla y disfrutan el momento." + 
-				"Se dirigen de nuevo a la universidad, pero Oliver est· decidido a hacerle una invitaciÛn " + 
-				"porque siente que tuvieron buena quÌmica. Si lo hace en ese momento, puede que no sea " + 
+				"Se dirigen de nuevo a la universidad, pero Oliver est√° decidido a hacerle una invitaci√≥n " + 
+				"porque siente que tuvieron buena qu√≠mica. Si lo hace en ese momento, puede que no sea " + 
 				"apropiado, pero si lo hace antes de despedirse, puede que se acobarde");
 		n11221.setTipo(n11221.DECISION);
 		n11221.setUbicacion("imagenesChicas/A14.jpg");
 		n11221.agregarOpcion("Pedirle en ese momento una cita.");
 		n11221.agregarOpcion("Esperar a la hora de despedirse para pedirle la cita.");
-		
+		n11221.setAudio("/audio/hace buen clima.wav");
 		
 		//Nodo 1.1.2.2.2 Llueve
-		Nodo n11222 = new Nodo(5, "Al ver que llueve, Oliver le propone ir a comer empanadita de 1000, ya que no cuenta con presupuesto para invitarla para algo mas caro. El espera que ella acepte su invitaciÛn");
+		Nodo n11222 = new Nodo(5, "Al ver que llueve, Oliver le propone ir a comer empanadita de 1000, ya que no cuenta con presupuesto para invitarla para algo mas caro. El espera que ella acepte su invitaci√≥n");
 		n11222.setTipo(n11222.PROBABILIDAD);
 		n11222.setUbicacion("imagenesChicas/A05.jpg");
-		n11222.agregarOpcion("Catalina acepta su invitaciÛn");
-		n11222.agregarOpcion("Catalina dice que no, que mejor hacen el plan otro dÌa.");
-		
+		n11222.agregarOpcion("Catalina acepta su invitaci√≥n");
+		n11222.agregarOpcion("Catalina dice que no, que mejor hacen el plan otro d√≠a.");
+		n11222.setAudio("/audio/llueve.wav");
 		
 		//Nodo 1.1.2.2.1.1 Pedirle la cita en ese momento
-		Nodo n112211 = new Nodo(6,"En ese momento Oliver mira a Catalina a los ojos y le dice que pasÛ una " + 
+		Nodo n112211 = new Nodo(6,"En ese momento Oliver mira a Catalina a los ojos y le dice que pas√≥ una " + 
 				"excelente tarde a su lado. Que desea volver a salir con ella, pero no para devolverle " + 
-				"un favor de amigos sino como algo m·s. Catalina algo sonrojada le dice que si." + 
-				"El sueÒo de Oliver se hace realidad, por primera vez en su vida una chica aceptÛ su invitaciÛn.");
+				"un favor de amigos sino como algo m√°s. Catalina algo sonrojada le dice que si." + 
+				"El sue√±o de Oliver se hace realidad, por primera vez en su vida una chica acept√≥ su invitaci√≥n.");
 		n112211.setUbicacion("imagenesChicas/A15.jpg");
 		n112211.setTipo(n112211.TERMINAL);
-		n112211.agregarOpcion("ERES ES TODO UN TÕMIDO CONQUISTADOR.");
-		
+		n112211.agregarOpcion("ERES ES TODO UN T√çMIDO CONQUISTADOR.");
+		n112211.setAudio("/audio/pedir la cita en el momento.wav");
 		
 		//Nodo 1.1.2.2.1.2 Pedirle la cita al final
-		Nodo n112212 = new Nodo(6,"Mientras se dirigÌan a la universidad, en el sem·foro de carrera 13, Oliver sintiÛ que algo le cayÛ en el brazo. Era popÛ de paloma. Justo se habÌa puesto debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. PerdiÛ la oportunidad de hacerle una nueva invitaciÛn.");
+		Nodo n112212 = new Nodo(6,"Mientras se dirig√≠an a la universidad, en el sem√°foro de carrera 13, Oliver sinti√≥ que algo le cay√≥ en el brazo. Era pop√≥ de paloma. Justo se hab√≠a puesto debajo de los cables de electricidad donde las palomas se ubican siempre. Tuvo que ir corriendo a la universidad a limpiarse. A penas pudo despedirse de Catalina. Perdi√≥ la oportunidad de hacerle una nueva invitaci√≥n.");
 		n112212.setTipo(n112212.TERMINAL);
 		n112212.setUbicacion("imagenesChicas/A17.jpg");
 		n112212.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
-		
+		n112212.setAudio("/audio/pedir la invitacion despues.wav");
 		
 		//Nodo 1.1.2.2.2.1 Acepta ir a comer empanada
-		Nodo n112221 = new Nodo(6,"Catalina no pone problema y se dirigen a la tienda donde venden empanaditas de mil. Se sientan a hablar. Oliver disfruta muchÌsimo de la charla y considera que hay muy buena quÌmica entre los dos. Piden otra ronda de empanadas y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a su salsa favorita. ");
+		Nodo n112221 = new Nodo(6,"Catalina no pone problema y se dirigen a la tienda donde venden empanaditas de mil. Se sientan a hablar. Oliver disfruta much√≠simo de la charla y considera que hay muy buena qu√≠mica entre los dos. Piden otra ronda de empanadas y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a su salsa favorita. ");
 		n112221.setTipo(n112221.PROBABILIDAD);
 		n112221.setUbicacion("imagenesChicas/A16.jpg");
 		n112221.agregarOpcion("Oliver le echa salsa de ajo a la empanada.");
 		n112221.agregarOpcion("Oliver decide no aderezar la empenada con salsa de ajo.");
+		n112221.setAudio("/audio/acepta ir a comer empanada.wav");
 		
 		
-		
-		//Nodo 1.1.2.2.2.2 Espera a otro dÌa
-		Nodo n112222 = new Nodo(6,"Durante el mes, en Bogot· no dejÛ de llover. Oliver se quedÛ esperando...");
+		//Nodo 1.1.2.2.2.2 Espera a otro d√≠a
+		Nodo n112222 = new Nodo(6,"Durante el mes, en Bogot√° no dej√≥ de llover. Oliver se qued√≥ esperando...");
 		n112222.setTipo(n112222.TERMINAL);
 		n112222.agregarOpcion("ERES UN CONQUISTADOR CON MUY MALA SUERTE.");
-		
+		n112222.setAudio("/audio/espera a otro dia.wav");
 
 		//Nodo 1.1.2.2.2.1.1 Le hecha salsa de ajo
-		Nodo n1122211 = new Nodo(7,"Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexiÛn. Cuando llega el momento en que Catalina se acerca para darle un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradÛ. La situaciÛn se tornÛ algo incÛmoda, por lo que terminaron la conversaciÛn, se despidieron y nada mas volviÛ a suceder.");
+		Nodo n1122211 = new Nodo(7,"Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexi√≥n. Cuando llega el momento en que Catalina se acerca para darle un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agrad√≥. La situaci√≥n se torn√≥ algo inc√≥moda, por lo que terminaron la conversaci√≥n, se despidieron y nada mas volvi√≥ a suceder.");
 		n1122211.setTipo(n1122211.TERMINAL);
 		n1122211.setUbicacion("imagenesChicas/A18.jpg");
 		n1122211.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
-		
+		n1122211.setAudio("/audio/usar salsa de ajo.wav");
 		
 		//Nodo 1.1.2.2.2.1.2 No usa la salsa de ajo
-		Nodo n1122212 = new Nodo(7, "Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexiÛn. Antes de despedirse, Catalina, muy sonrojada le dice a Oliver que la pasÛ muy bien a su lado. Que desearÌa volver a salir con el, ya que le pareciÛ alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
+		Nodo n1122212 = new Nodo(7, "Oliver y Catalina continuan hablando y coqueteando por un rato, tienen una gran conexi√≥n. Antes de despedirse, Catalina, muy sonrojada le dice a Oliver que la pas√≥ muy bien a su lado. Que desear√≠a volver a salir con el, ya que le pareci√≥ alguien divertido. Le da un beso en la mejilla y se aleja muy apenada.");
 		n1122212.setTipo(n1122212.TERMINAL);
 		n1122212.setUbicacion("imagenesChicas/A15.jpg");
-		n1122212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACI”N");
+		n1122212.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACI√ìN");
+		n1122212.setAudio("/audio/no usar salsa de ajo.wav");
 		
 		
 		//Nodo 1.2 Ofrecer ayuda con la tarea
-		Nodo n12 = new Nodo(2, "Ella acepta ser ayudada. Al parecer tenÌa problemas en resolver el"
+		Nodo n12 = new Nodo(2, "Ella acepta ser ayudada. Al parecer ten√≠a problemas en resolver el"
 				+ " problema. Oliver se toma su tiempo para explicarle el ejercicio y que pueda "
 				+ "terminarlo. Finalmente llega la hora de que empiece la clase, por lo que aprovecha"
 				+ " y le pregunta su nombre a lo que ella responde: Catalina. Esperemos que la ayuda haya"
-				+ " sido suficiente para causar reacciÛn en ella.");
+				+ " sido suficiente para causar reacci√≥n en ella.");
 		n12.setTipo(n12.PROBABILIDAD);
 		n12.agregarOpcion("Catalina Le agradece.");
 		n12.agregarOpcion("Catalina le agradece y le promete invitarle a algo por su ayuda.");
 		n12.setUbicacion("imagenesChicas/A09.jpg");
+		n12.setAudio("/audio/ofrecer ayuda con la tarea.wav");
+		
 		//Nodo 1.2.1 Catalina le agradece y ya
-		Nodo n121 = new Nodo (3, "Y esa fue la ˙nica y ˙ltima vez que Oliver hablÛ con Catalina.");
+		Nodo n121 = new Nodo (3, "Y esa fue la √∫nica y √∫ltima vez que Oliver habl√≥ con Catalina.");
 		n121.setTipo(n121.TERMINAL);
 		n121.agregarOpcion("SER AMABLE NO SIEMPRE ES SUFICIENTE.");
+		n121.setAudio("/audio/le agradece y ya.wav");
 		
 		//Nodo 1.2.2 Le agradece y le invita a algo
-		Nodo n122 = new Nodo (3, "Oliver se sorprende de la facilidad con la que consiguiÛ aquella"
-				+ " reacciÛn en Catalina. Intercambian n˙meros para determinar cuando se reunir·n. Habr· "
-				+ "que andar con cuidado ya que todo est· saliendo muy bien. Ya en su hogar, Oliver"
-				+ " debe decidir si iniciar la conversaciÛn o no.");
+		Nodo n122 = new Nodo (3, "Oliver se sorprende de la facilidad con la que consigui√≥ aquella"
+				+ " reacci√≥n en Catalina. Intercambian n√∫meros para determinar cuando se reunir√°n. Habr√° "
+				+ "que andar con cuidado ya que todo est√° saliendo muy bien. Ya en su hogar, Oliver"
+				+ " debe decidir si iniciar la conversaci√≥n o no.");
 		n122.setTipo(n122.DECISION);
 		n122.agregarOpcion("Oliver decide escribirle primero.");
-		n122.agregarOpcion("Oliver esperar· hasta que ella se comunique.");
+		n122.agregarOpcion("Oliver esperar√° hasta que ella se comunique.");
+		n122.setAudio("/audio/le agradece y le invita algo.wav");
 		
 		//Nodo 1.2.2.1 Escribirle primero
 		Nodo n1221 = new Nodo (4, "Oliver prefiere no arriesgarse y da la iniciativa para iniciar "
-				+ "la conversaciÛn. Catalina responde r·pidamente y finalmente ella le dice donde se "
-				+ "pueden reunir, para gastarle algo de comer. Ahora Èl debe decidir entre las "
-				+ "opciones que ella le diÛ.");
+				+ "la conversaci√≥n. Catalina responde r√°pidamente y finalmente ella le dice donde se "
+				+ "pueden reunir, para gastarle algo de comer. Ahora √©l debe decidir entre las "
+				+ "opciones que ella le di√≥.");
 		n1221.setUbicacion("imagenesChicas/A10.jpg");
 		n1221.setTipo(n1221.DECISION);
 		n1221.agregarOpcion("Ir a comer empanadita de 1000.");
 		n1221.agregarOpcion("Ir a comer helado.");
+		n1221.setAudio("/audio/escribirle primero.wav");
 		
 		//Nodo 1.2.2.1.1 Empanada de mil
 		Nodo n12211 = new Nodo (5, "Catalina no pone problema y se dirigen a la tienda donde venden "
-				+ "empanaditas de mil. Se sientan a hablar. Oliver disfruta muchÌsimo de la charla "
-				+ "y considera que hay muy buena quÌmica entre los dos. Piden otra ronda de empanadas "
+				+ "empanaditas de mil. Se sientan a hablar. Oliver disfruta much√≠simo de la charla "
+				+ "y considera que hay muy buena qu√≠mica entre los dos. Piden otra ronda de empanadas "
 				+ "y esta vez le ofrecen salsa de ajo para aderezar. Oliver no puede resistirse a "
 				+ "su salsa favorita.");
 		n12211.setTipo(n12211.PROBABILIDAD);
 		n12211.setUbicacion("imagenesChicas/A16.jpg");
 		n12211.agregarOpcion("Oliver le hecha salsa de ajo a la empanada.");
 		n12211.agregarOpcion("Oliver decide no aderezar la empanada con salsa de ajo.");
+		n12211.setAudio("/audio/acepta ir a comer empanada.wav");
 		
 		//Nodo 1.2.2.1.1.1 Usar salsa de ajo
 		Nodo n122111 = new Nodo (6, "Oliver y Catalina continuan hablando y coqueteando por un rato, "
-				+ "tienen una gran conexiÛn. Cuando llega el momento en que Catalina se acerca para darle "
-				+ "un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agradÛ. La "
-				+ "situaciÛn se tornÛ algo incÛmoda, por lo que terminaron la conversaciÛn, se "
-				+ "despidieron y nada m·s volvio a suceder.");
+				+ "tienen una gran conexi√≥n. Cuando llega el momento en que Catalina se acerca para darle "
+				+ "un beso, se aleja de nuevo. Al parecer el olor de salsa de ajo no le agrad√≥. La "
+				+ "situaci√≥n se torn√≥ algo inc√≥moda, por lo que terminaron la conversaci√≥n, se "
+				+ "despidieron y nada m√°s volvio a suceder.");
 		n122111.setTipo(n122111.TERMINAL);
 		n122111.setUbicacion("imagenesChicas/A18.jpg");
 		n122111.agregarOpcion("ERES UN CONQUISTADOR ALGO DESPISTADO");
+		n122111.setAudio("/audio/usar salsa de ajo.wav");
 		
 		//Nodo 1.2.2.1.1.2 No usar salsa de ajo
 		Nodo n122112 = new Nodo (6	, "Oliver y X continuan hablando y coqueteando por un rato, tienen"
-				+ " una gran conexiÛn. Antes de despedirse, Catalina muy sonrojada le dice a Oliver "
-				+ "que la pasÛ muy bien a su lado. Que desearÌa volver a salir con el, ya que le "
-				+ "pareciÛ alguien divertido. Le da un beso en la mejilla y se aleja apenada. ");
+				+ " una gran conexi√≥n. Antes de despedirse, Catalina muy sonrojada le dice a Oliver "
+				+ "que la pas√≥ muy bien a su lado. Que desear√≠a volver a salir con el, ya que le "
+				+ "pareci√≥ alguien divertido. Le da un beso en la mejilla y se aleja apenada. ");
 		n122112.setUbicacion("imagenesChicas/A19.jpg");
 		n122112.setTipo(n122112.TERMINAL);
-		n122112.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACI”N.");
+		n122112.agregarOpcion("ERES UN CONQUISTADOR CON BUENA CONVERSACI√ìN.");
+		n122112.setAudio("/audio/no usar salsa de ajo.wav");
 		
 		//Nodo 1.2.2.2 Esperar a que ella se comunique
-		Nodo n1222 = new Nodo (4, "ESPER”, ESPER” Y SE QUEDO ESPERANDO ....");
+		Nodo n1222 = new Nodo (4, "ESPER√ì, ESPER√ì Y SE QUEDO ESPERANDO ....");
 		n1222.setTipo(n1222.TERMINAL);
+		n1222.setAudio("/audio/esperar que ella se comunique.wav");
 		
 		//Nodo 1.2.2.1.2 Ir a comer helado
-		Nodo n12212 = new Nodo (5, "LlegÛ el dÌa esperado. Le pareciÛ verla radiante ese dÌa, no "
-				+ "podÌa creer que todo esto estuviera pasando. Se dirigieron al Crepes and Waffles"
+		Nodo n12212 = new Nodo (5, "Lleg√≥ el d√≠a esperado. Le pareci√≥ verla radiante ese d√≠a, no "
+				+ "pod√≠a creer que todo esto estuviera pasando. Se dirigieron al Crepes and Waffles"
 				+ " de la plaza de la 39, en el camino tuvieron una buena charla. Oliver siente que "
-				+ " hay una gran quÌmica entre los dos, esta es la oportunidad que estaba esperando. "
-				+ "A pesar de ser ella la que invitÛ, Oliver tiene la posibilidad de pagar por "
-				+ "el helado, eso lo harÌa quedar bien y darÌa otra oportunidad para que se "
-				+ "re˙nan.");
+				+ " hay una gran qu√≠mica entre los dos, esta es la oportunidad que estaba esperando. "
+				+ "A pesar de ser ella la que invit√≥, Oliver tiene la posibilidad de pagar por "
+				+ "el helado, eso lo har√≠a quedar bien y dar√≠a otra oportunidad para que se "
+				+ "re√∫nan.");
 		n12212.setUbicacion("imagenesChicas/A05.jpg");
 		n12212.setTipo(n12212.DECISION);
 		n12212.agregarOpcion("Oliver se adelanta a Catalina y paga los helados.");
 		n12212.agregarOpcion("Oliver permite que Catalina pague los helados.");
+		n12212.setAudio("/audio/ir a comer helado.wav");
 		
 		//Nodo 1.2.2.1.2.1 Pagar los helados primero
 		Nodo n122121 = new Nodo(6, "Catalina le mira agradecida y se sientan a comer el helado. Cada vez "
-				+ "la charla se hace m·s interesante y Oliver siente que es un buen momento para "
-				+ "ser sincero con sus sentimientos. øCÛmo deberÌa demostrarlos?");
+				+ "la charla se hace m√°s interesante y Oliver siente que es un buen momento para "
+				+ "ser sincero con sus sentimientos. ¬øC√≥mo deber√≠a demostrarlos?");
 		n122121.setTipo(n122121.PROBABILIDAD);
 		n122121.setUbicacion("imagenesChicas/A11.jpg");
 		n122121.agregarOpcion("Acercarse e intentar darle un beso.");
 		n122121.agregarOpcion("Decirle: 'Oye, me gustas'.");
+		n122121.setAudio("/audio/pagar los helados primero.wav");
 		
 		//Nodo 1.2.2.1.2.1.1 Intentar darle un beso
-		Nodo n1221211 = new Nodo (7, "Oliver se acerca cada vez m·s, e intenta darle un beso, ella"
+		Nodo n1221211 = new Nodo (7, "Oliver se acerca cada vez m√°s, e intenta darle un beso, ella"
 				+ " lo detiene en seco y le dice: 'Oye, no te confundas, tengo novio'. ");
 		n1221211.setTipo(n1221211.TERMINAL);
 		n1221211.setUbicacion("imagenesChicas/A12.jpg");
-		n1221211.agregarOpcion("FRIENZONEADO PAP¡");
+		n1221211.agregarOpcion("FRIENZONEADO PAP√Å");
+		n1221211.setAudio("/audio/intentar darle un beso.wav");
 		
 		//Nodo 1.2.2.1.2.1.2 Decirle que le gusta
 		Nodo n1221212 = new Nodo (7, "Oliver dice estas palabras y el momento se vuelve inmediatamente"
-				+ " incÛmodo. Ella algo apenada le dice: 'Lo siento, pero tengo novio'.");
+				+ " inc√≥modo. Ella algo apenada le dice: 'Lo siento, pero tengo novio'.");
 		n1221212.setTipo(n1221212.TERMINAL);
-		n1221212.agregarOpcion("FRIENZONEADO PAP¡");
+		n1221212.agregarOpcion("FRIENZONEADO PAP√Å");
 		n1221212.setUbicacion("imagenesChicas/A12.jpg");
+		n1221212.setAudio("/audio/decirle que le gusta.wav");
 		
 		//Nodo 1.2.2.1.2.2 Dejar que ella pague los helados
 		Nodo n122122 = new Nodo (6, "Ambos se sientan a comer helado. Cada vez la charla se hace "
-				+ "m·s interesante y Oliver siente que es un buen momento para ser sincero con sus "
-				+ "sentimientos, øSe arriesgar·?");
+				+ "m√°s interesante y Oliver siente que es un buen momento para ser sincero con sus "
+				+ "sentimientos, ¬øSe arriesgar√°?");
 		n122122.setTipo(n122122.DECISION);
 		n122122.agregarOpcion("Decirle: 'Oye, me gustas'.");
 		n122122.agregarOpcion("No decirle nada.");
+		n122122.setAudio("/audio/dejar que ella pague.wav");
 		
 		//Nodo 1.2.2.1.2.2.1 Decirle que le gusta
 		Nodo n1221221 = new Nodo (7, "Oliver dice estas palabras y el momento se vuelve inmediatamente "
-				+ "incÛmodo. Ella algo apenada le dice: 'Lo siento, pero tengo novio'.");
+				+ "inc√≥modo. Ella algo apenada le dice: 'Lo siento, pero tengo novio'.");
 		n1221221.setUbicacion("imagenesChicas/A11.jpg");
 		n1221221.setTipo(n1221221.TERMINAL);
-		n1221221.agregarOpcion("FRIENZONEADO PAP¡.");
+		n1221221.agregarOpcion("FRIENZONEADO PAP√Å.");	
+		n1221221.setAudio("/audio/decirle que le gusta.wav");
 		
 		//Nodo 1.2.2.1.2.2.2 No decirle nada
 		Nodo n1221222= new Nodo (7, "Estuvieron hablando por un buen rato hasta que terminaron el helado"
-				+ ". Ella se despidiÛ y se fue. Oliver no fue capaz de invitarla a salir de nuevo. El "
-				+ "tiempo pasÛ y Catalina se volviÛ una simple conocida. ");
+				+ ". Ella se despidi√≥ y se fue. Oliver no fue capaz de invitarla a salir de nuevo. El "
+				+ "tiempo pas√≥ y Catalina se volvi√≥ una simple conocida. ");
 		n1221222.setTipo(n1221222.TERMINAL);
-		n1221222.agregarOpcion("USTED NO APRENDE, øVERDAD?.");
+		n1221222.agregarOpcion("USTED NO APRENDE, ¬øVERDAD?.");
+		n1221222.setAudio("/audio/no decirle nada.wav");
 		
 		//Inicio historia de Camilo
-		Nodo n0 = new Nodo(0,"En ese momento Oliver se da cuenta que una de las chicas se queda mirandolo fijamente, øquÈ deberÌa hacer?");
+		Nodo n0 = new Nodo(0,"En ese momento Oliver se da cuenta que una de las chicas se queda mirandolo fijamente, ¬øqu√© deber√≠a hacer?");
 		n0.setTipo(n0.DECISION);
-		n0.agregarOpcion("Ir directamente a hablarle y pedirle ayuda con su investigaciÛn.");
-		n0.agregarOpcion("Ir a casa a preparar una conversaciÛn para hablar en otra ocasiÛn con ella");
+		n0.agregarOpcion("Ir directamente a hablarle y pedirle ayuda con su investigaci√≥n.");
+		n0.agregarOpcion("Ir a casa a preparar una conversaci√≥n para hablar en otra ocasi√≥n con ella");
 		n0.setPuntaje(100);
+		n0.setAudio("/audio/inicio camilo.wav");
 		
 		//Nodo 2.1 Le hablas a la chica
-		Nodo n21 = new Nodo(2,"La chica le pregunta cu·l investigaciÛn, a lo que Oliver responde que su investigaciÛn ayudara a muchos chicos en la 40,"
-				+ " pero como tal ya est· en la fase experimental y quiere que ella haga parte de ese experimento, "
-				+ "si Èl la hace reÌr, ella tendrÌa que salir con Èl. "
-				+ "Ella se rÌe y accede a salir con Èl. øquÈ debe hacer ahora?");
+		Nodo n21 = new Nodo(2,"La chica le pregunta cu√°l investigaci√≥n, a lo que Oliver responde que su investigaci√≥n ayudara a muchos chicos en la 40,"
+				+ " pero como tal ya est√° en la fase experimental y quiere que ella haga parte de ese experimento, "
+				+ "si √©l la hace re√≠r, ella tendr√≠a que salir con √©l. "
+				+ "Ella se r√≠e y accede a salir con √©l. ¬øqu√© debe hacer ahora?");
 		n21.setTipo(n21.DECISION);
 		n21.agregarOpcion("Decirle que se vean el viernes a la salida en creps and waffles para comer un helado");
-		n21.agregarOpcion("Pedirle el n˙mero para por medio de un mensaje o llamada le diga cu·ndo salir");
+		n21.agregarOpcion("Pedirle el n√∫mero para por medio de un mensaje o llamada le diga cu√°ndo salir");
 		n21.setPuntaje(80);
+		n21.setAudio("/audio/hablarle a la chica.wav");
 		
-		//Nodo 2.1.1 Ella accede salir con Èl
-		Nodo n211 = new Nodo(3,"Ella acepta verse ese dÌa con Èl, sin necesidad de hablar por redes sociales, parece que le gusta m·s la idea de conocerse a la antigua, pero Oliver se percatÛ de una cosa, nunca le pregunto cÛmo se llamaba y le daba muchÌsima pena preguntarle su nombre en la cita, tendr· que hacer de alguna forma ella diga su nombre sin que parezca grosero, ya que no sabe si ella ya se lo habÌa dicho antes.\n" + 
-				"El viernes, Oliver est· muy nervioso no sabe de quÈ hablar y tiene miedo de que ella no aparezca, quiere impresionarla asÌ que:");
+		//Nodo 2.1.1 Ella accede salir con √©l
+		Nodo n211 = new Nodo(3,"Ella acepta verse ese d√≠a con √©l, sin necesidad de hablar por redes sociales, parece que le gusta m√°s la idea de conocerse a la antigua, pero Oliver se percat√≥ de una cosa, nunca le pregunto c√≥mo se llamaba y le daba much√≠sima pena preguntarle su nombre en la cita, tendr√° que hacer de alguna forma ella diga su nombre sin que parezca grosero, ya que no sabe si ella ya se lo hab√≠a dicho antes.\n" + 
+				"El viernes, Oliver est√° muy nervioso no sabe de qu√© hablar y tiene miedo de que ella no aparezca, quiere impresionarla as√≠ que:");
 		n211.setTipo(n211.DECISION);
 		n211.agregarOpcion("Oliver decide ir bien arreglado pero sin mucho formalismo");
 		n211.agregarOpcion("Oliver decide ir en traje de gala y de paso le compra rosas");
 		n211.setPuntaje(55);
+		n211.setAudio("/audio/ella accede a salir con el.wav");
 		
-		//Nodo 2.1.2 Elle le da su n˙mero de celular
-		Nodo n212 = new Nodo(3, "La conversaciÛn fluye y Oliver aprovecha para pedirle el n˙mero a la chica que tanto le llamo la atenciÛn. Ella acepta con una sonrisa, luego de darle su n˙mero, se despiden con un beso en la mejilla.\n" + 
-				"Oliver est· muy feliz, orgulloso y demasiado emocionado por escribirle, tiene que pensar muy bien que decirle, no quiere que ella piense que est· desesperado.\n" + 
+		//Nodo 2.1.2 Elle le da su n√∫mero de celular
+		Nodo n212 = new Nodo(3, "La conversaci√≥n fluye y Oliver aprovecha para pedirle el n√∫mero a la chica que tanto le llamo la atenci√≥n. Ella acepta con una sonrisa, luego de darle su n√∫mero, se despiden con un beso en la mejilla.\n" + 
+				"Oliver est√° muy feliz, orgulloso y demasiado emocionado por escribirle, tiene que pensar muy bien que decirle, no quiere que ella piense que est√° desesperado.\n" + 
 				"");
 		n212.setTipo(n212.DECISION);
 		n212.agregarOpcion("Escribirle de una vez.");
-		n212.agregarOpcion("Decide no escribirle por ahora, piensa que lo mejor es hacerse el interesante y deja pasar algunos dÌas.");
+		n212.agregarOpcion("Decide no escribirle por ahora, piensa que lo mejor es hacerse el interesante y deja pasar algunos d√≠as.");
 		n212.setPuntaje(45);
+		n212.setAudio("/audio/ella le da su numero de celular.wav");
 		
 		//Nodo 2.1.1.1 Decide ir informal
-		Nodo n2111 = new Nodo(4,"Pasada media hora de donde habÌan quedado donde verse, se percata que la chica no llega, a lo cual Oliver se desanima, ya que piensa que no va a llegar, pero al  menos no gatÛ dinero\n" + 
-				"Cuando est· a punto de irse la chica llega con una cara de pena por el tiempo de retraso, le explico que estaba en clase y se quedÛ hablando con su amiga. …l sonrÌe y le dice que no hay problema,"
-				+ " que pensaba que no iba a venir, pero ya he le habÌa hecho tarde para irse, (debe ir a recoger a su hermana al colegio), asÌ que no sabe quÈ hacer.\n" + 
+		Nodo n2111 = new Nodo(4,"Pasada media hora de donde hab√≠an quedado donde verse, se percata que la chica no llega, a lo cual Oliver se desanima, ya que piensa que no va a llegar, pero al  menos no gat√≥ dinero\n" + 
+				"Cuando est√° a punto de irse la chica llega con una cara de pena por el tiempo de retraso, le explico que estaba en clase y se qued√≥ hablando con su amiga. √âl sonr√≠e y le dice que no hay problema,"
+				+ " que pensaba que no iba a venir, pero ya he le hab√≠a hecho tarde para irse, (debe ir a recoger a su hermana al colegio), as√≠ que no sabe qu√© hacer.\n" + 
 				"");
 		n2111.setTipo(n2111.DECISION);
-		n2111.agregarOpcion("Quedarse en la heladerÌa y salir como estaba planeado para conocerse");
+		n2111.agregarOpcion("Quedarse en la helader√≠a y salir como estaba planeado para conocerse");
 		n2111.agregarOpcion("Aplazar la cita ya que debe recoger a su hermana");
 		n2111.setPuntaje(65);
+		n2111.setAudio("/audio/decide ir formal.wav");
 		
 		//Nodo 2.1.1.2 Decide irse elegante
-		Nodo n2112 = new Nodo(4,"La chica piensa que est· desesperado por ella, viendo que le trajo rosas, pero tambiÈn piensa que es tierno su gesto. Aun asÌ se le hace muy refinado el hecho de ir en traje de gala,"
-				+ " la idea era comer helado, a lo que ella le dice que est· ocupada que si pueden salir otro dÌa.");
+		Nodo n2112 = new Nodo(4,"La chica piensa que est√° desesperado por ella, viendo que le trajo rosas, pero tambi√©n piensa que es tierno su gesto. Aun as√≠ se le hace muy refinado el hecho de ir en traje de gala,"
+				+ " la idea era comer helado, a lo que ella le dice que est√° ocupada que si pueden salir otro d√≠a.");
 		n2112.setTipo(n2112.DECISION);
 		n2112.agregarOpcion("Insistirle en salir en ese momento");
-		n2112.agregarOpcion("Aceptar verse otro dÌa");
+		n2112.agregarOpcion("Aceptar verse otro d√≠a");
 		n2112.setPuntaje(35);
+		n2112.setAudio("/audio/decide irse elegante.wav");
 		
 		//Nodo 2.1.2.1 Decide hablarle de una vez
-		Nodo n2121 = new Nodo(4,"Daniela piensa que est· desesperado por ella por ende no le responde de una,"
-				+ " lo deja esperando varios dÌas, Èl por su lado se desanima,"
-				+ " ya que al pasar varios dÌas piensa que ella no est· interesado por Èl,"
-				+ " asÌ que decide borrar su n˙mero, y no volverle a hablar, sabe que ser rechazado no es malo como lo decÌa en el libro,"
-				+ " \"cada rechazo es una oportunidad de aprender a mejorar en cÛmo no hacerlo\"");
+		Nodo n2121 = new Nodo(4,"Daniela piensa que est√° desesperado por ella por ende no le responde de una,"
+				+ " lo deja esperando varios d√≠as, √©l por su lado se desanima,"
+				+ " ya que al pasar varios d√≠as piensa que ella no est√° interesado por √©l,"
+				+ " as√≠ que decide borrar su n√∫mero, y no volverle a hablar, sabe que ser rechazado no es malo como lo dec√≠a en el libro,"
+				+ " \"cada rechazo es una oportunidad de aprender a mejorar en c√≥mo no hacerlo\"");
 		n2121.setTipo(n2121.TERMINAL);
 		n2121.agregarOpcion("Eres un coquistador muy intenso.");
 		n2121.setPuntaje(10);
+		n2121.setAudio("/audio/decide hablarle de una vez.wav");
 		
 		
-		//Nodo 2.1.2.2 Decide dejar pasar unos dÌas
-		Nodo n2122 = new Nodo(4,"Han pasado 4 dÌas desde aquella conversaciÛn, eran las 2:30 de la tarde y envÌa un Hola. Ella no est· en lÌnea pero Oliver no puede despegar los ojos de su conversaciÛn. Pasan dos horas desde ese mensaje, por la cabeza de Oliver pasan mil cosas, quiz· lo vio pero no le interesa responderle, quiz· le dio un numero equivocado, quiz· lo anoto malÖ\n" + 
-				"Y cuando menos lo espera, su celular suena. Dejo pasar 10 minutos y respondiÛ, la conversaciÛn fue lenta pero siempre hubo interÈs de parte y parte. Pasaron algunos dÌas de conversaciones largas por Whatsapp hasta la madrugada, asÌ que Oliver decide:\n" + 
+		//Nodo 2.1.2.2 Decide dejar pasar unos d√≠as
+		Nodo n2122 = new Nodo(4,"Han pasado 4 d√≠as desde aquella conversaci√≥n, eran las 2:30 de la tarde y env√≠a un Hola. Ella no est√° en l√≠nea pero Oliver no puede despegar los ojos de su conversaci√≥n. Pasan dos horas desde ese mensaje, por la cabeza de Oliver pasan mil cosas, quiz√° lo vio pero no le interesa responderle, quiz√° le dio un numero equivocado, quiz√° lo anoto mal¬Ö\n" + 
+				"Y cuando menos lo espera, su celular suena. Dejo pasar 10 minutos y respondi√≥, la conversaci√≥n fue lenta pero siempre hubo inter√©s de parte y parte. Pasaron algunos d√≠as de conversaciones largas por Whatsapp hasta la madrugada, as√≠ que Oliver decide:\n" + 
 				"");
 		n2122.setTipo(n2122.DECISION);
 		n2122.agregarOpcion("Invitarla a salir.");
 		n2122.agregarOpcion("Pedirle ser su novia.");
 		n2122.setPuntaje(90);
+		n2122.setAudio("/audio/decide dejar pasar unos dias.wav");
 		
 		//Nodo 2.1.1.1.1 Decide no ir por su hermana
-		Nodo n21111 = new Nodo(5,"Cada uno compra su helado, aunque el preferÌa gastarle para hacerse pasar por caballero, ella le pregunta por su nombre, Èl le responde: -Oliver øY t˙?, Ella le dice que se llama Daniela.\\n\" + \n" + 
-				"				\"Pasaron los minutos volando a lo cual Oliver llama a su mama para decirle que no puede recoger a su hermana, la madre le dice que bueno, que ella va por ella. Ahora puede disfrutar m·s con Daniela.\\n\" + \n" + 
+		Nodo n21111 = new Nodo(5,"Cada uno compra su helado, aunque el prefer√≠a gastarle para hacerse pasar por caballero, ella le pregunta por su nombre, √©l le responde: -Oliver ¬øY t√∫?, Ella le dice que se llama Daniela.\\n\" + \n" + 
+				"				\"Pasaron los minutos volando a lo cual Oliver llama a su mama para decirle que no puede recoger a su hermana, la madre le dice que bueno, que ella va por ella. Ahora puede disfrutar m√°s con Daniela.\\n\" + \n" + 
 				"				\"Hablan de historias, amores, cosas de terror algo distinto a una cita, al finalizar la cita el decide:");
 		n21111.setTipo(n21111.DECISION);
-		n21111.agregarOpcion("AcompaÒarla hasta que llegue a la casa para asegurarse que llegue bien.");
-		n21111.agregarOpcion("AcompaÒarla al transporte que ella coja y decirle que espera verse en otra ocasiÛn.");
+		n21111.agregarOpcion("Acompa√±arla hasta que llegue a la casa para asegurarse que llegue bien.");
+		n21111.agregarOpcion("Acompa√±arla al transporte que ella coja y decirle que espera verse en otra ocasi√≥n.");
 		n21111.setPuntaje(75);
+		n21111.setAudio("/audio/decide no ir por su hermana.wav");
 		
 		//Nodo 2.1.1.1.2 Decide cancelar la cita
-		Nodo n21112 = new Nodo(5,"Daniela acepta y deciden verse al otro dÌa, en lo cual ambos estaban vestido informalmente, esta vez no fueron a comer helado fueron a escuchar cuenteros, en la tarde ambos la pasan s˙per bien, Daniela se sintiÛ bien al estar con Èl, Oliver la invita a caminar un rato para conocerse en el trayecto Èl le pregunta que si tiene  novio,\n" + 
-				"Ella dice que no, que hace poco saliÛ de una relaciÛn y decidiÛ no volver a tener novio por el momento\n" + 
-				"Oliver se desanima por lo ˙ltimo pero tambiÈn se da alientos para intentarlo, asÌ que Oliver decide:\n" + 
+		Nodo n21112 = new Nodo(5,"Daniela acepta y deciden verse al otro d√≠a, en lo cual ambos estaban vestido informalmente, esta vez no fueron a comer helado fueron a escuchar cuenteros, en la tarde ambos la pasan s√∫per bien, Daniela se sinti√≥ bien al estar con √©l, Oliver la invita a caminar un rato para conocerse en el trayecto √©l le pregunta que si tiene  novio,\n" + 
+				"Ella dice que no, que hace poco sali√≥ de una relaci√≥n y decidi√≥ no volver a tener novio por el momento\n" + 
+				"Oliver se desanima por lo √∫ltimo pero tambi√©n se da alientos para intentarlo, as√≠ que Oliver decide:\n" + 
 				"");
 		n21112.setTipo(n21112.DECISION);
 		n21112.agregarOpcion("Ser solamente amigos.");
 		n21112.agregarOpcion("Intentar conquistarla.");
 		n21112.setPuntaje(25);
+		n21112.setAudio("/audio/decide cancelar la cita.wav");
 		
 		//Nodo 2.1.1.2.1 Insiste en salir
-		Nodo n21121 = new Nodo(5, "…l le dice que no hay problema, que salgan asÌ, que la idea es que quiere mostrarle lo caballero que puede ser,"
-				+ " ella admite que le da mucha pena ya que ella no esa vestida o igual para una ocasiÛn asÌ,"
-				+ " Èl sonrÌe y le dice que no hay problema, que pensaba que no iba a venir pero analizando la situaciÛn es mejor divertirse,"
+		Nodo n21121 = new Nodo(5, "√âl le dice que no hay problema, que salgan as√≠, que la idea es que quiere mostrarle lo caballero que puede ser,"
+				+ " ella admite que le da mucha pena ya que ella no esa vestida o igual para una ocasi√≥n as√≠,"
+				+ " √©l sonr√≠e y le dice que no hay problema, que pensaba que no iba a venir pero analizando la situaci√≥n es mejor divertirse,"
 				+ " aunque ya se le hizo tarde para irse, "
-				+ "(debe ir a recoger a su hermana al colegio), asÌ que no sabe quÈ hacer, el decide:");
+				+ "(debe ir a recoger a su hermana al colegio), as√≠ que no sabe qu√© hacer, el decide:");
 		n21121.setTipo(n21121.DECISION);
-		n21121.agregarOpcion("Quedarse en la heladerÌa y salir como estaba planeado para conocerse");
+		n21121.agregarOpcion("Quedarse en la helader√≠a y salir como estaba planeado para conocerse");
 		n21121.agregarOpcion("Aplazar la cita ya que debe recoger a su hermana");
 		n21121.setPuntaje(55);
+		n21121.setAudio("/audio/insiste en salir.wav");
 		
 		//Nodo 2.1.1.2.2 Oliver se enoja
 		Nodo n21122 = new Nodo(5,"Oliver acepto verse otro dia, pero le parecio una falta de respeto que ese dia no salierran\n" + 
@@ -567,196 +599,216 @@ public class Arbol {
 		n21122.setTipo(n21122.TERMINAL);
 		n21122.agregarOpcion("ERES UN CONQUISTADOR MUUY ORGULLOSO.");
 		n21122.setPuntaje(30);
-		
+		n21122.setAudio("/audio/oliver se enoja.wav");
 		
 		
 		//Nodo 2.1.2.2.1 invitarla a salir
-		Nodo n21221 = new Nodo(5,"Le pregunto una tarde por sus planes de ese dÌa, ella estaba libre, asÌ que sin m·s temor Oliver la invito a un cafÈ luego de la clase, ella acepto.\n" + 
-				"Se vieron a las 5:30 en un cafÈ cerca de la universidad, la conversaciÛn fluyo, todo fue risas hasta que se hicieron las 10 de la noche.\n" + 
-				"Oliver acompaÒo a la chica a tomar el transporte, en el momento de despedirse, estaba muy nervioso, no sabÌa si serÌa atrevido darle un beso en la primera cita. \n" + 
-				"DecidiÛ no hacerlo, pero para su sorpresa ella lo hizo, un beso r·pido y se fue.\n" + 
+		Nodo n21221 = new Nodo(5,"Le pregunto una tarde por sus planes de ese d√≠a, ella estaba libre, as√≠ que sin m√°s temor Oliver la invito a un caf√© luego de la clase, ella acepto.\n" + 
+				"Se vieron a las 5:30 en un caf√© cerca de la universidad, la conversaci√≥n fluyo, todo fue risas hasta que se hicieron las 10 de la noche.\n" + 
+				"Oliver acompa√±o a la chica a tomar el transporte, en el momento de despedirse, estaba muy nervioso, no sab√≠a si ser√≠a atrevido darle un beso en la primera cita. \n" + 
+				"Decidi√≥ no hacerlo, pero para su sorpresa ella lo hizo, un beso r√°pido y se fue.\n" + 
 				"");
 		n21221.setTipo(n21221.TERMINAL);
 		n21221.agregarOpcion("ERES UN CONQUISTADOR MUY EFICIENTE");
 		n21221.setPuntaje(60);
+		n21221.setAudio("/audio/invitarla a salir.wav");
 		
 		//NOdo 2.1.2.2.2 Pedirle ser su novia
-		Nodo n21222 = new Nodo(5,"Daniela le dice que no, ya que no se conocen y que le parece que es muy r·pido,"
-				+ " Oliver se decepciona ya que no era la respuesta que esperaba asÌ que Oliver decide:");
+		Nodo n21222 = new Nodo(5,"Daniela le dice que no, ya que no se conocen y que le parece que es muy r√°pido,"
+				+ " Oliver se decepciona ya que no era la respuesta que esperaba as√≠ que Oliver decide:");
 		n21222.setTipo(n21222.DECISION);
 		n21222.agregarOpcion("Pedirle disculpas y dejarle de hablar por un tiempo");
 		n21222.agregarOpcion("Decirle que eso se puede arreglar, entonces la invita a salir a un bar");
 		n21222.setPuntaje(10);
-			
+		n21222.setAudio("/audio/pedirle ser su novia.wav");
 		
 		//Nodo 2.2 ERES UN COBARDe
-		Nodo n22 = new Nodo(2,"No volviÛ a ver a la chica sino una semana despuÈs, tomada de la mano de un chico joven,"
-				+ " se sintiÛ decepcionado, pero se alegrÛ de no ser rechazado.");
+		Nodo n22 = new Nodo(2,"No volvi√≥ a ver a la chica sino una semana despu√©s, tomada de la mano de un chico joven,"
+				+ " se sinti√≥ decepcionado, pero se alegr√≥ de no ser rechazado.");
 		n22.setTipo(n22.TERMINAL);
 		n22.agregarOpcion("En verdad eres muy cobarde.");
 		n22.setPuntaje(0);
+		n22.setAudio("/audio/eres un cobarde.wav");
 		
-		
-		//Nodo 2.1.1.1.1.1 AcompaÒarla a casa
-		Nodo n211111 = new Nodo(6,"Al ir a la casa, se conocen m·s y Oliver se siente bien con la chica, ambos empiezan a sentir un gusto mutuo se dan la oportunidad de compartir sus sueÒos y ambos le queda gustando.\n" + 
-				"Antes de irse Èl le pide su n˙mero, para seguir en contacto. A lo que ella acepta y parece que continuaran saliendo\n" + 
-				"…l toma la decisiÛn de:\n" + 
+		//Nodo 2.1.1.1.1.1 Acompa√±arla a casa
+		Nodo n211111 = new Nodo(6,"Al ir a la casa, se conocen m√°s y Oliver se siente bien con la chica, ambos empiezan a sentir un gusto mutuo se dan la oportunidad de compartir sus sue√±os y ambos le queda gustando.\n" + 
+				"Antes de irse √©l le pide su n√∫mero, para seguir en contacto. A lo que ella acepta y parece que continuaran saliendo\n" + 
+				"√âl toma la decisi√≥n de:\n" + 
 				"");
 		n211111.setTipo(n211111.DECISION);
 		n211111.agregarOpcion("Hablarle de una vez");
-		n211111.agregarOpcion("Esperar unos dÌas y hablarle");
+		n211111.agregarOpcion("Esperar unos d√≠as y hablarle");
 		n211111.setPuntaje(85);
+		n211111.setAudio("/audio/acompa√±arla a la casa.wav");
 		
-		//Nodo 2.1.1.1.1.2 AcompaÒarla a coger bus
-		Nodo n211112 = new Nodo(6,"Oliver sintiÛ que la pasaron  bien y que se gustaron, ahora debe seguir haciÈndolo, "
-				+ "pero al ella irse nunca supo cÛmo hablarle, asÌ que la buscaba en la universidad."
-				+ " Pasaron semanas y no se volvieron a ver, para cuando se toparon, fue el subiendo al quinto piso y ella saliendo del baÒo,"
-				+ " Èl con la pena de que jam·s se volvieron a hablar, no sabÌa que hacer:");
+		//Nodo 2.1.1.1.1.2 Acompa√±arla a coger bus
+		Nodo n211112 = new Nodo(6,"Oliver sinti√≥ que la pasaron  bien y que se gustaron, ahora debe seguir haci√©ndolo, "
+				+ "pero al ella irse nunca supo c√≥mo hablarle, as√≠ que la buscaba en la universidad."
+				+ " Pasaron semanas y no se volvieron a ver, para cuando se toparon, fue el subiendo al quinto piso y ella saliendo del ba√±o,"
+				+ " √©l con la pena de que jam√°s se volvieron a hablar, no sab√≠a que hacer:");
 		n211112.setTipo(n211112.DECISION);
 		n211112.agregarOpcion("Decide ignorarla y seguir subiendo");
-		n211112.agregarOpcion("Decide hablarle y explicarle porquÈ no se habian hablado antes");
+		n211112.agregarOpcion("Decide hablarle y explicarle porqu√© no se habian hablado antes");
 		n211112.setPuntaje(30);
+		n211112.setAudio("/audio/acompa√±arla a coger bus.wav");
 				
 		//Nodo 2.1.1.1.2.1 Ser solamente amigos
-		Nodo n211121 = new Nodo(6,"Salen pero como amigos de ahÌ en adelante hay chispas pero ambos deciden no intentarlo,"
-				+ " ya que Daniela est· saliendo con alguien m·s y Oliver est· inseguro de lo que siente por ella,"
-				+ " asÌ que decide dejarla como una amiga m·s de la Universidad.");
+		Nodo n211121 = new Nodo(6,"Salen pero como amigos de ah√≠ en adelante hay chispas pero ambos deciden no intentarlo,"
+				+ " ya que Daniela est√° saliendo con alguien m√°s y Oliver est√° inseguro de lo que siente por ella,"
+				+ " as√≠ que decide dejarla como una amiga m√°s de la Universidad.");
 		n211121.setTipo(n211121.TERMINAL);
 		n211121.agregarOpcion("BIENVENIDO A LA FRIENDZONE.");
 		n211121.setPuntaje(25);
+		n211121.setAudio("/audio/ser solamente amigos.wav");		
 		
 		//Nodo 2.1.1.1.2.2 Decide conquistarla
-		Nodo n211122 = new Nodo(6,"Empiezan a chatear cada vez m·s seguido hasta que logra conquistarla por medio de citas y salidas.");
+		Nodo n211122 = new Nodo(6,"Empiezan a chatear cada vez m√°s seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n211122.setTipo(n211122.TERMINAL);
 		n211122.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
 		n211122.setPuntaje(100);
+		n211122.setAudio("/audio/decide conquistarla.wav");
 		
 		//Nodo 2.1.1.2.1.1 Continuar con la cita
-		Nodo n211211 = new Nodo(6,"Cada uno compra su helado, aunque el preferÌa gastarle para hacerse pasar por caballero, ella le pregunta por su nombre, Èl le responde: -Oliver øY t˙?, Ella le dice que se llama Daniela.\n" + 
-				"Pasaron los minutos volando a lo cual Oliver llama a su mama para decirle que no puede recoger a su hermana, la madre le dice que bueno, que ella va por ella. Ahora puede disfrutar m·s con Daniela.\n" + 
+		Nodo n211211 = new Nodo(6,"Cada uno compra su helado, aunque el prefer√≠a gastarle para hacerse pasar por caballero, ella le pregunta por su nombre, √©l le responde: -Oliver ¬øY t√∫?, Ella le dice que se llama Daniela.\n" + 
+				"Pasaron los minutos volando a lo cual Oliver llama a su mama para decirle que no puede recoger a su hermana, la madre le dice que bueno, que ella va por ella. Ahora puede disfrutar m√°s con Daniela.\n" + 
 				"Hablan de historias, amores, cosas de terror algo distinto a una cita, al finalizar la cita el decide:\n" + 
 				"");
 		n211211.setTipo(n211211.DECISION);
-		n211211.agregarOpcion("AcompaÒarla hasta que llegue a la casa para asegurarse que llegue bie");
-		n211211.agregarOpcion("AcompaÒarla al transporte que ella coja y decirle que espera verse en otra ocasion");
+		n211211.agregarOpcion("Acompa√±arla hasta que llegue a la casa para asegurarse que llegue bie");
+		n211211.agregarOpcion("Acompa√±arla al transporte que ella coja y decirle que espera verse en otra ocasion");
 		n211211.setPuntaje(55);
+		n211211.setAudio("/audio/continuar con la cita.wav");
 		
-		//Nodo 2.1.1.2.1.2 Salir otro dÌa
-		Nodo n211212 = new Nodo(6,"Daniela acepta y deciden verse al otro dÌa, en lo cual ambos estaban vestido informalmente, esta vez no fueron a comer helado fueron a escuchar cuenteros, en la tarde ambos la pasan muy bien, ella se sintiÛ cÛmoda Oliver la invita a caminar un rato para conocerse en el trayecto Èl le pregunta que si tiene  novio, Ella dice que no, que hace poco saliÛ de una relaciÛn y decidiÛ no volver a tener novio por el momento\n" + 
-				"Oliver se desanima por lo ˙ltimo pero tambiÈn se da alientos para intentarlo, asÌ que Oliver decide:\n" + 
+		//Nodo 2.1.1.2.1.2 Salir otro d√≠a
+		Nodo n211212 = new Nodo(6,"Daniela acepta y deciden verse al otro d√≠a, en lo cual ambos estaban vestido informalmente, esta vez no fueron a comer helado fueron a escuchar cuenteros, en la tarde ambos la pasan muy bien, ella se sinti√≥ c√≥moda Oliver la invita a caminar un rato para conocerse en el trayecto √©l le pregunta que si tiene  novio, Ella dice que no, que hace poco sali√≥ de una relaci√≥n y decidi√≥ no volver a tener novio por el momento\n" + 
+				"Oliver se desanima por lo √∫ltimo pero tambi√©n se da alientos para intentarlo, as√≠ que Oliver decide:\n" + 
 				"");
 		n211212.setTipo(n211212.DECISION);
 		n211212.agregarOpcion("Ser solamente amigos");
 		n211212.agregarOpcion("Intentar conquistarla");
 		n211212.setPuntaje(45);
+		n211212.setAudio("/audio/salir otro dia.wav");
 		
 		//Nodo 2.1.2.2.2.1 Decide dejarle de hablar
-		Nodo n212221 = new Nodo(6,"Le pide disculpas, que estaba confundido y sintiÛ que debiÛ hacerlo, "
-				+ "ella le dice que no hay problema pero la conversaciÛn deja de fluir como estaba esperado el decide dejarle de hablar por unos dÌas y"
-				+ "  se desanima, ya que al pasar varios dÌas piensa que ella no est· interesado por Èl, asÌ que decide borrar su n˙mero, y no volverle a hablar, sabe que ser rechazado no es malo cÛmo lo decÌa en el libro, "
-				+ "\"cada rechazo es una oportunidad de aprender a mejorar en cÛmo no hacerlo\"");
+		Nodo n212221 = new Nodo(6,"Le pide disculpas, que estaba confundido y sinti√≥ que debi√≥ hacerlo, "
+				+ "ella le dice que no hay problema pero la conversaci√≥n deja de fluir como estaba esperado el decide dejarle de hablar por unos d√≠as y"
+				+ "  se desanima, ya que al pasar varios d√≠as piensa que ella no est√° interesado por √©l, as√≠ que decide borrar su n√∫mero, y no volverle a hablar, sabe que ser rechazado no es malo c√≥mo lo dec√≠a en el libro, "
+				+ "\"cada rechazo es una oportunidad de aprender a mejorar en c√≥mo no hacerlo\"");
 		n212221.setTipo(n212221.TERMINAL);
 		n212221.agregarOpcion("ERES UN CONQUISTADOR CON MALA SUERTE.");
 		n212221.setPuntaje(5);
+		n212221.setAudio("/audio/decide dejarle de hablar.wav");
 		
 		//Nodo 2.1.2.2.2.2 Invitarla al bar
 		Nodo n212222 = new Nodo(6,"Salen al bar, empiezan a tomar y bailar al rato se sientan a hablar, "
 				+ "de lo ebrios que estaban, Daniela lo besa Oliver se siente feliz, pensando que logro conquistarla, "
-				+ "luego al dÌa siguiente a˙n se denota el sentimiento de Daniela hacia Èl, salen a escondidas, "
-				+ "pero Oliver querÌa que fuese su novia, asÌ que la presiona como tal para serlo con el tiempo Daniela empieza ver como Oliver la cela sin necesidad y empieza aburrirse de Oliver, un dÌa lo para y le dice que no m·s ya que Èl es muy toxico y controlador, le dice que dejara de hablarle Oliver se siente destruido pero aprendiÛ a que hay que darle tiempo al tiempo.");
+				+ "luego al d√≠a siguiente a√∫n se denota el sentimiento de Daniela hacia √©l, salen a escondidas, "
+				+ "pero Oliver quer√≠a que fuese su novia, as√≠ que la presiona como tal para serlo con el tiempo Daniela empieza ver como Oliver la cela sin necesidad y empieza aburrirse de Oliver, un d√≠a lo para y le dice que no m√°s ya que √©l es muy toxico y controlador, le dice que dejara de hablarle Oliver se siente destruido pero aprendi√≥ a que hay que darle tiempo al tiempo.");
 		n212222.setTipo(n212222.TERMINAL);
-		n212222.agregarOpcion("!PELIGRO° PERSONA T”XICA FRENTE A LA PANTALLA");
+		n212222.agregarOpcion("!PELIGRO¬° PERSONA T√ìXICA FRENTE A LA PANTALLA");
 		n212222.setPuntaje(0);
+		n212222.setAudio("/audio/invitarla al bar.wav");
 		
 		//Nodo 2.1.1.1.1.1.2 eSCRIBIRLE DESPUES
 		Nodo n2111112 = new Nodo(7,"Ella cree que a el no le gusto la cita y por eso no le escribio, con el tiempo de los dias ella pierde el interes por el\n" + 
 				"y cuando Oliver le escribe, ella ya no quiere nada con el, solamente se siguen conociendo y prefiere ser una amiga de la universidad\n" + 
-				"con el tiempo ella le da consejos de comÛ salir con chicas como ella, para que no pierda una oportunidad como la que perdio con ella");
+				"con el tiempo ella le da consejos de com√≥ salir con chicas como ella, para que no pierda una oportunidad como la que perdio con ella");
 		n2111112.setTipo(n2111112.TERMINAL);
-		n2111112.agregarOpcion("LO SIENTO, ASÕ NO LE INTERESAS A NADIE.");
+		n2111112.agregarOpcion("LO SIENTO, AS√ç NO LE INTERESAS A NADIE.");
 		n2111112.setPuntaje(5);
+		n2111112.setAudio("/audio/escribirle despues.wav");
 		
 		//Nodo 2.1.1.1.1.1.1 Escribirle de una
-		Nodo n2111111 = new Nodo(7,"Empiezan a chatear cada vez m·s seguido hasta que logra conquistarla por medio de citas y salidas.");
+		Nodo n2111111 = new Nodo(7,"Empiezan a chatear cada vez m√°s seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n2111111.setTipo(n2111111.TERMINAL);
 		n2111111.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
 		n2111111.setPuntaje(95);
+		n2111111.setAudio("/audio/escribirle de una.wav");
 		
 		//Nodo 2.1.1.1.1.2.1 Decide ignorarla
-		Nodo n2111121 = new Nodo(7,"Daniela se enoja y decide no volver a hablarle ya que se sintiÛ mal cuando Èl la ignorÛ");
+		Nodo n2111121 = new Nodo(7,"Daniela se enoja y decide no volver a hablarle ya que se sinti√≥ mal cuando √©l la ignor√≥");
 		n2111121.setTipo(n2111121.DECISION);
 		n2111121.agregarOpcion("ES INCREIBLE PERO ESTO NO ES LO TUYO.");
 		n2111121.setPuntaje(25);
+		n2111121.setAudio("/audio/decide ignorarla.wav");
 		
 		//Nodo 2.1.1.1.1.2.2 Saludarla
-		Nodo n2111122 = new Nodo(7,"…l le explica que no la encontrÛ en las redes con solo su nombre, la buscÛ en la U y tampoco la encontrÛ. "
-				+ "Le pregunta cÛmo est·, y hablan un rato, pasado el tiempo, salen pero como amigos de ahÌ en adelante hay chispas pero ambos deciden no intentarlo,"
-				+ " ya que Daniela est·  saliendo con alguien m·s y Oliver est· inseguro de lo que siente por ella,");
+		Nodo n2111122 = new Nodo(7,"√âl le explica que no la encontr√≥ en las redes con solo su nombre, la busc√≥ en la U y tampoco la encontr√≥. "
+				+ "Le pregunta c√≥mo est√°, y hablan un rato, pasado el tiempo, salen pero como amigos de ah√≠ en adelante hay chispas pero ambos deciden no intentarlo,"
+				+ " ya que Daniela est√°  saliendo con alguien m√°s y Oliver est√° inseguro de lo que siente por ella,");
 		n2111122.setTipo(n2111122.TERMINAL);
 		n2111122.agregarOpcion("ERES UN CONQUISTADOR CON MALA SUERTE.");
 		n2111122.setPuntaje(25);
+		n2111122.setAudio("/audio/saludarla.wav");
 		
-		//Nodo 2.1.1.2.1.1.1 La acompaÒa a la casa
-		Nodo n2112111 = new Nodo(7,"Al ir a la casa, se conocen mejor y Oliver se siente cÛmodo con la chica, ambos sienten atracciÛn por el otro,  se dan la oportunidad de compartir sus sueÒos y ambos le queda gustando.\n" + 
-				"Antes de irse Èl le pide su n˙mero, para seguir en contacto. A lo que ella acepta y parece que continuaran saliendo\n" + 
+		//Nodo 2.1.1.2.1.1.1 La acompa√±a a la casa
+		Nodo n2112111 = new Nodo(7,"Al ir a la casa, se conocen mejor y Oliver se siente c√≥modo con la chica, ambos sienten atracci√≥n por el otro,  se dan la oportunidad de compartir sus sue√±os y ambos le queda gustando.\n" + 
+				"Antes de irse √©l le pide su n√∫mero, para seguir en contacto. A lo que ella acepta y parece que continuaran saliendo\n" + 
 				"");
 		n2112111.setTipo(n2112111.DECISION);
 		n2112111.agregarOpcion("Escribirle de una vez.");
-		n2112111.agregarOpcion("Esperar unos dÌas y hablarle");
+		n2112111.agregarOpcion("Esperar unos d√≠as y hablarle");
 		n2112111.setPuntaje(65);
+		n2112111.setAudio("/audio/acompa√±arla a la casa.wav");
 		
-		//Nodo 2.1.1.2.1.1.2 La acompaÒa al bus
-		Nodo n2112112 = new Nodo(7,"Oliver sintiÛ que la pasaron  bien y que se gustaron, ahora debe seguir haciÈndolo, "
-				+ "pero al ella irse nunca supo cÛmo hablarle, asÌ que la buscaba en la universidad."
-				+ " Pasaron semanas y no se volvieron a ver, para cuando se toparon, fue el subiendo al quinto piso y ella saliendo del baÒo,"
-				+ " Èl con la pena de que jam·s se volvieron a hablar, no sabÌa que hacer:");
+		//Nodo 2.1.1.2.1.1.2 La acompa√±a al bus
+		Nodo n2112112 = new Nodo(7,"Oliver sinti√≥ que la pasaron  bien y que se gustaron, ahora debe seguir haci√©ndolo, "
+				+ "pero al ella irse nunca supo c√≥mo hablarle, as√≠ que la buscaba en la universidad."
+				+ " Pasaron semanas y no se volvieron a ver, para cuando se toparon, fue el subiendo al quinto piso y ella saliendo del ba√±o,"
+				+ " √©l con la pena de que jam√°s se volvieron a hablar, no sab√≠a que hacer:");
 		n2112112.setTipo(n2112112.DECISION);
 		n2112112.agregarOpcion("Decide ignorarla y seguir subiendo");
-		n2112112.agregarOpcion("Decide hablarle y explicarle por quÈ no se habÌan hablado antes");
+		n2112112.agregarOpcion("Decide hablarle y explicarle por qu√© no se hab√≠an hablado antes");
 		n2112112.setPuntaje(35);
+		n2112112.setAudio("/audio/acompa√±arla a coger bus.wav");
 		
 		//Nodo 2.1.1.2.1.2.1 Salen como amigos
-		Nodo n2112121 = new Nodo(7,"Salen pero como amigos de ahÌ en adelante hay chispas pero ambos deciden no intentarlo,\"\n" + 
-				"				+ \" ya que Daniela est· saliendo con alguien m·s y Oliver est· inseguro de lo que siente por ella,\"\n" + 
-				"				+ \" asÌ que decide dejarla como una amiga m·s de la Universidad.");
+		Nodo n2112121 = new Nodo(7,"Salen pero como amigos de ah√≠ en adelante hay chispas pero ambos deciden no intentarlo,\"\n" + 
+				"				+ \" ya que Daniela est√° saliendo con alguien m√°s y Oliver est√° inseguro de lo que siente por ella,\"\n" + 
+				"				+ \" as√≠ que decide dejarla como una amiga m√°s de la Universidad.");
 		n2112121.setTipo(n2112121.TERMINAL);
 		n2112121.agregarOpcion("BIENVENIDO A LA FRIENDZONE");
 		n2112121.setPuntaje(25);
+		n2112121.setAudio("/audio/ser solamente amigos.wav");
 		
 		//NODO 2.1.1.2.1.2.2 decide conquistarla
-		Nodo n2112122 = new Nodo(7,"Empiezan a chatear cada vez m·s seguido hasta que logra conquistarla por medio de citas y salidas.");
+		Nodo n2112122 = new Nodo(7,"Empiezan a chatear cada vez m√°s seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n2112122.setTipo(n2112122.TERMINAL);
 		n2112122.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
 		n2112122.setPuntaje(75);
+		n2112122.setAudio("/audio/decide conquistarla.wav");
 		
 		//Nodo 2.1.1.2.1.1.1.1 Escribirle de una vez
-		Nodo n21121111 = new Nodo(8,"Empiezan a chatear cada vez m·s seguido hasta que logra conquistarla por medio de citas y salidas.");
+		Nodo n21121111 = new Nodo(8,"Empiezan a chatear cada vez m√°s seguido hasta que logra conquistarla por medio de citas y salidas.");
 		n21121111.setTipo(n21121111.TERMINAL);
 		n21121111.agregarOpcion("GRANDE TIGRE, ERES TODO UN CONQUISTADOR.");
 		n21121111.setPuntaje(80);
+		n21121111.setAudio("/audio/escribirle de una.wav");
 		
 		//Nodo 2.1.1.2.1.1.1.2 Escribirle despues
 		Nodo n21121112 = new Nodo(8,"Ella cree que a el no le gusto la cita y por eso no le escribio, con el tiempo de los dias ella pierde el interes por el\n" + 
 				"y cuando Oliver le escribe, ella ya no quiere nada con el, solamente se siguen conociendo y prefiere ser una amiga de la universidad\n" + 
-				"con el tiempo ella le da consejos de comÛ salir con chicas como ella, para que no pierda una oportunidad como la que perdio con ella");
+				"con el tiempo ella le da consejos de com√≥ salir con chicas como ella, para que no pierda una oportunidad como la que perdio con ella");
 		n21121112.setTipo(n21121112.TERMINAL);
-		n21121112.agregarOpcion("LO SIENTO, ASÕ NO LE INTERESAS A NADIE.");
+		n21121112.agregarOpcion("LO SIENTO, AS√ç NO LE INTERESAS A NADIE.");
 		n21121112.setPuntaje(20);
+		n21121112.setAudio("/audio/escribirle despues.wav");
 		
 		//Nodo 2.1.1.2.1.1.2.1 ignorarla
-		Nodo n21121121= new Nodo(8,"Daniela se enoja y decide no volver a hablarle ya que se sintiÛ mal cuando Èl la ignorÛ");
+		Nodo n21121121= new Nodo(8,"Daniela se enoja y decide no volver a hablarle ya que se sinti√≥ mal cuando √©l la ignor√≥");
 		n21121121.setTipo(n21121121.DECISION);
 		n21121121.agregarOpcion("ES INCREIBLE PERO ESTO NO ES LO TUYO.");
 		n21121121.setPuntaje(5);
-		
+		n21121121.setAudio("/audio/decide ignorarla.wav");
 		
 		//Nodo 2.1.1.2.1.1.2.2 Saludarla
-		Nodo n21121122 = new Nodo(7,"…l le explica que no la encontrÛ en las redes con solo su nombre, la buscÛ en la U y tampoco la encontrÛ. "
-				+ "Le pregunta cÛmo est·, y hablan un rato, pasado el tiempo, salen pero como amigos de ahÌ en adelante hay chispas pero ambos deciden no intentarlo,"
-				+ " ya que Daniela est·  saliendo con alguien m·s y Oliver est· inseguro de lo que siente por ella,");
+		Nodo n21121122 = new Nodo(7,"√âl le explica que no la encontr√≥ en las redes con solo su nombre, la busc√≥ en la U y tampoco la encontr√≥. "
+				+ "Le pregunta c√≥mo est√°, y hablan un rato, pasado el tiempo, salen pero como amigos de ah√≠ en adelante hay chispas pero ambos deciden no intentarlo,"
+				+ " ya que Daniela est√°  saliendo con alguien m√°s y Oliver est√° inseguro de lo que siente por ella,");
 		n21121122.setTipo(n21121122.TERMINAL);
-		n21121122.agregarOpcion("°BIENVENIDO A LA FRIENDZONE!");
+		n21121122.agregarOpcion("¬°BIENVENIDO A LA FRIENDZONE!");
 		n21121122.setPuntaje(25);
+		n21121122.setAudio("/audio/saludarla.wav");
 		
 		n2112112.addpart(n21121121);
 		n2112112.addpart(n21121122);
