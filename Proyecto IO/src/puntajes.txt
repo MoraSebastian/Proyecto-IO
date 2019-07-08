@@ -1,2 +1,6 @@
-Ivan 3100
-Gabriel 2000
+Grupo4 425
+Grupo3 375
+Grupo6 375
+Grupo7 235
+Grupo5 85
+Grupo1 35

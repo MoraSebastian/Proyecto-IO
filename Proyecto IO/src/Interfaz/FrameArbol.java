@@ -1,7 +1,6 @@
 package Interfaz;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -11,16 +10,13 @@ import javax.swing.border.EmptyBorder;
 
 import Logica.Arbol;
 import Logica.Componente;
-import Logica.Nodo;
+
 
 import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JScrollPane;
-import javax.swing.JScrollBar;
-import javax.swing.ScrollPaneConstants;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
+
 
 public class FrameArbol extends JFrame {
 

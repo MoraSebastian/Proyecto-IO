@@ -19,7 +19,7 @@ public class Archivo {
 	}
 	public void leer() {
 		// crea el flujo para leer desde el archivo
-				File file = new File("C:\\Users\\MARISOL RUEDA\\Desktop\\Proyecto IO\\src\\puntajes.txt");
+				File file = new File("C:\\Users\\MARISOL RUEDA\\Desktop\\IO\\src\\puntajes.txt");
 				Scanner scanner;
 				try {
 					//se pasa el flujo al objeto scanner
@@ -44,7 +44,7 @@ public class Archivo {
 		vaciar();
 		FileWriter flwriter = null;
 		try {//además de la ruta del archivo recibe un parámetro de tipo boolean, que le indican que se va añadir más registros 
-			flwriter = new FileWriter("C:\\\\Users\\\\MARISOL RUEDA\\\\Desktop\\\\Proyecto IO\\\\src\\\\puntajes.txt", true);
+			flwriter = new FileWriter("C:\\\\Users\\\\MARISOL RUEDA\\\\Desktop\\\\IO\\\\src\\\\puntajes.txt", true);
 			BufferedWriter bfwriter = new BufferedWriter(flwriter);
 			for(int i = 0;i<puntajes.size();i++) {
 				bfwriter.write(puntajes.get(i).getNombre()+" "+puntajes.get(i).getPuntaje());
@@ -71,7 +71,7 @@ public class Archivo {
 
 		PrintWriter writer;
 		try {
-			writer = new PrintWriter("C:\\\\Users\\\\MARISOL RUEDA\\\\Desktop\\\\Proyecto IO\\\\src\\\\puntajes.txt");
+			writer = new PrintWriter("C:\\\\Users\\\\MARISOL RUEDA\\\\Desktop\\\\IO\\\\src\\\\puntajes.txt");
 			writer.print(""); writer.close(); 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

@@ -16,6 +16,8 @@ import Logica.Archivo;
 import Logica.Puntaje;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
@@ -29,7 +31,9 @@ public class PanelPuntaje extends JPanel {
 	JLabel lbl;
 	JButton btnDecisiones;
 	Arbol arbol;
-	public PanelPuntaje() {
+	JFrame frame;
+	public PanelPuntaje(JFrame fram) {
+		frame = fram;
 		setLayout(null);
 		panel.setBackground(new Color(112, 128, 144));
 		panel.setBounds(0, 0, 1291, 797);
@@ -39,12 +43,13 @@ public class PanelPuntaje extends JPanel {
 		JButton btnVolver = new JButton("");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				accionVolver();
 			}
 		});
 		
 		btnVolver.setSelectedIcon(new ImageIcon(PanelPuntaje.class.getResource("/RecusosInterfaz/Recurso 35.png")));
 		btnVolver.setIcon(new ImageIcon(PanelPuntaje.class.getResource("/RecusosInterfaz/Recurso 34.png")));
-		btnVolver.setBounds(521, 705, 203, 55);
+		btnVolver.setBounds(521, 505, 203, 55);
 		btnVolver.setContentAreaFilled(false);
 		btnVolver.setBorderPainted(false);
 		btnVolver.setOpaque(false);
@@ -85,9 +90,9 @@ public class PanelPuntaje extends JPanel {
 		panel.add(lblFondo);
 	}
 	
-	public PanelPuntaje(Puntaje p, Arbol arbol) {
+	public PanelPuntaje(Puntaje p, Arbol arbol,JFrame fram) {
 		this.arbol =arbol;
-		
+		frame = fram;
 		setLayout(null);
 		panel.setBackground(new Color(112, 128, 144));
 		panel.setBounds(0, 0, 1291, 797);
@@ -97,11 +102,12 @@ public class PanelPuntaje extends JPanel {
 		JButton btnVolver = new JButton("");
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				accionVolver();
 			}
 		});
 		btnDecisiones = new JButton();
 		btnDecisiones.setIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 51.png")));
-		btnDecisiones.setBounds(328, 706, 203, 55);
+		btnDecisiones.setBounds(328, 506, 203, 55);
 		btnDecisiones.setBorderPainted(false);
 		btnDecisiones.setPressedIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 52.png")));
 		btnDecisiones.setOpaque(false);
@@ -117,7 +123,7 @@ public class PanelPuntaje extends JPanel {
 		
 		btnVolver.setSelectedIcon(new ImageIcon(PanelPuntaje.class.getResource("/RecusosInterfaz/Recurso 35.png")));
 		btnVolver.setIcon(new ImageIcon(PanelPuntaje.class.getResource("/RecusosInterfaz/Recurso 34.png")));
-		btnVolver.setBounds(521, 705, 203, 55);
+		btnVolver.setBounds(521, 505, 203, 55);
 		btnVolver.setContentAreaFilled(false);
 		btnVolver.setBorderPainted(false);
 		btnVolver.setOpaque(false);
@@ -138,7 +144,7 @@ public class PanelPuntaje extends JPanel {
 			lbl.setText((i+1)+". "+a.puntajes.get(i).getNombre()+" "+a.puntajes.get(i).getPuntaje());
 			panel.add(lbl);
 		}
-		
+		a.guardar();
 		JLabel lblContenedorjuego = new JLabel("");
 		lblContenedorjuego.setHorizontalAlignment(SwingConstants.CENTER);
 		lblContenedorjuego.setIcon(new ImageIcon(PanelPuntaje.class.getResource("/RecusosInterfaz/Recurso 36.png")));
@@ -159,7 +165,17 @@ public class PanelPuntaje extends JPanel {
 		panel.add(lblFondo);
 	}
 	public void accionVolver(){
-		
+		frame.dispose();
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PantallaInicio window = new PantallaInicio();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 	
 	public void accionDecision() {

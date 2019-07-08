@@ -37,7 +37,7 @@ public class PantallaInicio {
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1300, 828);
+		frame.setBounds(0, 0, 1300, 828);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -75,7 +75,7 @@ public class PantallaInicio {
 		btnPuntajes.setOpaque(false);
 		btnPuntajes.setContentAreaFilled(false);
 		btnPuntajes.setBorderPainted(false);
-		btnPuntajes.setBounds(524, 705, 203, 55);
+		btnPuntajes.setBounds(424, 605, 203, 55);
 		frame.getContentPane().add(btnPuntajes);
 		
 		JButton btnCreditos = new JButton("");
@@ -90,7 +90,7 @@ public class PantallaInicio {
 		btnCreditos.setOpaque(false);
 		btnCreditos.setContentAreaFilled(false);
 		btnCreditos.setBorderPainted(false);
-		btnCreditos.setBounds(723, 706, 203, 55);
+		btnCreditos.setBounds(623, 606, 203, 55);
 		frame.getContentPane().add(btnCreditos);
 		
 		
@@ -135,7 +135,7 @@ public class PantallaInicio {
 	
 	public void accionJugar(String usuario) throws LineUnavailableException, IOException, UnsupportedAudioFileException{
 		frame.getContentPane().removeAll();
-		JPanel panelJ = new PanelJuego(this.arbol,usuario);
+		JPanel panelJ = new PanelJuego(this.arbol,usuario,frame);
 		panelJ.setBounds(0, 0, 1300, 828);
 		frame.add(panelJ);
 		frame.repaint();
@@ -143,7 +143,7 @@ public class PantallaInicio {
 	
 	public void accionCreditos(){
 		frame.getContentPane().removeAll();
-		JPanel panelC = new PanelCreditos();
+		JPanel panelC = new PanelCreditos(frame);
 		panelC.setBounds(0, 0, 1300, 828);
 		frame.add(panelC);
 		frame.repaint();
@@ -151,7 +151,7 @@ public class PantallaInicio {
 	
 	public void accionPuntajes(){
 		frame.getContentPane().removeAll();
-		JPanel panelP = new PanelPuntaje();
+		JPanel panelP = new PanelPuntaje(frame);
 		panelP.setBounds(0, 0, 1300, 828);
 		frame.add(panelP);
 		frame.repaint();

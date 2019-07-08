@@ -1,19 +1,26 @@
 package Interfaz;
 
 import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 public class PanelCreditos extends JPanel {
-
+	JFrame frame;
 	JPanel panel = new JPanel();
-	public PanelCreditos() {
+	JEditorPane textoHistoria;
+	public PanelCreditos(JFrame fram) {
+		frame = fram;
 		setLayout(null);
 		panel.setBackground(new Color(112, 128, 144));
 		panel.setBounds(0, 0, 1291, 797);
@@ -27,10 +34,28 @@ public class PanelCreditos extends JPanel {
 		});
 		btnVolver.setSelectedIcon(new ImageIcon(PanelPuntaje.class.getResource("/RecusosInterfaz/Recurso 35.png")));
 		btnVolver.setIcon(new ImageIcon(PanelPuntaje.class.getResource("/RecusosInterfaz/Recurso 34.png")));
-		btnVolver.setBounds(521, 705, 203, 55);
+		btnVolver.setBounds(521, 505, 203, 55);
 		btnVolver.setContentAreaFilled(false);
 		btnVolver.setBorderPainted(false);
 		btnVolver.setOpaque(false);
+
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				accionVolver();
+			}
+		});
+		
+		textoHistoria = new JEditorPane();
+		textoHistoria.setText("Desarrolladores: \n Andrés Rentería \n Sebastián Mora \n Estefanía García \n"
+				+ "Dibujante:  Rodrigo Álvarez Avendaño \n"
+				+ "Audios:  SodelsCot \n"
+				+ "Imágenes:  freePik");
+		textoHistoria.setEditable(false);
+		textoHistoria.setForeground(new Color(51, 0, 0));
+		textoHistoria.setFont(new Font("Century Schoolbook", Font.PLAIN, 26));
+		textoHistoria.setBackground(new Color(0,0,0,0));
+		textoHistoria.setBounds(300, 211, 921, 334);
+		panel.add(textoHistoria);
 		
 		panel.add(btnVolver);
 		
@@ -54,4 +79,17 @@ public class PanelCreditos extends JPanel {
 		panel.add(lblFondo);
 	}
 
+	public void accionVolver(){
+		frame.dispose();
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PantallaInicio window = new PantallaInicio();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 }

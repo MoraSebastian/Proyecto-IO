@@ -21,6 +21,8 @@ import java.awt.Image;
 
 import javax.swing.JTextPane;
 import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+
 import java.awt.SystemColor;
 import javax.swing.JButton;
 
@@ -48,6 +50,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 	JLabel lblPanelsuperior;
 	JButton btnProbabilidad;
 	String usuario;
+	JFrame frame;
+	
 	//Arbol que llega (Completo)
 	Arbol arbol;
 	JButton btnPuntajes;
@@ -57,6 +61,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 	Reproductor repro = new Reproductor();
 	private void cargar() {
 		btnBotondecision.setText("");
+		btnDerecho.setEnabled(true);
+		btnIzquierda.setEnabled(true);
 		btnBotondecision2.setText("");
 		lblPuntaje.setText(String.valueOf(Integer.valueOf(lblPuntaje.getText())+(int)arbol.getReferencia().getPuntaje()));
 		switch(arbol.getReferencia().getTipo()) {
@@ -82,14 +88,15 @@ public class PanelJuego extends JPanel implements ActionListener {
 		}
 		
 		textoHistoria.setText(arbol.getReferencia().getEnunciado());
-		textoHistoria.setVisible(false);
+		textoHistoria.setVisible(true);
+		repro.Reproducir(arbol.getReferencia().getAudio());
 		if(arbol.getReferencia().getUbicacion()!=null) {
 			ImageIcon fot = new ImageIcon(PanelJuego.class.getResource(arbol.getReferencia().getUbicacion()));
 			Icon icono = new ImageIcon(fot.getImage().getScaledInstance(lblIMG.getWidth(), lblIMG.getHeight(), Image.SCALE_DEFAULT));
 			lblIMG.setIcon(icono);
 			this.repaint();
 		}
-		lblIMG.setVisible(true);
+		lblIMG.setVisible(false);
 		btnIzquierda.setEnabled(false);
 		panel.updateUI();
 		btnBotondecision.setText(arbol.getReferencia().getOpciones().get(0));
@@ -99,7 +106,8 @@ public class PanelJuego extends JPanel implements ActionListener {
 		
 	}
 	
-	public PanelJuego(Arbol arbol,String usuario) {
+	public PanelJuego(Arbol arbol,String usuario,JFrame fram) {
+		frame = fram;
 		this.usuario = usuario;
 		this.arbol = arbol;
 		construirPanel();
@@ -117,7 +125,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 		panel.setLayout(null);
 		
 		internalFrameSinopsis = new JInternalFrame("Sinopsis");
-		internalFrameSinopsis.setBounds(137, 147, 1193, 700);
+		internalFrameSinopsis.setBounds(0, 0, 1193, 700);
 		panel.add(internalFrameSinopsis);
 		internalFrameSinopsis.setFrameIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 38.png")));
 		internalFrameSinopsis.setClosable(true);
@@ -157,7 +165,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 		btnBotondecision2.setActionCommand("btn2");
 		btnBotondecision2.addActionListener( this);
 		btnBotondecision2.setBorderPainted(false);
-		btnBotondecision2.setBounds(642, 628, 378, 44);
+		btnBotondecision2.setBounds(232,700, 1200, 44);
 		panel.add(btnBotondecision2);
 		
 		btnBotondecision = new JButton("");
@@ -165,7 +173,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 		btnBotondecision.setHorizontalAlignment(SwingConstants.LEFT);
 		btnBotondecision.setRolloverIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 38.png")));
 		btnBotondecision.setIcon(new ImageIcon(PanelJuego.class.getResource("/RecusosInterfaz/Recurso 39.png")));
-		btnBotondecision.setBounds(232, 628, 378, 44);
+		btnBotondecision.setBounds(232, 628, 1200, 44);
 		btnBotondecision.setBorderPainted(false);
 		btnBotondecision.setPressedIcon(new ImageIcon(PantallaInicio.class.getResource("/RecusosInterfaz/Recurso 38.png")));
 		btnBotondecision.setOpaque(false);
@@ -292,17 +300,18 @@ public class PanelJuego extends JPanel implements ActionListener {
 			}
 			break;
 		case "derecho":
-			lblIMG.setVisible(false);
-			textoHistoria.setVisible(true);
-			btnIzquierda.setEnabled(true);
-			btnDerecho.setEnabled(false);
-			repro.Reproducir(arbol.getReferencia().getAudio());
-			break;
-		case "izquierdo":
 			lblIMG.setVisible(true);
 			textoHistoria.setVisible(false);
+			btnIzquierda.setEnabled(true);
+			btnDerecho.setEnabled(false);
+			
+			break;
+		case "izquierdo":
+			lblIMG.setVisible(false);
+			textoHistoria.setVisible(true);
 			btnIzquierda.setEnabled(false);
 			btnDerecho.setEnabled(true);
+			repro.Reproducir(arbol.getReferencia().getAudio());
 			break;
 		}
 		
@@ -313,7 +322,7 @@ public class PanelJuego extends JPanel implements ActionListener {
 		p.setNombre(usuario);
 		p.setPuntaje(lblPuntaje.getText());
 		removeAll();
-		JPanel panelP = new PanelPuntaje(p,arbol);
+		JPanel panelP = new PanelPuntaje(p,arbol,frame);
 		panelP.setBounds(0, 0, 1300, 828);
 		add(panelP);
 		repaint();
